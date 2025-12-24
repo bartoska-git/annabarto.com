@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Handle case-study directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^/case-study/(.*)$
+RewriteCond %{DOCUMENT_ROOT}/case-study/%1.php -f
+RewriteRule ^case-study/(.*)$ /case-study/$1.php [L]
