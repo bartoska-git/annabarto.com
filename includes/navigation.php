@@ -86,6 +86,41 @@ document.addEventListener('DOMContentLoaded', function() {
     closeMobileMenu.addEventListener('click', closeMenu);
     mobileOverlay.addEventListener('click', closeMenu);
     mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    // Active section indicator
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = [];
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            const section = document.querySelector(href);
+            if (section) sections.push({ id: href.slice(1), element: section, link: link });
+        }
+    });
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0
+    };
+
+    let currentActive = null;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const sectionData = sections.find(s => s.element === entry.target);
+                if (sectionData && currentActive !== sectionData.link) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    sectionData.link.classList.add('active');
+                    currentActive = sectionData.link;
+                }
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section.element));
 });
 </script>
 <?php endif; ?>

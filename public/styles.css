@@ -248,6 +248,27 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--olive-grey);
 }
 
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 5px;
+  height: 5px;
+  background: var(--soft-terracotta);
+  border-radius: 50%;
+  transition: transform var(--transition-normal);
+}
+
+.nav-link.active {
+  color: var(--soft-terracotta);
+}
+
+.nav-link.active::after {
+  transform: translateX(-50%) scale(1);
+}
+
 .nav-cta {
   padding: var(--space-sm) var(--space-lg);
   background: var(--soft-terracotta);
