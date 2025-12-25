@@ -3,7 +3,7 @@ $pageTitle = 'Building 0→1 Products at Moniify';
 $isCaseStudy = true;
 $backLink = '/#portfolio';
 $backText = 'Back to Portfolio';
-require_once 'includes/header.php';
+require_once '../includes/header.php';
 
 $stats = [
     ['label' => 'Products Built', 'value' => '3'],
@@ -29,7 +29,7 @@ $sections = [
     ['id' => 'related', 'label' => 'Related Case Studies']
 ];
 ?>
-<?php require_once 'includes/navigation.php'; ?>
+<?php require_once '../includes/navigation.php'; ?>
 
 <aside class="toc">
     <div class="toc-inner">
@@ -205,4 +205,4 @@ $sections = [
     </section>
 </main>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once '../includes/footer.php'; ?>

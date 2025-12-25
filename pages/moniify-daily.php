@@ -3,7 +3,7 @@ $pageTitle = 'Moniify Daily';
 $isCaseStudy = true;
 $backLink = '/moniify';
 $backText = 'Back to Moniify Case Study';
-require_once 'includes/header.php';
+require_once '../includes/header.php';
 
 $stats = [
     ['label' => 'Content Length', 'value' => '~15 min'],
@@ -20,7 +20,7 @@ $sections = [
     ['id' => 'outcome', 'label' => 'Outcome']
 ];
 ?>
-<?php require_once 'includes/navigation.php'; ?>
+<?php require_once '../includes/navigation.php'; ?>
 
 <aside class="toc">
     <div class="toc-inner">
@@ -133,4 +133,4 @@ $sections = [
     </section>
 </main>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once '../includes/footer.php'; ?>

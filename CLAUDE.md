@@ -14,17 +14,17 @@ This is Anna Barto's portfolio website - a simple PHP site converted from a Magi
 
 ```
 barto/
-├── pages/
+├── includes/                    # PHP includes (not web-accessible)
+│   ├── header.php               # HTML head, fonts
+│   ├── navigation.php           # Responsive nav (adapts for homepage vs case studies)
+│   └── footer.php               # Footer with copyright
+├── pages/                       # Web-accessible PHP pages
 │   ├── index.php                # Homepage
 │   ├── moniify.php              # Main Moniify case study
 │   ├── airtable-app.php         # Airtable workflow automation
 │   ├── moniify-creators.php     # Creator integration product
 │   ├── moniify-daily.php        # Daily video product
-│   ├── richer.php               # Female-focused finance format
-│   └── includes/
-│       ├── header.php           # HTML head, fonts
-│       ├── navigation.php       # Responsive nav (adapts for homepage vs case studies)
-│       └── footer.php           # Footer with copyright
+│   └── richer.php               # Female-focused finance format
 ├── public/                      # Images and CSS
 │   └── styles.css               # Main stylesheet
 ├── Dockerfile                   # PHP 8.2 Apache image

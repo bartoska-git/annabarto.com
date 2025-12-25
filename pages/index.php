@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Product Strategy & Media Innovation';
-require_once 'includes/header.php';
-require_once 'includes/navigation.php';
+require_once '../includes/header.php';
+require_once '../includes/navigation.php';
 ?>
 
 <main class="container">
@@ -354,4 +354,4 @@ require_once 'includes/navigation.php';
     </section>
 </main>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once '../includes/footer.php'; ?>

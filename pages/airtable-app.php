@@ -3,7 +3,7 @@ $pageTitle = 'Custom Airtable App (Moniify)';
 $isCaseStudy = true;
 $backLink = '/#portfolio';
 $backText = 'Back to Portfolio';
-require_once 'includes/header.php';
+require_once '../includes/header.php';
 
 $stats = [
     ['label' => 'Automated Handoffs/Year', 'value' => '10K+'],
@@ -25,7 +25,7 @@ $relatedCaseStudies = [
     ['title' => 'Moniify Creators', 'description' => 'Integrating credible creators into editorial output', 'slug' => 'moniify-creators']
 ];
 ?>
-<?php require_once 'includes/navigation.php'; ?>
+<?php require_once '../includes/navigation.php'; ?>
 
 <aside class="toc">
     <div class="toc-inner">
@@ -155,4 +155,4 @@ $relatedCaseStudies = [
     </section>
 </main>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once '../includes/footer.php'; ?>
