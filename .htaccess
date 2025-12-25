@@ -1,13 +1,14 @@
 RewriteEngine On
 
-# Remove .php extension
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php [L]
+# Serve public assets directly
+RewriteCond %{REQUEST_URI} ^/public/
+RewriteRule ^ - [L]
 
-# Handle case-study directory
+# Route homepage to pages/index.php
+RewriteRule ^$ pages/index.php [L]
+
+# Route requests to pages/ if PHP file exists
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} ^/case-study/(.*)$
-RewriteCond %{DOCUMENT_ROOT}/case-study/%1.php -f
-RewriteRule ^case-study/(.*)$ /case-study/$1.php [L]
+RewriteCond %{DOCUMENT_ROOT}/pages/%{REQUEST_URI}.php -f
+RewriteRule ^(.+)$ pages/$1.php [L]

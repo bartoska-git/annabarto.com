@@ -46,7 +46,7 @@ require_once 'includes/navigation.php';
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" alt="YouTube" class="logo-strip-logo">
             <img src="/public/MONIIFY_Logo-2.png" alt="Moniify" class="logo-strip-logo logo-strip-logo-sm">
             <img src="/public/unnamed.png" alt="HGS Consultants" class="logo-strip-logo">
-            <img src="/public/unnamed_%281%29.png" alt="Transform Lab" class="logo-strip-logo">
+            <img src="/public/transform-lab.png" alt="Transform Lab" class="logo-strip-logo">
         </div>
     </section>
 
@@ -64,14 +64,14 @@ require_once 'includes/navigation.php';
                     'description' => 'Built 3 products from zero and led 20+ hybrid team in a next-gen business media startup. Each product addressed a distinct audience and market opportunity.',
                     'tags' => ['Product Strategy', 'Early-Stage'],
                     'image' => '/public/6631043b-6410-455a-9938-9d6e1eb8ca40.jpg',
-                    'link' => '/case-study/moniify.php'
+                    'link' => '/moniify'
                 ],
                 [
                     'title' => 'Custom Airtable App (Moniify)',
                     'description' => 'Designed a low-code Airtable app that automated 10K+ annual handoffs across 700+ video workflows, connecting internal teams and agencies in real time.',
                     'tags' => ['Workflow Automation', 'Internal Tools'],
                     'image' => '/public/622ab1d7-e27c-474d-84a6-ea33c89e469d.jpg',
-                    'link' => '/case-study/airtable-app.php'
+                    'link' => '/airtable-app'
                 ],
                 [
                     'title' => 'AI Dubbing Experiment (Google)',

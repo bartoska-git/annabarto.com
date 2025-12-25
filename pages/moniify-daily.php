@@ -1,9 +1,9 @@
 <?php
 $pageTitle = 'Moniify Daily';
 $isCaseStudy = true;
-$backLink = '/case-study/moniify.php';
+$backLink = '/moniify';
 $backText = 'Back to Moniify Case Study';
-require_once '../includes/header.php';
+require_once 'includes/header.php';
 
 $stats = [
     ['label' => 'Content Length', 'value' => '~15 min'],
@@ -20,7 +20,7 @@ $sections = [
     ['id' => 'outcome', 'label' => 'Outcome']
 ];
 ?>
-<?php require_once '../includes/navigation.php'; ?>
+<?php require_once 'includes/navigation.php'; ?>
 
 <aside class="toc">
     <div class="toc-inner">
@@ -117,15 +117,15 @@ $sections = [
             <h2 class="section-title">Related Case Studies</h2>
         </div>
         <div class="grid grid-2">
-            <a href="/case-study/moniify.php" class="card-info">
+            <a href="/moniify" class="card-info">
                 <h3 class="card-info-title">Building 0→1 Products at Moniify</h3>
                 <p class="card-info-text">Product strategy and 0→1 building at a media startup</p>
             </a>
-            <a href="/case-study/moniify-creators.php" class="card-info">
+            <a href="/moniify-creators" class="card-info">
                 <h3 class="card-info-title">Moniify Creators</h3>
                 <p class="card-info-text">Integrating credible creators into editorial output</p>
             </a>
-            <a href="/case-study/richer.php" class="card-info">
+            <a href="/richer" class="card-info">
                 <h3 class="card-info-title">RicHer</h3>
                 <p class="card-info-text">Female-led finance and investing format</p>
             </a>
@@ -133,4 +133,4 @@ $sections = [
     </section>
 </main>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once 'includes/footer.php'; ?>

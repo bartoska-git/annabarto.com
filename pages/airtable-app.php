@@ -3,7 +3,7 @@ $pageTitle = 'Custom Airtable App (Moniify)';
 $isCaseStudy = true;
 $backLink = '/#portfolio';
 $backText = 'Back to Portfolio';
-require_once '../includes/header.php';
+require_once 'includes/header.php';
 
 $stats = [
     ['label' => 'Automated Handoffs/Year', 'value' => '10K+'],
@@ -25,7 +25,7 @@ $relatedCaseStudies = [
     ['title' => 'Moniify Creators', 'description' => 'Integrating credible creators into editorial output', 'slug' => 'moniify-creators']
 ];
 ?>
-<?php require_once '../includes/navigation.php'; ?>
+<?php require_once 'includes/navigation.php'; ?>
 
 <aside class="toc">
     <div class="toc-inner">
@@ -63,7 +63,7 @@ $relatedCaseStudies = [
         <div class="section-header">
             <h2 class="section-title">Problem / Opportunity</h2>
         </div>
-        <p class="mb-lg"><a href="/case-study/moniify.php" class="link-accent font-medium">Moniify</a> was a product-led media startup targeting Zillennials interested in building financial independence. Among its portfolio, <a href="/case-study/moniify-creators.php" class="link-accent font-medium">Moniify Creators</a> stood out for its scale, commissioning twelve creators who delivered ≈240 assets per month across five agency pipelines. Integrating creators directly into editorial production was a new model for business media, creating two core challenges for the product's small 3.5-person editorial team.</p>
+        <p class="mb-lg"><a href="/moniify" class="link-accent font-medium">Moniify</a> was a product-led media startup targeting Zillennials interested in building financial independence. Among its portfolio, <a href="/moniify-creators" class="link-accent font-medium">Moniify Creators</a> stood out for its scale, commissioning twelve creators who delivered ≈240 assets per month across five agency pipelines. Integrating creators directly into editorial production was a new model for business media, creating two core challenges for the product's small 3.5-person editorial team.</p>
         <h3 class="text-xl font-semibold mb-md">Challenge 1: Volume & Fragmentation</h3>
         <p class="mb-2xl">Each agency partner used their own spreadsheets and chat threads to manage production, causing lost approvals, conflicting versions, and difficulty tracking progress. Unlike Moniify's other products (which used one partner each), Creators demanded enterprise-level workflow infrastructure—but engineering resources were extremely limited.</p>
         <h3 class="text-xl font-semibold mb-md">Challenge 2: Confidentiality & Access Control</h3>
@@ -146,7 +146,7 @@ $relatedCaseStudies = [
         </div>
         <div class="grid grid-2">
             <?php foreach ($relatedCaseStudies as $study): ?>
-            <a href="/case-study/<?php echo $study['slug']; ?>.php" class="card-info">
+            <a href="/<?php echo $study['slug']; ?>" class="card-info">
                 <h3 class="card-info-title"><?php echo htmlspecialchars($study['title']); ?></h3>
                 <p class="card-info-text"><?php echo htmlspecialchars($study['description']); ?></p>
             </a>
@@ -155,4 +155,4 @@ $relatedCaseStudies = [
     </section>
 </main>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once 'includes/footer.php'; ?>

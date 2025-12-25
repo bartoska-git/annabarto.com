@@ -1,9 +1,9 @@
 <?php
 $pageTitle = 'Moniify Creators';
 $isCaseStudy = true;
-$backLink = '/case-study/moniify.php';
+$backLink = '/moniify';
 $backText = 'Back to Moniify Case Study';
-require_once '../includes/header.php';
+require_once 'includes/header.php';
 
 $stats = [
     ['label' => 'Commissioned Creators', 'value' => '12'],
@@ -20,7 +20,7 @@ $sections = [
     ['id' => 'outcome', 'label' => 'Outcome']
 ];
 ?>
-<?php require_once '../includes/navigation.php'; ?>
+<?php require_once 'includes/navigation.php'; ?>
 
 <aside class="toc">
     <div class="toc-inner">
@@ -86,7 +86,7 @@ $sections = [
             </div>
             <div>
                 <h3 class="font-semibold mb-sm">Operations System</h3>
-                <p><a href="/case-study/airtable-app.php" class="link-accent font-medium">Built a custom Airtable app</a> connecting creators, agencies, and the internal team — automating 10K+ handoffs annually across 700+ workflows and five agency pipelines.</p>
+                <p><a href="/airtable-app" class="link-accent font-medium">Built a custom Airtable app</a> connecting creators, agencies, and the internal team — automating 10K+ handoffs annually across 700+ workflows and five agency pipelines.</p>
             </div>
             <div>
                 <h3 class="font-semibold mb-sm">Distribution & Launch</h3>
@@ -116,11 +116,11 @@ $sections = [
             <h2 class="section-title">Related Case Studies</h2>
         </div>
         <div class="grid grid-2">
-            <a href="/case-study/moniify.php" class="card-info">
+            <a href="/moniify" class="card-info">
                 <h3 class="card-info-title">Building 0→1 Products at Moniify</h3>
                 <p class="card-info-text">Product strategy and 0→1 building at a media startup</p>
             </a>
-            <a href="/case-study/airtable-app.php" class="card-info">
+            <a href="/airtable-app" class="card-info">
                 <h3 class="card-info-title">Custom Airtable App (Moniify)</h3>
                 <p class="card-info-text">Workflow automation for 10K+ handoffs</p>
             </a>
@@ -128,4 +128,4 @@ $sections = [
     </section>
 </main>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once 'includes/footer.php'; ?>

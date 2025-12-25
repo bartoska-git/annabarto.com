@@ -3,7 +3,7 @@ $pageTitle = 'Building 0→1 Products at Moniify';
 $isCaseStudy = true;
 $backLink = '/#portfolio';
 $backText = 'Back to Portfolio';
-require_once '../includes/header.php';
+require_once 'includes/header.php';
 
 $stats = [
     ['label' => 'Products Built', 'value' => '3'],
@@ -29,7 +29,7 @@ $sections = [
     ['id' => 'related', 'label' => 'Related Case Studies']
 ];
 ?>
-<?php require_once '../includes/navigation.php'; ?>
+<?php require_once 'includes/navigation.php'; ?>
 
 <aside class="toc">
     <div class="toc-inner">
@@ -80,7 +80,7 @@ $sections = [
                     <span class="tag tag-emerald">Launched</span>
                 </div>
                 <p class="mb-md">A creator-led product built around the insight that, while creators had become a leading voice for Zillennials, finance media had failed to integrate them into their editorial output.</p>
-                <a href="/case-study/moniify-creators.php" class="link-accent font-medium text-sm">Learn more about this product</a>
+                <a href="/moniify-creators" class="link-accent font-medium text-sm">Learn more about this product</a>
             </div>
             <div class="card-info">
                 <div class="flex justify-between items-start mb-md">
@@ -88,7 +88,7 @@ $sections = [
                     <span class="tag tag-emerald">Launched</span>
                 </div>
                 <p class="mb-md">A daily video product based on the insight that "new money" topics such as AI, crypto, and emerging markets were under-served by traditional coverage.</p>
-                <a href="/case-study/moniify-daily.php" class="link-accent font-medium text-sm">Learn more about this product</a>
+                <a href="/moniify-daily" class="link-accent font-medium text-sm">Learn more about this product</a>
             </div>
             <div class="card-info">
                 <div class="flex justify-between items-start mb-md">
@@ -96,7 +96,7 @@ $sections = [
                     <span class="tag tag-blue">Piloted</span>
                 </div>
                 <p class="mb-md">A female-led finance and investing format driven by the insight that, despite women representing a rapidly growing investor segment, financial media still lacked female perspectives on practical finance and investing.</p>
-                <a href="/case-study/richer.php" class="link-accent font-medium text-sm">Learn more about this product</a>
+                <a href="/richer" class="link-accent font-medium text-sm">Learn more about this product</a>
             </div>
         </div>
     </section>
@@ -139,7 +139,7 @@ $sections = [
             <li>Developed product strategies grounded in user, market, and competitive research</li>
             <li>Built and led three hybrid product–editorial teams (20+ team members)</li>
             <li>Coordinated with finance and legal on budgets, contracts, and compliance</li>
-            <li>Created <a href="/case-study/airtable-app.php" class="link-accent font-medium">Airtable-based workflow systems</a> for cross-team and external collaboration</li>
+            <li>Created <a href="/airtable-app" class="link-accent font-medium">Airtable-based workflow systems</a> for cross-team and external collaboration</li>
             <li>Worked on brand systems with design</li>
             <li>Partnered with engineering, design, and analytics on user journeys, data layers, and website discovery optimization and feature prioritization</li>
             <li>Drove format prototyping pre-launch and A/B testing post launch</li>
@@ -196,7 +196,7 @@ $sections = [
         </div>
         <div class="grid grid-2">
             <?php foreach ($relatedCaseStudies as $study): ?>
-            <a href="/case-study/<?php echo $study['slug']; ?>.php" class="card-info">
+            <a href="/<?php echo $study['slug']; ?>" class="card-info">
                 <h3 class="card-info-title"><?php echo htmlspecialchars($study['title']); ?></h3>
                 <p class="card-info-text"><?php echo htmlspecialchars($study['description']); ?></p>
             </a>
@@ -205,4 +205,4 @@ $sections = [
     </section>
 </main>
 
-<?php require_once '../includes/footer.php'; ?>
+<?php require_once 'includes/footer.php'; ?>
