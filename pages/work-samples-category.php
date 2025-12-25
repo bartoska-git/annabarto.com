@@ -41,7 +41,7 @@ $categories = [
             ],
             [
                 'title' => 'Hidden Layers explainer series',
-                'embed' => 'https://www.youtube.com/embed/9YrYDqhJqPw?controls=0',
+                'embed' => 'https://www.youtube.com/embed/9YrYDqhJdPw?controls=0',
                 'date' => 'January 2023',
                 'role' => 'Producer, Director',
                 'description' => '<p>Hidden Layers is an explainer series about generative AI. The series was recorded in front of a green screen and a custom boilerplate was designed for this show.</p><p>The first episode aired in January 2023 and has already added over 700 subscribers to the new <a href="https://www.youtube.com/@GoogleResearch" class="link-accent">Google Research</a> channel.</p>'
