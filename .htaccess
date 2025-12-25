@@ -7,6 +7,9 @@ RewriteRule ^ - [L]
 # Route homepage to pages/index.php
 RewriteRule ^$ pages/index.php [L]
 
+# Route work-samples category pages
+RewriteRule ^work-samples/([a-z-]+)$ pages/work-samples-category.php?category=$1 [L,QSA]
+
 # Route requests to pages/ if PHP file exists
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
