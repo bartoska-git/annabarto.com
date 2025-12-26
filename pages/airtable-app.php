@@ -6,10 +6,10 @@ $backText = 'Back to Portfolio';
 require_once '../includes/header.php';
 
 $stats = [
-    ['label' => 'Automated Handoffs/Year', 'value' => '10K+'],
-    ['label' => 'Video Workflows/Year', 'value' => '700+'],
-    ['label' => 'Deliverables/Month', 'value' => '240'],
-    ['label' => 'Agency Pipelines', 'value' => '5']
+    ['value' => '10K+', 'labelSecondary' => 'Automated', 'label' => 'Handoffs/Year'],
+    ['value' => '700+', 'labelSecondary' => 'Video', 'label' => 'Workflows/Year'],
+    ['value' => '240', 'label' => 'Deliverables/Month'],
+    ['value' => '5', 'labelSecondary' => 'Agency', 'label' => 'Pipelines']
 ];
 
 $sections = [
@@ -53,7 +53,12 @@ $relatedCaseStudies = [
     <div class="stats-grid">
         <?php foreach ($stats as $stat): ?>
         <div class="stat-card">
-            <div class="stat-value"><?php echo $stat['value']; ?></div>
+            <div class="stat-top">
+                <div class="stat-value"><?php echo $stat['value']; ?></div>
+                <?php if (isset($stat['labelSecondary'])): ?>
+                <div class="stat-label-secondary"><?php echo $stat['labelSecondary']; ?></div>
+                <?php endif; ?>
+            </div>
             <div class="stat-label"><?php echo $stat['label']; ?></div>
         </div>
         <?php endforeach; ?>

@@ -6,10 +6,10 @@ $backText = 'Back to Moniify Case Study';
 require_once '../includes/header.php';
 
 $stats = [
-    ['label' => 'Commissioned Creators', 'value' => '12'],
-    ['label' => 'Assets/Month', 'value' => '240'],
-    ['label' => 'Agency Pipelines', 'value' => '5'],
-    ['label' => 'Social Performance', 'value' => 'Top']
+    ['value' => '12', 'labelSecondary' => 'Commissioned', 'label' => 'Creators'],
+    ['value' => '240', 'label' => 'Assets/Month'],
+    ['value' => '5', 'labelSecondary' => 'Agency', 'label' => 'Pipelines'],
+    ['value' => 'Top', 'labelSecondary' => 'Social', 'label' => 'Performance']
 ];
 
 $sections = [
@@ -48,7 +48,12 @@ $sections = [
     <div class="stats-grid">
         <?php foreach ($stats as $stat): ?>
         <div class="stat-card">
-            <div class="stat-value"><?php echo $stat['value']; ?></div>
+            <div class="stat-top">
+                <div class="stat-value"><?php echo $stat['value']; ?></div>
+                <?php if (isset($stat['labelSecondary'])): ?>
+                <div class="stat-label-secondary"><?php echo $stat['labelSecondary']; ?></div>
+                <?php endif; ?>
+            </div>
             <div class="stat-label"><?php echo $stat['label']; ?></div>
         </div>
         <?php endforeach; ?>

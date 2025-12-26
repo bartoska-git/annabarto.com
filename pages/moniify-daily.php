@@ -6,10 +6,10 @@ $backText = 'Back to Moniify Case Study';
 require_once '../includes/header.php';
 
 $stats = [
-    ['label' => 'Content Length', 'value' => '~15 min'],
-    ['label' => 'Publishing Cadence', 'value' => 'Weekdays'],
-    ['label' => 'Focus Areas', 'value' => 'Tech & Crypto'],
-    ['label' => 'Regional Lens', 'value' => 'Asia-first']
+    ['value' => '~15', 'labelSecondary' => 'Minutes', 'label' => 'Per Episode'],
+    ['value' => '5x', 'labelSecondary' => 'Per Week', 'label' => 'Weekdays'],
+    ['value' => '2', 'labelSecondary' => 'Focus', 'label' => 'Tech & Crypto'],
+    ['value' => 'Asia', 'labelSecondary' => 'First', 'label' => 'Regional Lens']
 ];
 
 $sections = [
@@ -48,7 +48,12 @@ $sections = [
     <div class="stats-grid">
         <?php foreach ($stats as $stat): ?>
         <div class="stat-card">
-            <div class="stat-value"><?php echo $stat['value']; ?></div>
+            <div class="stat-top">
+                <div class="stat-value"><?php echo $stat['value']; ?></div>
+                <?php if (isset($stat['labelSecondary'])): ?>
+                <div class="stat-label-secondary"><?php echo $stat['labelSecondary']; ?></div>
+                <?php endif; ?>
+            </div>
             <div class="stat-label"><?php echo $stat['label']; ?></div>
         </div>
         <?php endforeach; ?>
