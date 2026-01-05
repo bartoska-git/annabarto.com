@@ -127,17 +127,15 @@ require_once '../includes/navigation.php';
     <section id="writing" class="section">
         <div class="text-center mb-2xl">
             <h2 class="section-title mb-md">Writing</h2>
-            <p class="section-subtitle">Thoughts on product, media, AI, and the things I'm curious about.</p>
+            <p class="section-subtitle">My thoughts on product, media, AI, and the things I'm curious about.</p>
         </div>
         <div class="articles-scroll">
             <?php
             $articles = [
-                ['title' => 'When Creative Work Is Product Work', 'category' => 'Product Strategy', 'excerpt' => 'Exploring the intersection of creative processes and product development methodologies.', 'date' => 'June 12, 2023'],
-                ['title' => 'Building Products That Scale With User Needs', 'category' => 'Product Development', 'excerpt' => 'How to design flexible systems that evolve with your user base and their changing requirements.', 'date' => 'April 3, 2023'],
-                ['title' => 'The Future of Media Platforms', 'category' => 'Industry Insights', 'excerpt' => 'Predictions and analysis of emerging trends in media consumption and creator economies.', 'date' => 'February 18, 2023'],
-                ['title' => 'Data-Driven Product Decisions', 'category' => 'Product Strategy', 'excerpt' => 'How to leverage analytics and user research to make informed product choices.', 'date' => 'January 8, 2023'],
-                ['title' => 'The Art of Saying No', 'category' => 'Product Management', 'excerpt' => 'Why strategic prioritization and focus are essential skills for product managers.', 'date' => 'December 15, 2022'],
-                ['title' => 'AI and the Future of Content', 'category' => 'Industry Insights', 'excerpt' => 'Examining how artificial intelligence is reshaping content creation and distribution.', 'date' => 'November 22, 2022']
+                ['title' => 'When Creative Work Is Product Work', 'category' => 'Product Management', 'excerpt' => 'A producer\'s path to product management, exploring how creative production and PM share the same core loop: understand, design, ship, learn, and iterate.', 'date' => 'January 1, 2026', 'link' => 'https://medium.com/womenintechnology/when-creative-work-is-product-work-ba59267fb1ee'],
+                ['title' => 'It Looks Like ChatGPT Learned to Count. It Didn\'t.', 'category' => 'AI Architecture', 'excerpt' => 'LLMs seem much better at counting, but the real story is the shift toward hybrid, tool-augmented AI systems that delegate computational tasks strategically.', 'date' => 'December 18, 2025', 'link' => 'https://www.linkedin.com/pulse/looks-like-chatgpt-learned-count-itdidnt-anna-barto-eohmf/'],
+                ['title' => 'How Does a \'Normal\' Company Actually Implement Generative AI?', 'category' => 'MLOps', 'excerpt' => 'Exploring how MLOps platforms like Vertex AI bridge the gap between theory and implementation, enabling ordinary businesses to operationalize generative AI.', 'date' => 'November 13, 2025', 'link' => 'https://www.linkedin.com/pulse/how-does-normal-company-actually-implement-generative-anna-barto-gj3lc/'],
+                ['title' => 'AI Disruption Risk Framework', 'category' => 'AI Strategy', 'excerpt' => 'A practical framework for evaluating organizational AI vulnerability, emphasizing that successful AI strategy requires understanding where disruption threatens your competitive position.', 'date' => 'October 19, 2025', 'link' => 'https://www.linkedin.com/posts/anna-barto-product_ai-disruption-risk-framework-activity-7385703481598435328-Vfx2']
             ];
             foreach ($articles as $article): ?>
             <article class="article-card">
@@ -146,13 +144,13 @@ require_once '../includes/navigation.php';
                 <p class="article-excerpt"><?php echo htmlspecialchars($article['excerpt']); ?></p>
                 <div class="article-meta">
                     <span class="article-date"><?php echo htmlspecialchars($article['date']); ?></span>
-                    <a href="#" class="article-link">Read Article &rarr;</a>
+                    <a href="<?php echo htmlspecialchars($article['link']); ?>" target="_blank" rel="noopener noreferrer" class="article-link">Read More &rarr;</a>
                 </div>
             </article>
             <?php endforeach; ?>
         </div>
         <p class="medium-note">
-            Some essays are also published on <a href="https://medium.com/@annabarto" target="_blank" rel="noopener noreferrer" class="link-accent">Medium</a>.
+            Some of my essays are also published on <a href="https://medium.com/@annabarto" target="_blank" rel="noopener noreferrer" class="link-accent">Medium</a>.
         </p>
     </section>
 

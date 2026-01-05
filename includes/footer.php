@@ -39,6 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
+        // Check if we're near the bottom of the page (for last section)
+        const scrolledToBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50;
+        if (scrolledToBottom && sections.length > 0) {
+            currentSection = sections[sections.length - 1];
+            currentIndex = sections.length - 1;
+        }
+
         // Update active link
         tocLinks.forEach(l => l.classList.remove('active'));
         if (currentSection) {
@@ -47,12 +54,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update progress bar to reach the active section
         if (tocList && currentIndex >= 0) {
-            // Calculate the position of the active link in the TOC
+            // Calculate the position that extends to the bottom of the active link
             const activeLink = tocLinks[currentIndex];
             if (activeLink) {
                 const tocListRect = tocList.getBoundingClientRect();
                 const activeLinkRect = activeLink.getBoundingClientRect();
-                const progressHeight = (activeLinkRect.bottom - tocListRect.top) / tocListRect.height * 100;
+
+                // For the last section, extend to 100% of TOC height
+                // For other sections, extend to the bottom of the active link
+                let progressHeight;
+                if (currentIndex === sections.length - 1) {
+                    progressHeight = 100;
+                } else {
+                    progressHeight = (activeLinkRect.bottom - tocListRect.top) / tocListRect.height * 100;
+                }
 
                 const style = document.getElementById('toc-progress-style') || document.createElement('style');
                 style.id = 'toc-progress-style';
@@ -73,6 +88,26 @@ document.addEventListener('DOMContentLoaded', function() {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(updateTOC, 10);
     }, { passive: true });
+
+    // Handle TOC link clicks with proper offset
+    tocLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                const headerOffset = 100; // Offset to account for fixed navigation
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
     // Initialize
     updateTOC();

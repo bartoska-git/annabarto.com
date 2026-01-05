@@ -774,12 +774,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stat-top {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-height: 4.5rem;
   padding-bottom: var(--space-md);
   border-bottom: 1px solid rgba(201, 134, 106, 0.3);
 }
@@ -796,7 +796,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   font-weight: 500;
   color: var(--deep-espresso);
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xs);
 }
 
 .stat-label {

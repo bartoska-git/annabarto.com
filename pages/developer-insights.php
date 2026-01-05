@@ -9,7 +9,7 @@ $stats = [
     ['value' => '387', 'labelSecondary' => 'Developer', 'label' => 'Survey Responses'],
     ['value' => '≈95%', 'labelSecondary' => 'Confidence', 'label' => 'For 210K UMV'],
     ['value' => '2×', 'labelSecondary' => 'Growth', 'label' => 'Audience Reach'],
-    ['value' => '~20%', 'labelSecondary' => 'Increase', 'label' => 'Engagement']
+    ['value' => '20%', 'labelSecondary' => 'Increase', 'label' => 'Engagement']
 ];
 
 $sections = [
@@ -49,7 +49,7 @@ $relatedCaseStudies = [
             <p><span class="role-label">Role:</span> Research & Insights Lead (Senior Producer, Google Developer Media Lab)</p>
             <p><span class="role-label">Focus:</span> User Research · Data-Informed Strategy · Developer Insights</p>
         </div>
-        <p class="text-lg">I designed and led an end-to-end user study to understand Google Search's developer video audience: who they were, what they needed, and how to better serve them. The research gathered 387 responses with ≈95% confidence, revealing insights that shaped content strategy, expanded accessibility, and launched new distribution channels. These efforts doubled audience reach and increased engagement by ~20% with zero paid promotion.</p>
+        <p class="text-lg">I designed and led an end-to-end user study to understand Google Search's developer video audience: who they were, what they needed, and how to better serve them. The research gathered 387 responses with ≈95% confidence, revealing insights that shaped content strategy, expanded accessibility, and launched new distribution channels. These efforts doubled audience reach and increased engagement by 20% with zero paid promotion.</p>
     </div>
 
     <div class="stats-grid">
@@ -140,7 +140,7 @@ $relatedCaseStudies = [
         <div class="flex flex-col gap-lg">
             <div>
                 <h3 class="font-semibold mb-sm">Growth & Engagement</h3>
-                <p>Doubled audience reach and improved engagement by ~20%, informed by insights from the user study as part of the broader programming and accessibility initiative.</p>
+                <p>Doubled audience reach and improved engagement by 20%, informed by insights from the user study as part of the broader programming and accessibility initiative.</p>
             </div>
 
             <div>
