@@ -476,14 +476,15 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   font-size: 0.9375rem;
   font-weight: 500;
-  color: var(--olive-grey);
+  color: var(--soft-terracotta);
   text-decoration: none;
-  margin-bottom: var(--space-lg);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-xl);
   transition: color var(--transition-normal);
 }
 
 .hero-about-link:hover {
-  color: var(--soft-terracotta);
+  color: rgba(201, 134, 106, 0.8);
 }
 
 .hero-actions {
@@ -1602,7 +1603,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-content p {
   font-size: 1.125rem;
   line-height: 1.8;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
   color: var(--deep-espresso);
 }
 
@@ -1611,13 +1612,41 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--deep-espresso);
-  margin-top: var(--space-xl);
-  margin-bottom: var(--space-md);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-lg);
 }
 
-.about-content p:first-of-type {
+.about-content > p:first-of-type {
   font-size: 1.25rem;
   font-weight: 500;
+}
+
+.about-content .inline-link {
+  color: var(--olive-grey);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-normal);
+}
+
+.about-content .inline-link:hover {
+  color: var(--soft-terracotta);
+  border-bottom-color: var(--soft-terracotta);
+}
+
+.work-statements {
+  margin: var(--space-xl) 0;
+}
+
+.work-statements .statement {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--deep-espresso);
+  margin-bottom: var(--space-lg);
+}
+
+.work-statements .statement:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
@@ -1631,5 +1660,9 @@ h1, h2, h3, h4, h5, h6 {
 
   .about-content h2 {
     font-size: 1.25rem;
+  }
+
+  .work-statements .statement {
+    font-size: 1.125rem;
   }
 }

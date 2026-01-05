@@ -6,7 +6,7 @@ require_once '../includes/navigation.php';
 
 <main class="container">
     <!-- Hero Section -->
-    <section id="about" class="hero">
+    <section id="hero" class="hero">
         <div class="hero-image-wrapper">
             <img src="/public/barto-1.png" alt="Anna Barto" class="hero-avatar">
         </div>
