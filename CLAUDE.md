@@ -74,15 +74,22 @@ Or use the dev script for live reloading:
 ## Recent Updates
 
 ### About Page (pages/about.php)
-- Created comprehensive About page with professional bio
-- Content structure:
-  - Opening: 14+ years experience overview
-  - Career progression: YouTube → Google → Moniify
-  - AI fluency paragraph
-  - "How I work" section with bold statement format
+- Streamlined, concise About page optimized for PM/product leadership recruiters
+- Content structure (4 paragraphs):
+  - **Opening**: Strong hook - "product leader who moves fast in ambiguous environments"
+  - **Career path**: Chronological progression (strategy/advertising at Google → YouTube partnerships → Google Developer Media Lab → early-stage startups/consulting)
+  - **Specific examples**: YouTube creator crowdfunding discovery (with SQL), Google Developer Media Lab AI dubbing pilot, Moniify 0→1 products
+  - **AI fluency**: Recent focus on understanding AI systems and practical application
+- **How I work** section: 5 distinctive principles
+  - Bias toward action and adaptability
+  - Collaboration over rigid process
+  - Problem solver who takes initiative
+  - Combines data with experience, intuition, storytelling
+  - Walks the talk, transparent decision-making, continuous learning
 - Inline links to case studies: `/creator-crowdfunding`, `/ai-dubbing`, `/moniify`
-- External links to thought leadership: Medium essay, LinkedIn articles
-- Visual spacing optimized with `--space-xl` and `--space-2xl` variables
+- External links to thought leadership: Medium essay on creative work as product work, LinkedIn articles on AI
+- Language optimized to avoid AI-sounding patterns (removed em dashes, generic phrases)
+- ~310 words total (10% shorter than original, significantly less dense)
 
 ### Homepage Capabilities Section (pages/index.php)
 - **Skills**: 12 strategic PM skills in card layout without categories
