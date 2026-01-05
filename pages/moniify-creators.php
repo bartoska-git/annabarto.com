@@ -6,10 +6,10 @@ $backText = 'Back to Moniify Case Study';
 require_once '../includes/header.php';
 
 $stats = [
-    ['value' => '12', 'labelSecondary' => 'Commissioned', 'label' => 'Creators'],
+    ['value' => '12', 'label' => 'Commissioned Creators'],
     ['value' => '240', 'label' => 'Assets/Month'],
-    ['value' => '5', 'labelSecondary' => 'Agency', 'label' => 'Pipelines'],
-    ['value' => 'Top', 'labelSecondary' => 'Social', 'label' => 'Performance']
+    ['value' => '5', 'label' => 'Agency Pipelines'],
+    ['value' => 'Top', 'label' => 'Social Performance']
 ];
 
 $sections = [
@@ -17,7 +17,8 @@ $sections = [
     ['id' => 'problem', 'label' => 'Problem / Opportunity'],
     ['id' => 'model', 'label' => 'The Model'],
     ['id' => 'implementation', 'label' => 'Implementation'],
-    ['id' => 'outcome', 'label' => 'Outcome']
+    ['id' => 'outcome', 'label' => 'Outcome'],
+    ['id' => 'related', 'label' => 'Related Case Studies']
 ];
 ?>
 <?php require_once '../includes/navigation.php'; ?>
@@ -116,7 +117,7 @@ $sections = [
         </div>
     </section>
 
-    <section class="mb-3xl">
+    <section id="related" class="mb-3xl">
         <div class="section-header">
             <h2 class="section-title">Related Case Studies</h2>
         </div>
@@ -128,6 +129,10 @@ $sections = [
             <a href="/airtable-app" class="card-info">
                 <h3 class="card-info-title">Custom Airtable App (Moniify)</h3>
                 <p class="card-info-text">Workflow automation for 10K+ handoffs</p>
+            </a>
+            <a href="/creator-crowdfunding" class="card-info">
+                <h3 class="card-info-title">Creator Crowdfunding Product Discovery (YouTube)</h3>
+                <p class="card-info-text">Hypothesis-driven discovery combining SQL data mining with market research</p>
             </a>
         </div>
     </section>

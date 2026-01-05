@@ -2,20 +2,22 @@
 $isHomepage = !isset($isCaseStudy) || !$isCaseStudy;
 $backLink = isset($backLink) ? $backLink : '/';
 $backText = isset($backText) ? $backText : 'Back to Portfolio';
+$isActualHomepage = ($_SERVER['REQUEST_URI'] === '/' || $_SERVER['REQUEST_URI'] === '/index.php');
+$baseUrl = $isActualHomepage ? '' : '/';
 ?>
 <nav class="nav">
     <div class="nav-inner">
         <a href="/" class="nav-logo">Anna Barto</a>
         <?php if ($isHomepage): ?>
         <div class="nav-links">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-            <a href="#writing" class="nav-link">Writing</a>
-            <a href="#capabilities" class="nav-link">Capabilities</a>
-            <a href="#testimonials" class="nav-link">Testimonials</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="<?php echo $baseUrl; ?>#portfolio" class="nav-link">Portfolio</a>
+            <a href="<?php echo $baseUrl; ?>#writing" class="nav-link">Writing</a>
+            <a href="<?php echo $baseUrl; ?>#capabilities" class="nav-link">Capabilities</a>
+            <a href="<?php echo $baseUrl; ?>#testimonials" class="nav-link">Testimonials</a>
         </div>
         <div class="nav-cta-wrapper">
-            <a href="#contact" class="nav-cta">Get in Touch</a>
+            <a href="<?php echo $baseUrl; ?>#contact" class="nav-cta">Get in Touch</a>
         </div>
         <button id="mobile-menu-btn" class="nav-mobile-btn" aria-label="Toggle menu">
             <svg id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -48,14 +50,14 @@ $backText = isset($backText) ? $backText : 'Back to Portfolio';
         </button>
     </div>
     <div class="nav-mobile-body">
-        <a href="#about" class="nav-mobile-link">About</a>
-        <a href="#portfolio" class="nav-mobile-link">Portfolio</a>
-        <a href="#writing" class="nav-mobile-link">Writing</a>
-        <a href="#capabilities" class="nav-mobile-link">Capabilities</a>
-        <a href="#testimonials" class="nav-mobile-link">Testimonials</a>
+        <a href="/about" class="nav-mobile-link">About</a>
+        <a href="<?php echo $baseUrl; ?>#portfolio" class="nav-mobile-link">Portfolio</a>
+        <a href="<?php echo $baseUrl; ?>#writing" class="nav-mobile-link">Writing</a>
+        <a href="<?php echo $baseUrl; ?>#capabilities" class="nav-mobile-link">Capabilities</a>
+        <a href="<?php echo $baseUrl; ?>#testimonials" class="nav-mobile-link">Testimonials</a>
     </div>
     <div class="nav-mobile-footer">
-        <a href="#contact" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">Get in Touch</a>
+        <a href="<?php echo $baseUrl; ?>#contact" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">Get in Touch</a>
     </div>
 </div>
 <script>
@@ -89,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Active section indicator
     const navLinks = document.querySelectorAll('.nav-link');
+    const navLogo = document.querySelector('.nav-logo');
     const sections = [];
 
     navLinks.forEach(link => {
@@ -107,20 +110,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentActive = null;
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const sectionData = sections.find(s => s.element === entry.target);
-                if (sectionData && currentActive !== sectionData.link) {
+    function updateActiveSection() {
+        // If we're near the top of the page (less than 100px scrolled), show logo dot
+        if (window.scrollY < 100) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            navLogo.classList.remove('inactive');
+            currentActive = null;
+            return;
+        }
+
+        // Otherwise, find the section that's currently in view
+        let foundActive = false;
+        for (const sectionData of sections) {
+            const rect = sectionData.element.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Check if section is in the active zone (between 20% and 40% of viewport)
+            if (rect.top < viewportHeight * 0.4 && rect.bottom > viewportHeight * 0.2) {
+                if (currentActive !== sectionData.link) {
                     navLinks.forEach(l => l.classList.remove('active'));
                     sectionData.link.classList.add('active');
+                    navLogo.classList.add('inactive');
                     currentActive = sectionData.link;
                 }
+                foundActive = true;
+                break;
             }
-        });
-    }, observerOptions);
+        }
 
-    sections.forEach(section => observer.observe(section.element));
+        if (!foundActive && currentActive !== null) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            navLogo.classList.remove('inactive');
+            currentActive = null;
+        }
+    }
+
+    // Use scroll event instead of IntersectionObserver for more precise control
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveSection, 50);
+    }, { passive: true });
+
+    // Initialize on load
+    updateActiveSection();
 });
 </script>
 <?php endif; ?>

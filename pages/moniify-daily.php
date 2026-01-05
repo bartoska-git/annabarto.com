@@ -6,9 +6,9 @@ $backText = 'Back to Moniify Case Study';
 require_once '../includes/header.php';
 
 $stats = [
-    ['value' => '~15', 'labelSecondary' => 'Minutes', 'label' => 'Per Episode'],
-    ['value' => '5x', 'labelSecondary' => 'Per Week', 'label' => 'Weekdays'],
-    ['value' => '2', 'labelSecondary' => 'Focus', 'label' => 'Tech & Crypto'],
+    ['value' => '~15', 'labelSecondary' => 'Minutes', 'label' => 'Content Length'],
+    ['value' => '5x', 'labelSecondary' => 'Per Week', 'label' => 'Publishing Cadence'],
+    ['value' => 'Tech & Crypto', 'label' => 'Focus Areas'],
     ['value' => 'Asia', 'labelSecondary' => 'First', 'label' => 'Regional Lens']
 ];
 
@@ -17,7 +17,8 @@ $sections = [
     ['id' => 'problem', 'label' => 'Problem / Opportunity'],
     ['id' => 'solution', 'label' => 'Solution'],
     ['id' => 'implementation', 'label' => 'Implementation'],
-    ['id' => 'outcome', 'label' => 'Outcome']
+    ['id' => 'outcome', 'label' => 'Outcome'],
+    ['id' => 'related', 'label' => 'Related Case Studies']
 ];
 ?>
 <?php require_once '../includes/navigation.php'; ?>
@@ -117,7 +118,7 @@ $sections = [
         </div>
     </section>
 
-    <section class="mb-3xl">
+    <section id="related" class="mb-3xl">
         <div class="section-header">
             <h2 class="section-title">Related Case Studies</h2>
         </div>

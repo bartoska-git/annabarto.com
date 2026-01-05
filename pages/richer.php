@@ -6,10 +6,10 @@ $backText = 'Back to Moniify Case Study';
 require_once '../includes/header.php';
 
 $stats = [
-    ['value' => '2', 'labelSecondary' => 'Dual-Host', 'label' => 'Vodcast Format'],
-    ['value' => '2', 'labelSecondary' => 'Host', 'label' => 'Perspectives'],
-    ['value' => '3', 'labelSecondary' => 'Development', 'label' => 'Iterations'],
-    ['value' => 'Asia', 'labelSecondary' => 'Female', 'label' => 'Investors']
+    ['value' => 'Vodcast', 'labelSecondary' => 'Dual-Host', 'label' => 'Format Type'],
+    ['value' => 'Advisor + Aspiring', 'labelSecondary' => 'Investor', 'label' => 'Host Dynamic'],
+    ['value' => '3', 'labelSecondary' => 'Iterations', 'label' => 'Development Cycles'],
+    ['value' => 'Female', 'labelSecondary' => 'Investors (Asia)', 'label' => 'Target Audience']
 ];
 
 $sections = [
@@ -17,7 +17,8 @@ $sections = [
     ['id' => 'problem', 'label' => 'Problem / Opportunity'],
     ['id' => 'solution', 'label' => 'Solution'],
     ['id' => 'development', 'label' => 'Product Development'],
-    ['id' => 'outcome', 'label' => 'Outcome']
+    ['id' => 'outcome', 'label' => 'Outcome'],
+    ['id' => 'related', 'label' => 'Related Case Studies']
 ];
 ?>
 <?php require_once '../includes/navigation.php'; ?>
@@ -111,7 +112,7 @@ $sections = [
         </div>
     </section>
 
-    <section class="mb-3xl">
+    <section id="related" class="mb-3xl">
         <div class="section-header">
             <h2 class="section-title">Related Case Studies</h2>
         </div>

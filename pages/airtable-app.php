@@ -6,10 +6,10 @@ $backText = 'Back to Portfolio';
 require_once '../includes/header.php';
 
 $stats = [
-    ['value' => '10K+', 'labelSecondary' => 'Automated', 'label' => 'Handoffs/Year'],
-    ['value' => '700+', 'labelSecondary' => 'Video', 'label' => 'Workflows/Year'],
+    ['value' => '10K+', 'label' => 'Automated Handoffs/Year'],
+    ['value' => '700+', 'label' => 'Video Workflows/Year'],
     ['value' => '240', 'label' => 'Deliverables/Month'],
-    ['value' => '5', 'labelSecondary' => 'Agency', 'label' => 'Pipelines']
+    ['value' => '5', 'label' => 'Agency Pipelines']
 ];
 
 $sections = [

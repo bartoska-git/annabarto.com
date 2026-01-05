@@ -20,6 +20,7 @@ require_once '../includes/navigation.php';
                     content R&D at a media lab, and 0&rarr;1 product work in early-stage
                     startups and consulting.
                 </p>
+                <a href="/about" class="hero-about-link">More about my journey &rarr;</a>
                 <div class="hero-actions">
                     <a href="#portfolio" class="btn btn-primary">
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -75,31 +76,31 @@ require_once '../includes/navigation.php';
                 ],
                 [
                     'title' => 'AI Dubbing Experiment (Google)',
-                    'description' => "Led Google's early AI-dubbing experiment for developer content, testing multilingual synthetic audio using Universal Translator. AI dubbing achieved ~3× higher adoption than subtitles.",
+                    'description' => "Led Google's early AI-dubbing experiment for developer content, testing multilingual synthetic audio using Universal Translator. AI dubbing achieved 3× higher adoption than subtitles.",
                     'tags' => ['AI Experimentation', 'Accessibility'],
                     'image' => '/public/cd39daee-6f59-4f2f-8cf0-57159d8faf59.jpg',
-                    'link' => null
+                    'link' => '/ai-dubbing'
                 ],
                 [
                     'title' => 'Developer Audience Insights Study (Google)',
-                    'description' => 'Designed and ran a 387-response user study (≈95% confidence for 210k UMV), revealing audience needs that doubled reach and boosted engagement ~20%.',
+                    'description' => 'Designed and ran a 387-response user study (≈95% confidence for 210k UMV), revealing audience needs that doubled reach and boosted engagement 20%.',
                     'tags' => ['User Research', 'Data-Informed Strategy'],
                     'image' => '/public/22d28a67-69f2-4a30-b34e-e18acc9a5905.jpg',
-                    'link' => null
+                    'link' => '/developer-insights'
                 ],
                 [
                     'title' => 'Cross-Platform Delivery & Discoverability (Google)',
-                    'description' => "Built the delivery and discovery system for Google's Search Off the Record podcast. Discoverability experiments grew downloads ~400%.",
+                    'description' => "Built the delivery and discovery system for Google's Search Off the Record podcast. Discoverability experiments drove 146% and 247% increases in downloads.",
                     'tags' => ['Platform Constraints', 'Product Discoverability'],
                     'image' => '/public/99c400fa-3d3f-470e-80b4-f9b521d39a42.jpg',
-                    'link' => null
+                    'link' => '/cross-platform-delivery'
                 ],
                 [
                     'title' => 'Creator Crowdfunding Product Discovery (YouTube)',
                     'description' => 'Led a hypothesis-driven discovery on creator crowdfunding, combining SQL data mining with global market research.',
                     'tags' => ['Creator Monetization', 'Product Discovery'],
                     'image' => '/public/052b2e21-868c-4771-9b4c-741580b7195e.jpg',
-                    'link' => null
+                    'link' => '/creator-crowdfunding'
                 ]
             ];
             foreach ($projects as $project): ?>
@@ -176,23 +177,22 @@ require_once '../includes/navigation.php';
                     <div class="skills-grid">
                         <?php
                         $skills = [
-                            ['name' => 'Product Strategy & Roadmapping', 'category' => 'Soft skills', 'color' => 'tag-purple'],
-                            ['name' => 'User Research & Experience Design', 'category' => 'Soft skills', 'color' => 'tag-purple'],
-                            ['name' => 'Agile & Lean Methodologies', 'category' => 'Soft skills', 'color' => 'tag-purple'],
-                            ['name' => 'Data-Driven Decision Making', 'category' => 'Hard skills', 'color' => 'tag-amber'],
-                            ['name' => 'Cross-functional Team Leadership', 'category' => 'Soft skills', 'color' => 'tag-purple'],
-                            ['name' => 'Content Strategy & Development', 'category' => 'Soft skills', 'color' => 'tag-purple'],
-                            ['name' => 'Platform Ecosystem Building', 'category' => 'Hard skills', 'color' => 'tag-amber'],
-                            ['name' => 'Growth & Monetization Strategy', 'category' => 'Hard skills', 'color' => 'tag-amber'],
-                            ['name' => 'Time Management', 'category' => 'Soft skills', 'color' => 'tag-purple'],
-                            ['name' => 'Design Systems', 'category' => 'Hard skills', 'color' => 'tag-amber'],
-                            ['name' => 'Wireframing & Prototyping', 'category' => 'Hard skills', 'color' => 'tag-amber'],
-                            ['name' => 'Communication', 'category' => 'Soft skills', 'color' => 'tag-purple']
+                            'Product Strategy & Delivery',
+                            'Hypothesis-Driven Discovery',
+                            '0→1 Product Building',
+                            'AI Strategy',
+                            'User & Market Research',
+                            'Data Analysis & SQL',
+                            'Prototyping & Experimentation',
+                            'Go-to-Market Strategy',
+                            'Cross-Functional Leadership',
+                            'Agile (Scrum)',
+                            'Content Strategy & Development',
+                            'Project & Resource Management'
                         ];
                         foreach ($skills as $skill): ?>
                         <div class="skill-card">
-                            <span class="skill-name"><?php echo htmlspecialchars($skill['name']); ?></span>
-                            <span class="tag <?php echo $skill['color']; ?>"><?php echo htmlspecialchars($skill['category']); ?></span>
+                            <span class="skill-name"><?php echo htmlspecialchars($skill); ?></span>
                         </div>
                         <?php endforeach; ?>
                     </div>
@@ -202,26 +202,20 @@ require_once '../includes/navigation.php';
                     <div class="tools-grid">
                         <?php
                         $tools = [
-                            ['name' => 'Figma', 'proficiency' => 'Advanced', 'color' => 'tag-amber'],
-                            ['name' => 'Adobe Creative Suite', 'proficiency' => 'Advanced', 'color' => 'tag-amber'],
-                            ['name' => 'JIRA', 'proficiency' => 'Confident', 'color' => 'tag-blue'],
-                            ['name' => 'Confluence', 'proficiency' => 'Confident', 'color' => 'tag-blue'],
-                            ['name' => 'Google Analytics', 'proficiency' => 'Advanced', 'color' => 'tag-amber'],
-                            ['name' => 'Data Studio', 'proficiency' => 'Confident', 'color' => 'tag-blue'],
-                            ['name' => 'Amplitude', 'proficiency' => 'Confident', 'color' => 'tag-blue'],
-                            ['name' => 'Mixpanel', 'proficiency' => 'Confident', 'color' => 'tag-blue'],
-                            ['name' => 'Notion', 'proficiency' => 'Advanced', 'color' => 'tag-amber'],
-                            ['name' => 'Airtable', 'proficiency' => 'Confident', 'color' => 'tag-blue'],
-                            ['name' => 'Miro', 'proficiency' => 'Advanced', 'color' => 'tag-amber'],
-                            ['name' => 'FigJam', 'proficiency' => 'Confident', 'color' => 'tag-blue'],
-                            ['name' => 'GitHub', 'proficiency' => 'Basic', 'color' => 'tag-slate'],
-                            ['name' => 'Optimizely', 'proficiency' => 'Confident', 'color' => 'tag-blue'],
-                            ['name' => 'A/B Testing Platforms', 'proficiency' => 'Advanced', 'color' => 'tag-amber']
+                            ['category' => 'AI Prototyping', 'tools' => 'Magic Patterns, Bolt, Claude Code'],
+                            ['category' => 'AI Assistants', 'tools' => 'ChatGPT, NotebookLM, Relay.app, Perplexity'],
+                            ['category' => 'Bug Tracking & Corporate Wiki', 'tools' => 'Buganizer, g3doc, Google Sites'],
+                            ['category' => 'Project Management & Collaboration', 'tools' => 'Monday.com, Asana, Airtable, Miro, Notion'],
+                            ['category' => 'Data & Analytics', 'tools' => 'SQL (PLX), Google Analytics, PostHog, Optimizely'],
+                            ['category' => 'Content Management', 'tools' => 'YouTube CMS, YouTube Analytics'],
+                            ['category' => 'Design & Creative', 'tools' => 'Adobe Creative Suite (Basic), Canva, Artlist'],
+                            ['category' => 'Digital Asset Management', 'tools' => 'Frame.io, Iconik.io'],
+                            ['category' => 'Office Suite', 'tools' => 'Google Workspace, Microsoft 365']
                         ];
                         foreach ($tools as $tool): ?>
                         <div class="tool-card">
-                            <span class="tool-name"><?php echo htmlspecialchars($tool['name']); ?></span>
-                            <span class="tag <?php echo $tool['color']; ?>"><?php echo htmlspecialchars($tool['proficiency']); ?></span>
+                            <div class="tool-category"><?php echo htmlspecialchars($tool['category']); ?></div>
+                            <div class="tool-list"><?php echo htmlspecialchars($tool['tools']); ?></div>
                         </div>
                         <?php endforeach; ?>
                     </div>
@@ -233,11 +227,14 @@ require_once '../includes/navigation.php';
                             <tr><th>Year</th><th>Job Title</th><th>Organization</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td class="year">2019-2023</td><td>Senior Product Manager</td><td>Google</td></tr>
-                            <tr><td class="year">2017-2019</td><td>Product Lead, YouTube Creator Platform</td><td>YouTube</td></tr>
-                            <tr><td class="year">2015-2017</td><td>Product Strategy Consultant</td><td>Media Lab</td></tr>
-                            <tr><td class="year">2013-2015</td><td>Product Manager</td><td>Early-stage Startup</td></tr>
-                            <tr><td class="year">2011-2013</td><td>Content Strategy Lead</td><td>Digital Agency</td></tr>
+                            <tr><td class="year">2025-Present</td><td>Consultant, Product & Media</td><td>hgs Consultants (freelance)</td></tr>
+                            <tr><td class="year">2025</td><td>Acting Executive Producer (parental leave cover)</td><td>Google Developer Marketing (contracted via Randstad Digital Switzerland)</td></tr>
+                            <tr><td class="year">2024-2025</td><td>Product Manager</td><td>Moniify</td></tr>
+                            <tr><td class="year">2018-2024</td><td>Senior Producer, Research & Content Innovation</td><td>Google Developer Media Lab (contracted via Advanced Systems Group)</td></tr>
+                            <tr><td class="year">2016-2017</td><td>Founding Team (Pre-Launch)</td><td>Lafluence</td></tr>
+                            <tr><td class="year">2014-2017</td><td>Strategic Partner Manager, CEE & Israel</td><td>YouTube</td></tr>
+                            <tr><td class="year">2014</td><td>Project Manager, Transmedia</td><td>TransformatLab</td></tr>
+                            <tr><td class="year">2011-2014</td><td>Audience & Media Strategist, Digital Advertising, UKI & CZ/SK</td><td>Google</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -248,11 +245,14 @@ require_once '../includes/navigation.php';
                             <tr><th>Year</th><th>Certification / Course</th><th>Provider</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td class="year">2022</td><td>Professional Scrum Product Owner (PSPO)</td><td>Scrum.org</td></tr>
-                            <tr><td class="year">2021</td><td>Google Analytics Certification</td><td>Google</td></tr>
-                            <tr><td class="year">2020</td><td>Product Management Certification</td><td>Product School</td></tr>
-                            <tr><td class="year">2019</td><td>UX Design Professional Certificate</td><td>Google</td></tr>
-                            <tr><td class="year">2018</td><td>Advanced Leadership Program</td><td>Berkeley Haas</td></tr>
+                            <tr><td class="year">2025</td><td>AI Strategy (4-week program)</td><td>Reforge</td></tr>
+                            <tr><td class="year">2025</td><td>AI Productivity for Product Managers (4-week program)</td><td>Reforge</td></tr>
+                            <tr><td class="year">2025</td><td>Mastering Product Analytics (4-week program)</td><td>Reforge</td></tr>
+                            <tr><td class="year">2025</td><td>Certified Scrum Product Owner (CSPO)</td><td>Scrum Alliance</td></tr>
+                            <tr><td class="year">2023</td><td>Virtual Reality & Augmented Reality (2-month program)</td><td>MIT xPRO</td></tr>
+                            <tr><td class="year">2022</td><td>Change: How to Turn Uncertainty into Opportunity</td><td>Franklin Covey</td></tr>
+                            <tr><td class="year">2021</td><td>The 6 Critical Practices for Leading a Team</td><td>Franklin Covey</td></tr>
+                            <tr><td class="year">2015</td><td>App Making for Beginners</td><td>Ravensbourne University London</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -263,9 +263,7 @@ require_once '../includes/navigation.php';
                             <tr><th>Year</th><th>Degree</th><th>University</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td class="year">2009-2011</td><td>MBA</td><td>Stanford Graduate School of Business</td></tr>
-                            <tr><td class="year">2005-2009</td><td>B.A. in Communication & Media Studies</td><td>Columbia University</td></tr>
-                            <tr><td class="year">2017</td><td>Executive Education in Design Thinking</td><td>IDEO</td></tr>
+                            <tr><td class="year">2008-2011</td><td>BSc: Business, Language & Culture (research-based degree taught in English & Spanish)</td><td>Copenhagen Business School (Denmark)</td></tr>
                         </tbody>
                     </table>
                 </div>

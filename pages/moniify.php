@@ -6,8 +6,8 @@ $backText = 'Back to Portfolio';
 require_once '../includes/header.php';
 
 $stats = [
-    ['value' => '3', 'label' => 'Products Built'],
-    ['value' => '2', 'label' => 'Products Launched'],
+    ['value' => '3', 'labelSecondary' => 'Products', 'label' => 'Built'],
+    ['value' => '2', 'labelSecondary' => 'Products', 'label' => 'Launched'],
     ['value' => '20+', 'labelSecondary' => 'Hired & Led', 'label' => 'Team Members'],
     ['value' => '6', 'labelSecondary' => 'Months', 'label' => 'Build Timeline']
 ];
