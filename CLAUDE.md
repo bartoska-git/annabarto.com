@@ -21,6 +21,7 @@ barto/
 ├── pages/                       # Web-accessible PHP pages
 │   ├── index.php                # Homepage
 │   ├── about.php                # About page
+│   ├── building-with-ai.php     # How I Built This Site Using AI (Writing)
 │   ├── moniify.php              # Main Moniify case study
 │   ├── airtable-app.php         # Airtable workflow automation
 │   ├── moniify-creators.php     # Creator integration product
@@ -127,3 +128,40 @@ Or use the dev script for live reloading:
 - **Tools cards** (lines 1055-1066): Category headers with tool lists
 - **Data tables** (lines 1114-1158): Card-like rows with individual gradients
 - **Hero about link** (lines 474-487): Terracotta color with hover effect
+- **Featured badge** (.featured-badge): Terracotta background for featured articles in Writing section
+
+### Building with AI Page (pages/building-with-ai.php)
+- Featured article in Writing section demonstrating AI tool fluency
+- Full navigation (not minimal back-nav) since it's a LinkedIn traffic entry point
+- Structure follows About page pattern for readability
+- 6 sections:
+  1. The part AI didn't replace: Research & taste
+  2. Translating ideas into wireframes (with ChatGPT)
+  3. Visual identity: the cartoonification experiment
+  4. Site prototyping with AI tools (and when things broke)
+  5. Recovery, tool-switching, and site finalization
+  6. Final reflection
+- **Image layouts**:
+  - Section 2: Two images side by side (300px height, cropped to landscape)
+  - Section 3: Four cartoonification attempts in single row, Artlist result below
+  - Section 4: Single Magic Patterns Inspiration mode screenshot
+- **Styling**:
+  - Custom font size override: body text forced to 1rem with !important
+  - Subheader: 1.5rem terracotta color matching section headers
+  - All figcaptions: 0.875rem, italic, olive-grey, light-beige background
+- **External links**:
+  - Notion templates, marketing portfolio examples
+  - AI cartoonizer roundup
+  - Reforge AI Productivity course
+  - LinkedIn article: "It Looks Like ChatGPT Learned to Count. It Didn't."
+- **Images directory**: `/public/images/building-with-ai/` (8 images total)
+  - chatgpt-wireframe.png, chatgpt-visual-mockup.png
+  - cartoonification-attempts1.jpg through 4.png
+  - artlist-final-illustration.png
+  - magic-patterns-inspiration.png
+
+### Writing Section (pages/index.php)
+- Added featured flag to articles array
+- Featured article: "How I Built This Site Using AI" with AI Tools category
+- Featured badge displays next to category tag for featured articles
+- Articles can be internal (/building-with-ai) or external (https://...) links
