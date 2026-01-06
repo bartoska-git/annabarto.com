@@ -929,7 +929,16 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--soft-terracotta);
   border-radius: var(--radius-full);
   font-size: 0.875rem;
-  margin-bottom: var(--space-md);
+}
+
+.featured-badge {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  background: var(--soft-terracotta);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 .article-title {

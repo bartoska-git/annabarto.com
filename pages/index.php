@@ -132,19 +132,30 @@ require_once '../includes/navigation.php';
         <div class="articles-scroll">
             <?php
             $articles = [
+                ['title' => 'How I Built This Site Using AI', 'category' => 'AI Tools', 'excerpt' => 'What worked, what broke, and what I didn\'t expect. A detailed exploration of building this portfolio site using AI tools across the full process.', 'date' => 'January 10, 2026', 'link' => '/building-with-ai', 'featured' => true],
                 ['title' => 'When Creative Work Is Product Work', 'category' => 'Product Management', 'excerpt' => 'A producer\'s path to product management, exploring how creative production and PM share the same core loop: understand, design, ship, learn, and iterate.', 'date' => 'January 1, 2026', 'link' => 'https://medium.com/womenintechnology/when-creative-work-is-product-work-ba59267fb1ee'],
                 ['title' => 'It Looks Like ChatGPT Learned to Count. It Didn\'t.', 'category' => 'AI Architecture', 'excerpt' => 'LLMs seem much better at counting, but the real story is the shift toward hybrid, tool-augmented AI systems that delegate computational tasks strategically.', 'date' => 'December 18, 2025', 'link' => 'https://www.linkedin.com/pulse/looks-like-chatgpt-learned-count-itdidnt-anna-barto-eohmf/'],
                 ['title' => 'How Does a \'Normal\' Company Actually Implement Generative AI?', 'category' => 'MLOps', 'excerpt' => 'Exploring how MLOps platforms like Vertex AI bridge the gap between theory and implementation, enabling ordinary businesses to operationalize generative AI.', 'date' => 'November 13, 2025', 'link' => 'https://www.linkedin.com/pulse/how-does-normal-company-actually-implement-generative-anna-barto-gj3lc/'],
                 ['title' => 'AI Disruption Risk Framework', 'category' => 'AI Strategy', 'excerpt' => 'A practical framework for evaluating organizational AI vulnerability, emphasizing that successful AI strategy requires understanding where disruption threatens your competitive position.', 'date' => 'October 19, 2025', 'link' => 'https://www.linkedin.com/posts/anna-barto-product_ai-disruption-risk-framework-activity-7385703481598435328-Vfx2']
             ];
-            foreach ($articles as $article): ?>
-            <article class="article-card">
-                <span class="article-category"><?php echo htmlspecialchars($article['category']); ?></span>
+            foreach ($articles as $article):
+                $isFeatured = isset($article['featured']) && $article['featured'];
+                $isExternal = strpos($article['link'], 'http') === 0;
+                $cardClass = $isFeatured ? 'article-card featured' : 'article-card';
+                $linkAttrs = $isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
+            ?>
+            <article class="<?php echo $cardClass; ?>">
+                <div style="display: flex; gap: var(--space-sm); align-items: center; margin-bottom: var(--space-md);">
+                    <span class="article-category"><?php echo htmlspecialchars($article['category']); ?></span>
+                    <?php if ($isFeatured): ?>
+                    <span class="featured-badge">Featured</span>
+                    <?php endif; ?>
+                </div>
                 <h3 class="article-title"><?php echo htmlspecialchars($article['title']); ?></h3>
                 <p class="article-excerpt"><?php echo htmlspecialchars($article['excerpt']); ?></p>
                 <div class="article-meta">
                     <span class="article-date"><?php echo htmlspecialchars($article['date']); ?></span>
-                    <a href="<?php echo htmlspecialchars($article['link']); ?>" target="_blank" rel="noopener noreferrer" class="article-link">Read More &rarr;</a>
+                    <a href="<?php echo htmlspecialchars($article['link']); ?>" <?php echo $linkAttrs; ?> class="article-link">Read More &rarr;</a>
                 </div>
             </article>
             <?php endforeach; ?>
