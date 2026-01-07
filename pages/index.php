@@ -26,7 +26,7 @@ require_once '../includes/navigation.php';
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         View Portfolio
                     </a>
-                    <a href="#" class="btn btn-primary">
+                    <a href="/public/Anna-Barto-CV.pdf" class="btn btn-primary" download>
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                         Download CV
                     </a>
