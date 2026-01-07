@@ -1647,7 +1647,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .work-statements .statement {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.6;
   color: var(--deep-espresso);
