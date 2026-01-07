@@ -165,3 +165,74 @@ Or use the dev script for live reloading:
 - Featured article: "How I Built This Site Using AI" with AI Tools category
 - Featured badge displays next to category tag for featured articles
 - Articles can be internal (/building-with-ai) or external (https://...) links
+
+### CV (anna-barto-cv.html & public/Anna Barto - CV.pdf)
+- **File location**: `anna-barto-cv.html` (source), `public/Anna Barto - CV.pdf` (downloadable)
+- **Target audience**: PM recruiters and hiring managers for PM/product leadership roles
+- **Page count**: Exactly 2 pages when printed (Cmd+P)
+- **Download link**: Homepage "Download CV" button links to `/public/Anna-Barto-CV.pdf`
+
+**Design & Typography:**
+- **Fonts**: DM Sans (body), Outfit (headings) - matching website
+- **Colors**: Terracotta (#c17c5c) for brand consistency - title line, section headers, role titles, links
+- **Font sizes**: Body 8pt, section headers 9pt, name 20pt, contact/links 8pt, dates 7.5pt, role context 7pt, tool categories 7.5pt
+- **Spacing**: Section headers 12px top margin, content 6px after headers, roles 10px apart
+- **Print margins**: @page 0.4in top/bottom, 0.5in sides
+- **Layout**: Single column for ATS compatibility, page-break-inside: avoid on roles
+
+**Content Structure:**
+1. **Header**:
+   - Name: "ANNA BARTO"
+   - Title line: "Product Manager · Tech-Led Media & Innovation · Ex-Google & YouTube"
+   - Contact info with orange divider: Email, Phone & WhatsApp, LinkedIn, Portfolio, Writing, Location
+   - Location integrated: "Based in Zürich | Open to European opportunities"
+   - Summary: 14+ years experience, moving fast in ambiguous environments, AI-assisted workflows, CSPO certified
+
+2. **Core Competencies** (12 skills, pipe-separated):
+   - Product Strategy & Delivery | Hypothesis-Driven Discovery | 0→1 Product Building | AI Strategy & Prototyping | Experimentation | User & Market Research | Go-to-Market Strategy | Cross-Functional Team Leadership | Project & Resource Management | Agile (Scrum) | Basic SQL | Cross-Platform User Experience
+
+3. **Platform & Tool Expertise** (3-column grid, 6 categories):
+   - AI Prototyping & Assistants, Product & Project Management, Analytics & Performance
+   - Bug Tracking & Documentation, Content & Media Systems, Design & Digital Assets
+
+4. **Selected Highlights** (5 highlights with annabarto.com links):
+   - Built 0→1 Product Portfolio at Moniify → `/moniify`
+   - Led Creator Crowdfunding Product Discovery at YouTube → `/creator-crowdfunding`
+   - Ran AI Dubbing Experiment at Google → `/ai-dubbing`
+   - Doubled Developer Audience via Research-Led Insights → `/developer-insights`
+   - Improved Cross-Platform Delivery & Adoption at Google → `/cross-platform-delivery`
+
+5. **Professional Experience** (7 roles, reverse chronological):
+   - hgs Consultants (Nov 2025 - Present): Consultant, Product & Media
+   - Google Developer Marketing (May 2025 - Aug 2025): Acting Executive Producer (via Randstad)
+   - Moniify (Jun 2024 - Mar 2025): Product Lead (6 bullets including research, 3 products, Airtable automation)
+   - Google Developer Media Lab (Feb 2018 - May 2024): Senior Producer, Research & Content Innovation (via Advanced Systems Group)
+   - YouTube (Sep 2014 - Jul 2017): Strategic Partner Manager, CEE & Israel
+   - TransformatLab (Jun 2014 - Sep 2014): Project Manager, Transmedia
+   - Google (Jun 2011 - Aug 2014): Audience & Media Strategist, Digital Advertising, UKI & CZ/SK
+
+6. **Early Ventures**: Lafluence (Feb 2016 - Nov 2017, Founding Team, Pre-Launch)
+
+7. **Education**: BSc Business, Language & Culture, Copenhagen Business School (2008-2011)
+
+8. **Selected Professional Development** (2 categories with bullet points):
+   - Product Management & AI: Reforge courses (2025), CSPO (2025)
+   - Leadership & Emerging Technology: Franklin Covey (2022, 2021), MIT xPRO VR/AR (2023)
+
+**Key Design Decisions:**
+- Role titles in terracotta color (not italic) for better readability at 8pt
+- All links consistent at 8pt (not 7pt) for visual harmony
+- Location moved inside contact info block (below orange divider)
+- Languages removed from competencies to save space
+- Research bullet positioned after product building at Moniify (logical flow)
+- TransformatLab kept as "Project Manager, Transmedia" (accurate historical title)
+- No layoffs mention (space efficiency, better framing)
+- Partnership bullet removed from Google Developer Media Lab (redundant, generic)
+
+**Alignment with Website:**
+- Title line matches positioning: "Tech-Led Media & Innovation"
+- All 5 highlights link to case studies on annabarto.com
+- Competencies align with homepage capabilities
+- Tools match demonstrated AI fluency
+- Summary echoes About page language
+- Visual brand consistency with terracotta color throughout
