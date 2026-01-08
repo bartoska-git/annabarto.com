@@ -33,10 +33,11 @@ setup_ssh() {
 # Usage: deploy <remote_path>
 deploy() {
     local remote_path="$1"
+    local exclude_opts="--exclude=.DS_Store --exclude=Thumbs.db --exclude=*.swp --exclude=*.swo --exclude=*~"
 
     if [ -n "$SSH_OPTS" ]; then
-        rsync -avz --delete -e "ssh $SSH_OPTS" www/ "${DEPLOY_USER}@${DEPLOY_HOST}:${remote_path}"
+        rsync -avz --delete $exclude_opts -e "ssh $SSH_OPTS" www/ "${DEPLOY_USER}@${DEPLOY_HOST}:${remote_path}"
     else
-        rsync -avz --delete www/ "${DEPLOY_USER}@${DEPLOY_HOST}:${remote_path}"
+        rsync -avz --delete $exclude_opts www/ "${DEPLOY_USER}@${DEPLOY_HOST}:${remote_path}"
     fi
 }
