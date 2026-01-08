@@ -93,6 +93,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const navLogo = document.querySelector('.nav-logo');
     const sections = [];
+    const currentPath = window.location.pathname;
+
+    // Check if we're on the About page
+    const isAboutPage = currentPath === '/about' || currentPath === '/about.php';
+
+    if (isAboutPage) {
+        // Find and activate the About link
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === '/about') {
+                link.classList.add('active');
+                navLogo.classList.add('inactive');
+            }
+        });
+    }
 
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
@@ -111,6 +125,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentActive = null;
 
     function updateActiveSection() {
+        // Don't update active state if we're on the About page
+        if (isAboutPage) {
+            return;
+        }
+
         // If we're near the top of the page (less than 100px scrolled), show logo dot
         if (window.scrollY < 100) {
             navLinks.forEach(l => l.classList.remove('active'));

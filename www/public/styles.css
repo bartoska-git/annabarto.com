@@ -477,14 +477,17 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--soft-terracotta);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: var(--soft-terracotta);
+  text-underline-offset: 2px;
   margin-top: var(--space-sm);
   margin-bottom: var(--space-xl);
-  transition: color var(--transition-normal);
+  transition: all var(--transition-normal);
 }
 
 .hero-about-link:hover {
   color: rgba(201, 134, 106, 0.8);
+  text-decoration-color: rgba(201, 134, 106, 0.8);
 }
 
 .hero-actions {
@@ -968,11 +971,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--soft-terracotta);
-  transition: color var(--transition-normal);
+  text-decoration: underline;
+  text-decoration-color: var(--soft-terracotta);
+  text-underline-offset: 2px;
+  transition: all var(--transition-normal);
 }
 
 .article-link:hover {
   color: rgba(201, 134, 106, 0.8);
+  text-decoration-color: rgba(201, 134, 106, 0.8);
 }
 
 /* ========================================
@@ -1483,11 +1490,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .link-accent {
   color: var(--soft-terracotta);
-  transition: color var(--transition-normal);
+  text-decoration: underline;
+  text-decoration-color: var(--soft-terracotta);
+  text-underline-offset: 2px;
+  transition: all var(--transition-normal);
 }
 
 .link-accent:hover {
   color: rgba(201, 134, 106, 0.8);
+  text-decoration-color: rgba(201, 134, 106, 0.8);
 }
 
 .link-underline {
@@ -1711,15 +1722,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-content .inline-link {
-  color: var(--olive-grey);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
+  color: var(--soft-terracotta);
+  text-decoration: underline;
+  text-decoration-color: var(--soft-terracotta);
+  text-underline-offset: 2px;
   transition: all var(--transition-normal);
 }
 
 .about-content .inline-link:hover {
-  color: var(--soft-terracotta);
-  border-bottom-color: var(--soft-terracotta);
+  color: rgba(201, 134, 106, 0.8);
+  text-decoration-color: rgba(201, 134, 106, 0.8);
 }
 
 .work-statements {

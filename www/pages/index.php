@@ -186,18 +186,18 @@ require_once '../includes/navigation.php';
                     <div class="skills-grid">
                         <?php
                         $skills = [
-                            'Product Strategy & Delivery',
+                            'Product Strategy & Execution',
                             'Hypothesis-Driven Discovery',
                             '0→1 Product Building',
-                            'AI Strategy',
+                            'AI Strategy & Prototyping',
                             'User & Market Research',
-                            'Data Analysis & SQL',
-                            'Prototyping & Experimentation',
+                            'Data Analysis & Basic SQL',
+                            'Experimentation',
                             'Go-to-Market Strategy',
                             'Cross-Functional Leadership',
+                            'Prioritization & Trade-offs',
                             'Agile (Scrum)',
-                            'Content Strategy & Development',
-                            'Project & Resource Management'
+                            'Cross-Platform User Experience'
                         ];
                         foreach ($skills as $skill): ?>
                         <div class="skill-card">
@@ -212,13 +212,13 @@ require_once '../includes/navigation.php';
                         <?php
                         $tools = [
                             ['category' => 'AI Prototyping', 'tools' => 'Magic Patterns, Bolt, Claude Code'],
-                            ['category' => 'AI Assistants', 'tools' => 'ChatGPT, NotebookLM, Relay.app, Perplexity'],
-                            ['category' => 'Bug Tracking & Corporate Wiki', 'tools' => 'Buganizer, g3doc, Google Sites'],
-                            ['category' => 'Project Management & Collaboration', 'tools' => 'Monday.com, Asana, Airtable, Miro, Notion'],
-                            ['category' => 'Data & Analytics', 'tools' => 'SQL (PLX), Google Analytics, PostHog, Optimizely'],
-                            ['category' => 'Content Management', 'tools' => 'YouTube CMS, YouTube Analytics'],
-                            ['category' => 'Design & Creative', 'tools' => 'Adobe Creative Suite (Basic), Canva, Artlist'],
-                            ['category' => 'Digital Asset Management', 'tools' => 'Frame.io, Iconik.io'],
+                            ['category' => 'AI Assistants', 'tools' => 'ChatGPT, NotebookLM, Perplexity'],
+                            ['category' => 'Workflow & Collaboration', 'tools' => 'Airtable, Miro, Asana, Monday.com, Relay.app, Notion'],
+                            ['category' => 'Analytics & Performance', 'tools' => 'Google Analytics, PostHog, YouTube Analytics, Optimizely'],
+                            ['category' => 'Bug Tracking & Documentation', 'tools' => 'Buganizer, g3doc, Google Sites'],
+                            ['category' => 'Design & Digital Assets', 'tools' => 'Adobe Suite (Basic), Canva, Artlist, Frame.io, Iconik.io'],
+                            ['category' => 'Content & Media Systems', 'tools' => 'YouTube CMS, Content ID'],
+                            ['category' => 'Data Analysis', 'tools' => 'SQL (PLX)'],
                             ['category' => 'Office Suite', 'tools' => 'Google Workspace, Microsoft 365']
                         ];
                         foreach ($tools as $tool): ?>
@@ -241,9 +241,9 @@ require_once '../includes/navigation.php';
                             <tr><td class="year">2024-2025</td><td>Product Manager</td><td>Moniify</td></tr>
                             <tr><td class="year">2018-2024</td><td>Senior Producer, Research & Content Innovation</td><td>Google Developer Media Lab (contracted via Advanced Systems Group)</td></tr>
                             <tr><td class="year">2016-2017</td><td>Founding Team (Pre-Launch)</td><td>Lafluence</td></tr>
-                            <tr><td class="year">2014-2017</td><td>Strategic Partner Manager, CEE & Israel</td><td>YouTube</td></tr>
+                            <tr><td class="year">2014-2017</td><td>Strategic Partner Manager</td><td>YouTube</td></tr>
                             <tr><td class="year">2014</td><td>Project Manager, Transmedia</td><td>TransformatLab</td></tr>
-                            <tr><td class="year">2011-2014</td><td>Audience & Media Strategist, Digital Advertising, UKI & CZ/SK</td><td>Google</td></tr>
+                            <tr><td class="year">2011-2014</td><td>Audience & Media Strategist, Digital Advertising</td><td>Google</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -257,7 +257,7 @@ require_once '../includes/navigation.php';
                             <tr><td class="year">2025</td><td>AI Strategy (4-week program)</td><td>Reforge</td></tr>
                             <tr><td class="year">2025</td><td>AI Productivity for Product Managers (4-week program)</td><td>Reforge</td></tr>
                             <tr><td class="year">2025</td><td>Mastering Product Analytics (4-week program)</td><td>Reforge</td></tr>
-                            <tr><td class="year">2025</td><td>Certified Scrum Product Owner (CSPO)</td><td>Scrum Alliance</td></tr>
+                            <tr><td class="year">2025</td><td>Certified Scrum Product Owner (CSPO®)</td><td>Scrum Alliance</td></tr>
                             <tr><td class="year">2023</td><td>Virtual Reality & Augmented Reality (2-month program)</td><td>MIT xPRO</td></tr>
                             <tr><td class="year">2022</td><td>Change: How to Turn Uncertainty into Opportunity</td><td>Franklin Covey</td></tr>
                             <tr><td class="year">2021</td><td>The 6 Critical Practices for Leading a Team</td><td>Franklin Covey</td></tr>
