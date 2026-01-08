@@ -177,6 +177,7 @@ Or use the dev script for live reloading:
 - **Colors**: Terracotta (#c17c5c) for brand consistency - title line, section headers, role titles, links
 - **Font sizes**: Body 8pt, section headers 9pt, name 20pt, contact/links 8pt, dates 7.5pt, role context 7pt, company names 8pt, tool categories 8pt
 - **Spacing**: Section headers 12px top margin, 8px bottom margin (padding-bottom: 0), content roles 10px apart, tool category margin-bottom 1px
+- **Line-height**: 1.4 for summary, competencies, and highlight-item (increased from 1.35 to fix spacing inconsistencies); 1.3 for all other sections
 - **Print margins**: @page 0.4in top/bottom, 0.5in sides
 - **Layout**: Single column for ATS compatibility, page-break-inside: avoid on roles
 
@@ -186,7 +187,7 @@ Or use the dev script for live reloading:
    - Title line: "Product Manager · Tech-Led Media & Innovation · Ex-Google & YouTube"
    - Contact info with orange divider: Email, Phone & WhatsApp, LinkedIn, Portfolio, Writing, Location
    - Location integrated: "Based in Zürich | Open to European opportunities"
-   - Summary: 14+ years experience across Google, YouTube, and early-stage startups, moving fast in ambiguous environments, AI-assisted workflows, CSPO certified (no "Currently consulting" - kept evergreen)
+   - Summary: 14+ years experience across Google, YouTube, and early-stage startups, track record of 0→1 product building, user research, and experimentation, AI-assisted workflows, CSPO certified (added "Track record of 0→1 product building, user research, and experimentation across platform and media products" sentence; removed "Skilled at moving fast in ambiguous environments and" for conciseness; no "Currently consulting" - kept evergreen)
 
 2. **Core Competencies** (12 skills, pipe-separated):
    - Product Strategy & Delivery | Hypothesis-Driven Discovery | 0→1 Product Building | AI Strategy & Prototyping | Experimentation | User & Market Research | Go-to-Market Strategy | Cross-Functional Team Leadership | Project & Resource Management | Agile (Scrum) | Basic SQL | Cross-Platform User Experience
@@ -195,7 +196,8 @@ Or use the dev script for live reloading:
    - Row 1: AI Prototyping & Assistants, Project Management & Collaboration, Analytics & Performance
    - Row 2: Bug Tracking & Documentation, Design & Digital Assets, Content & Media Systems
 
-4. **Selected Highlights** (5 highlights with annabarto.com links, bulleted):
+4. **Selected Product Highlights** (5 highlights with annabarto.com links, bulleted):
+   - Section renamed from "Selected Highlights" to "Selected Product Highlights" for stronger product positioning
    - Built 0→1 Product Portfolio at Moniify → `/moniify`
    - Led Creator Crowdfunding Product Discovery at YouTube → `/creator-crowdfunding`
    - Ran AI Dubbing Experiment at Google → `/ai-dubbing`
@@ -208,11 +210,11 @@ Or use the dev script for live reloading:
 6. **Professional Experience** (7 roles, reverse chronological):
    - hgs Consultants (Nov 2025 - Present): Consultant, Product & Media
    - Google Developer Marketing (May 2025 - Aug 2025): Acting Executive Producer (via Randstad)
-   - Moniify (Jun 2024 - Mar 2025): Product Lead (6 bullets including research, 3 products, Airtable automation)
-   - Google Developer Media Lab (Feb 2018 - May 2024): Senior Producer, Research & Content Innovation (via Advanced Systems Group) - bullet: "coordinated production teams across the US and EMEA" (removed "distributed")
-   - YouTube (Sep 2014 - Jul 2017): Strategic Partner Manager, CEE & Israel
-   - TransformatLab (Jun 2014 - Sep 2014): Project Manager, Transmedia
-   - Google (Jun 2011 - Aug 2014): Audience & Media Strategist, Digital Advertising, UKI & CZ/SK
+   - Moniify (Jun 2024 - Mar 2025): Product Lead (6 bullets including research, 3 products, Airtable automation) - references "[See Selected Product Highlights]"
+   - Google Developer Media Lab (Feb 2018 - May 2024): Senior Producer, Research & Content Innovation (via Advanced Systems Group) - bullet: "coordinated production teams across the US and EMEA" (removed "distributed"), references "[See Selected Product Highlights]"
+   - YouTube (Sep 2014 - Jul 2017): Strategic Partner Manager (removed "CEE & Israel" regional detail) - first bullet changed from "Led" to "Owned" for verb variation, second bullet changed from "research" to "product discovery", references "[See Selected Product Highlights]"
+   - TransformatLab (Jun 2014 - Sep 2014): Project Manager, Transmedia - bullet: "Led prototyping and design" (swapped order from "design and prototyping")
+   - Google (Jun 2011 - Aug 2014): Audience & Media Strategist, Digital Advertising (removed "UKI & CZ/SK" regional detail)
 
 7. **Early Ventures**: Lafluence (Feb 2016 - Nov 2017, Founding Team, Pre-Launch)
 
@@ -235,6 +237,10 @@ Or use the dev script for live reloading:
 - Tool category spacing: margin-bottom 1px (tighter, more consistent)
 - Summary kept evergreen: removed "Currently consulting" (redundant with hgs Consultants role)
 - Summary positioning: "early-stage startups" (not just "startups") to signal 0→1 experience
+- Regional details removed from role titles: YouTube removed "CEE & Israel", Google removed "UKI & CZ/SK" for cleaner presentation
+- Section name "Selected Product Highlights" (not "Selected Highlights") for stronger product positioning
+- All cross-references updated to "[See Selected Product Highlights]" for consistency
+- Line-height standardization: 1.4 for wrapped inline text (summary, competencies, highlights), 1.3 for regular content
 
 **Alignment with Website:**
 - Title line matches positioning: "Tech-Led Media & Innovation"
