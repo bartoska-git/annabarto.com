@@ -198,17 +198,18 @@ SSH key for automated deployment: `~/.ssh/claude_annabarto`
    - Title line: "Product Manager · Tech-Led Media & Innovation · Ex-Google & YouTube"
    - Contact info with orange divider: Email, Phone & WhatsApp, LinkedIn, Portfolio, Writing, Location
    - Location integrated: "Based in Zürich | Open to European opportunities"
-   - Summary: 14+ years experience across Google, YouTube, and early-stage startups, track record of 0→1 product building, user research, and experimentation, AI-assisted workflows, CSPO certified (added "Track record of 0→1 product building, user research, and experimentation across platform and media products" sentence; removed "Skilled at moving fast in ambiguous environments and" for conciseness; no "Currently consulting" - kept evergreen)
+   - Summary: 14+ years experience in product management (not "across"), track record of 0→1 product building, hypothesis-driven discovery, and experimentation, AI-assisted workflows, CSPO® (changed from "CSPO certified" to save space; added "hypothesis-driven discovery" to mirror competencies; reordered to lead with "product management")
 
 2. **Core Competencies** (12 skills, pipe-separated):
-   - Product Strategy & Delivery | Hypothesis-Driven Discovery | 0→1 Product Building | AI Strategy & Prototyping | Experimentation | User & Market Research | Go-to-Market Strategy | Cross-Functional Team Leadership | Project & Resource Management | Agile (Scrum) | Basic SQL | Cross-Platform User Experience
+   - Product Strategy & Execution (changed from "Delivery" for more senior positioning) | Hypothesis-Driven Discovery | 0→1 Product Building | AI Strategy & Prototyping | Experimentation | User & Market Research | Go-to-Market Strategy | Cross-Functional Team Leadership | Prioritization & Trade-offs (added; removed "Project & Resource Management" as too producer-like) | Agile (Scrum) | Basic SQL | Cross-Platform User Experience
 
 3. **Platform & Tool Expertise** (3-column grid, 6 categories):
-   - Row 1: AI Prototyping & Assistants, Project Management & Collaboration, Analytics & Performance
+   - Row 1: AI Prototyping & Assistants (removed Relay.app to save space; kept Claude Code, ChatGPT, NotebookLM, Magic Patterns), Workflow & Collaboration (renamed from "Project Management & Collaboration"), Analytics & Performance
    - Row 2: Bug Tracking & Documentation, Design & Digital Assets, Content & Media Systems
 
 4. **Selected Product Highlights** (5 highlights with annabarto.com links, bulleted):
    - Section renamed from "Selected Highlights" to "Selected Product Highlights" for stronger product positioning
+   - Added intro line: "Representative product work spanning strategy, discovery, experimentation, and 0→1 building:" (helps frame the section)
    - Built 0→1 Product Portfolio at Moniify → `/moniify`
    - Led Creator Crowdfunding Product Discovery at YouTube → `/creator-crowdfunding`
    - Ran AI Dubbing Experiment at Google → `/ai-dubbing`
@@ -220,10 +221,10 @@ SSH key for automated deployment: `~/.ssh/claude_annabarto`
 
 6. **Professional Experience** (7 roles, reverse chronological):
    - hgs Consultants (Nov 2025 - Present): Consultant, Product & Media
-   - Google Developer Marketing (May 2025 - Aug 2025): Acting Executive Producer (via Randstad)
-   - Moniify (Jun 2024 - Mar 2025): Product Lead (6 bullets including research, 3 products, Airtable automation) - references "[See Selected Product Highlights]"
-   - Google Developer Media Lab (Feb 2018 - May 2024): Senior Producer, Research & Content Innovation (via Advanced Systems Group) - bullet: "coordinated production teams across the US and EMEA" (removed "distributed"), references "[See Selected Product Highlights]"
-   - YouTube (Sep 2014 - Jul 2017): Strategic Partner Manager (removed "CEE & Israel" regional detail) - first bullet changed from "Led" to "Owned" for verb variation, second bullet changed from "research" to "product discovery", references "[See Selected Product Highlights]"
+   - Google Developer Marketing (May 2025 - Aug 2025): Acting Executive Producer (via Randstad) - condensed to single bullet: "Short-term role covering parental leave; focused on market and audience research to inform early 2026 planning." (removed "continuity" to save space)
+   - Moniify (Jun 2024 - Mar 2025): Product Lead - first bullet rewritten and reordered to lead with product ownership: "Owned end-to-end product lifecycle for three 0→1 video-first products, from discovery through launch." (removed "and iteration" as Moniify discontinued shortly after launch); research bullet shortened: "guide iterations" instead of "guide early-stage iterations"; references "[See Selected Product Highlights]"
+   - Google Developer Media Lab (Feb 2018 - May 2024): Senior Producer, Research & Content Innovation (via Advanced Systems Group) - bullets reordered to lead with metrics: "Led user research (contributing to 2× developer audience growth), AI experimentation (3× adoption vs subtitles), accessibility initiatives, and cross-platform growth experiments (146% and 247% increases in downloads)"; references "[See Selected Product Highlights]"
+   - YouTube (Sep 2014 - Jul 2017): Strategic Partner Manager (removed "CEE & Israel" regional detail) - bullets reordered to lead with product discovery: "Led product discovery into creator crowdfunding as 20% initiative" (removed "hypothesis-driven" to save space as it's already in competencies); GTM bullet second; references "[See Selected Product Highlights]"
    - TransformatLab (Jun 2014 - Sep 2014): Project Manager, Transmedia - bullet: "Led prototyping and design" (swapped order from "design and prototyping")
    - Google (Jun 2011 - Aug 2014): Audience & Media Strategist, Digital Advertising (removed "UKI & CZ/SK" regional detail)
 
@@ -232,7 +233,7 @@ SSH key for automated deployment: `~/.ssh/claude_annabarto`
 8. **Education**: BSc Business, Language & Culture, Copenhagen Business School (2008-2011)
 
 9. **Selected Professional Development** (1 category only, removed Leadership & Technology):
-   - Product Management & AI: Reforge courses (2025), CSPO (2025)
+   - Product Management & AI: Reforge courses (2025), CSPO® (2025) - added ® symbol for accuracy and consistency
 
 **Key Design Decisions:**
 - Role titles in terracotta color (not italic) for better readability at 8pt
@@ -252,6 +253,8 @@ SSH key for automated deployment: `~/.ssh/claude_annabarto`
 - Section name "Selected Product Highlights" (not "Selected Highlights") for stronger product positioning
 - All cross-references updated to "[See Selected Product Highlights]" for consistency
 - Line-height standardization: 1.4 for wrapped inline text (summary, competencies, highlights), 1.3 for regular content
+- Space optimization: CSPO® instead of "CSPO certified", removed Relay.app from tools, condensed Acting EP to 1 bullet, removed adjectives like "continuity", "early-stage", "hypothesis-driven" where redundant
+- Bullet ordering: Lead with product/metrics in all roles (Moniify: product ownership first; Google Dev Media Lab: metrics first; YouTube: product discovery first)
 
 **Alignment with Website:**
 - Title line matches positioning: "Tech-Led Media & Innovation"
