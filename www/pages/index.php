@@ -43,8 +43,8 @@ require_once '../includes/navigation.php';
     <section class="logo-strip">
         <p class="logo-strip-title">Worked with</p>
         <div class="logo-strip-logos">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google" class="logo-strip-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" alt="YouTube" class="logo-strip-logo">
+            <img src="/public/optimized/logos/google-logo.png" alt="Google" class="logo-strip-logo">
+            <img src="/public/optimized/logos/youtube-logo.png" alt="YouTube" class="logo-strip-logo">
             <img src="/public/optimized/logos/moniify-logo.png" alt="Moniify" class="logo-strip-logo logo-strip-logo-sm">
             <img src="/public/optimized/logos/hgs-logo.png" alt="HGS Consultants" class="logo-strip-logo">
             <img src="/public/optimized/logos/transform-lab.png" alt="Transform Lab" class="logo-strip-logo">

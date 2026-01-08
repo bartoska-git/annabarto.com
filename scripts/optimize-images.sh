@@ -53,6 +53,18 @@ for name in $PORTFOLIO_IMAGES; do
         "$OPTIMIZED_DIR/portfolio/${name}.jpg"
 done
 
+# Google logo
+magick "$PUBLIC_DIR/google-logo.png" \
+    -resize x80 \
+    -colorspace Gray \
+    "$OPTIMIZED_DIR/logos/google-logo.png"
+
+# YouTube logo
+magick "$PUBLIC_DIR/youtube-logo.png" \
+    -resize x80 \
+    -colorspace Gray \
+    "$OPTIMIZED_DIR/logos/youtube-logo.png"
+
 # Moniify logo (smaller variant at 28px = 56px for retina)
 magick "$PUBLIC_DIR/moniify-logo.png" \
     -resize x56 \
@@ -65,6 +77,7 @@ magick "$PUBLIC_DIR/hgs-logo.png" \
     -colorspace Gray \
     "$OPTIMIZED_DIR/logos/hgs-logo.png"
 
+# Transform Lab logo
 magick "$PUBLIC_DIR/transform-lab.png" \
     -resize x80 \
     -colorspace Gray \
