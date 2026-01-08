@@ -14,6 +14,16 @@
             api_host: 'https://eu.i.posthog.com',
             person_profiles: 'identified_only'
         })
+
+        // Allow opt-out via URL parameter: ?posthog_opt_out=true
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('posthog_opt_out') === 'true') {
+            posthog.opt_out_capturing();
+            console.log('PostHog tracking disabled');
+        } else if (urlParams.get('posthog_opt_in') === 'true') {
+            posthog.opt_in_capturing();
+            console.log('PostHog tracking enabled');
+        }
     </script>
 </head>
 <body>
