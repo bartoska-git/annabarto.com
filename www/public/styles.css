@@ -1020,6 +1020,28 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-soft);
 }
 
+@media (max-width: 768px) {
+  .tab-btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-btn {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.85rem;
+  }
+
+  .tabs {
+    gap: var(--space-xs);
+  }
+
+  .tabs-container {
+    padding: var(--space-md);
+  }
+}
+
 /* Skills Grid */
 .skills-grid {
   display: grid;
@@ -1135,6 +1157,20 @@ h1, h2, h3, h4, h5, h6 {
   .languages-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+@media (max-width: 480px) {
+  .languages-grid {
+    gap: var(--space-sm);
+  }
+
+  .language-card {
+    padding: var(--space-md);
+  }
+
+  .language-header {
+    gap: var(--space-sm);
+  }
+}
+
 /* Data Table */
 .data-table {
   width: 100%;
@@ -1185,6 +1221,50 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--olive-grey);
   font-weight: 600;
   min-width: 100px;
+}
+
+@media (max-width: 640px) {
+  .data-table thead {
+    display: none;
+  }
+
+  .data-table,
+  .data-table tbody,
+  .data-table tr,
+  .data-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .data-table tbody tr {
+    margin-bottom: var(--space-md);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .data-table tbody tr td {
+    padding: var(--space-xs) 0;
+    border-radius: 0 !important;
+  }
+
+  .data-table tbody tr td:first-child {
+    font-size: 0.85rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .data-table tbody tr td:nth-child(2) {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .data-table tbody tr td:last-child {
+    color: var(--olive-grey);
+    font-size: 0.9rem;
+  }
+
+  .data-table .year {
+    min-width: unset;
+  }
 }
 
 /* Certification Category Headers */
