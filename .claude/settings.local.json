@@ -12,7 +12,9 @@
       "Bash(sips:*)",
       "Bash(command -v magick:*)",
       "Bash(chmod:*)",
-      "Bash(/Users/adam/code/barto/scripts/optimize-images.sh:*)"
+      "Bash(/Users/adam/code/barto/scripts/optimize-images.sh:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)"
     ]
   }
 }
