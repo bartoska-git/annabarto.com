@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
     const mobileNavLinks = document.querySelectorAll('.nav-mobile-link');
+    const mobileFooterLinks = document.querySelectorAll('.nav-mobile-footer a');
 
     function openMenu() {
         mobileMenu.classList.add('active');
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     closeMobileMenu.addEventListener('click', closeMenu);
     mobileOverlay.addEventListener('click', closeMenu);
     mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
+    mobileFooterLinks.forEach(link => link.addEventListener('click', closeMenu));
 
     // Active section indicator
     const navLinks = document.querySelectorAll('.nav-link');
