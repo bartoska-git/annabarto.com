@@ -20,5 +20,5 @@ echo "Starting container on port $PORT..."
 docker run --rm \
     --name "$CONTAINER_NAME" \
     -p "$PORT:80" \
-    -v "$SCRIPT_DIR:/var/www/html" \
+    -v "$SCRIPT_DIR/www:/var/www/html" \
     "$IMAGE_NAME"

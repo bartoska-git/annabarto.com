@@ -7,7 +7,7 @@ RUN a2enmod rewrite
 RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 
 # Copy the application files
-COPY . /var/www/html/
+COPY www/ /var/www/html/
 
 # Set proper permissions
 RUN chown -R www-data:www-data /var/www/html

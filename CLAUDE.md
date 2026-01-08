@@ -14,27 +14,28 @@ This is Anna Barto's portfolio website - a simple PHP site converted from a Magi
 
 ```
 barto/
-├── includes/                    # PHP includes (not web-accessible)
-│   ├── header.php               # HTML head, fonts
-│   ├── navigation.php           # Responsive nav (adapts for homepage vs case studies)
-│   └── footer.php               # Footer with copyright
-├── pages/                       # Web-accessible PHP pages
-│   ├── index.php                # Homepage
-│   ├── about.php                # About page
-│   ├── building-with-ai.php     # How I Built This Site Using AI (Writing)
-│   ├── moniify.php              # Main Moniify case study
-│   ├── airtable-app.php         # Airtable workflow automation
-│   ├── moniify-creators.php     # Creator integration product
-│   ├── moniify-daily.php        # Daily video product
-│   ├── richer.php               # Female-focused finance format
-│   ├── ai-dubbing.php           # AI dubbing case study
-│   ├── creator-crowdfunding.php # Creator crowdfunding case study
-│   ├── cross-platform-delivery.php # Cross-platform delivery case study
-│   └── developer-insights.php   # Developer insights case study
-├── public/                      # Images and CSS
-│   └── styles.css               # Main stylesheet
+├── www/                         # Deployable web content
+│   ├── includes/                # PHP includes (not web-accessible)
+│   │   ├── header.php           # HTML head, fonts
+│   │   ├── navigation.php       # Responsive nav (adapts for homepage vs case studies)
+│   │   └── footer.php           # Footer with copyright
+│   ├── pages/                   # Web-accessible PHP pages
+│   │   ├── index.php            # Homepage
+│   │   ├── about.php            # About page
+│   │   ├── building-with-ai.php # How I Built This Site Using AI (Writing)
+│   │   ├── moniify.php          # Main Moniify case study
+│   │   ├── airtable-app.php     # Airtable workflow automation
+│   │   ├── moniify-creators.php # Creator integration product
+│   │   ├── moniify-daily.php    # Daily video product
+│   │   ├── richer.php           # Female-focused finance format
+│   │   ├── ai-dubbing.php       # AI dubbing case study
+│   │   ├── creator-crowdfunding.php # Creator crowdfunding case study
+│   │   ├── cross-platform-delivery.php # Cross-platform delivery case study
+│   │   └── developer-insights.php # Developer insights case study
+│   ├── public/                  # Images and CSS
+│   │   └── styles.css           # Main stylesheet
+│   └── .htaccess                # URL rewriting for clean URLs
 ├── Dockerfile                   # PHP 8.2 Apache image
-├── .htaccess                    # URL rewriting for clean URLs
 └── dev.sh                       # Development script with live reloading
 ```
 
@@ -59,9 +60,19 @@ Or use the dev script for live reloading:
 - **Navigation** uses PHP variables (`$isCaseStudy`, `$backLink`, `$backText`) to adapt behavior
 - **Clean URLs** work via .htaccess rewrite rules (e.g., `/moniify` serves `pages/moniify.php`)
 
+## Deployment
+
+Deploy to Dreamhost by syncing the `www/` directory:
+
+```bash
+rsync -avz --delete www/ annabarto@staging.annabarto.com:/home/annabarto/staging.annabarto.com/
+```
+
+SSH key for automated deployment: `~/.ssh/claude_annabarto`
+
 ## Adding New Pages
 
-1. Create a new file in `pages/` (e.g., `new-project.php`)
+1. Create a new file in `www/pages/` (e.g., `new-project.php`)
 2. Set the PHP variables at the top:
    ```php
    $pageTitle = 'Project Title';
@@ -70,7 +81,7 @@ Or use the dev script for live reloading:
    $backText = 'Back to Portfolio';
    ```
 3. Include the header, navigation, content, and footer
-4. Add a link to it from `pages/index.php` in the portfolio section
+4. Add a link to it from `www/pages/index.php` in the portfolio section
 
 ## Recent Updates
 
