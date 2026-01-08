@@ -4,10 +4,11 @@
 DEPLOY_HOST="annabarto.com"
 DEPLOY_USER="annabarto"
 
-# Setup SSH options from environment variables
+# Setup SSH options from environment variables or fallback key
 # Sets SSH_OPTS global variable
 setup_ssh() {
     SSH_OPTS=""
+    local fallback_key="$HOME/.ssh/claude_annabarto"
 
     if [ -n "$DEPLOY_SSH_KEY" ]; then
         SSH_KEY_FILE=$(mktemp)
@@ -15,6 +16,8 @@ setup_ssh() {
         chmod 600 "$SSH_KEY_FILE"
         SSH_OPTS="-i $SSH_KEY_FILE -o StrictHostKeyChecking=no"
         CLEANUP_FILES="$SSH_KEY_FILE"
+    elif [ -f "$fallback_key" ]; then
+        SSH_OPTS="-i $fallback_key"
     fi
 
     if [ -n "$DEPLOY_SSH_KNOWN_HOSTS" ]; then
