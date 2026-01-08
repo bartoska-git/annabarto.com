@@ -3,7 +3,7 @@ allowed-tools: Bash(git:*)
 description: Deploy to staging via GitHub Actions
 ---
 
-# Deploy to Staging
+# Stage
 
 Deploy the current commit to staging.annabarto.com via GitHub Actions.
 
