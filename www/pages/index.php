@@ -8,7 +8,7 @@ require_once '../includes/navigation.php';
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-image-wrapper">
-            <img src="/public/optimized/barto-1.jpg" alt="Anna Barto" class="hero-avatar">
+            <img src="/public/optimized/anna-portrait.jpg" alt="Anna Barto" class="hero-avatar">
         </div>
         <div class="hero-content">
             <div class="hero-inner">
@@ -45,8 +45,8 @@ require_once '../includes/navigation.php';
         <div class="logo-strip-logos">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google" class="logo-strip-logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" alt="YouTube" class="logo-strip-logo">
-            <img src="/public/optimized/logos/MONIIFY_Logo-2.png" alt="Moniify" class="logo-strip-logo logo-strip-logo-sm">
-            <img src="/public/optimized/logos/unnamed.png" alt="HGS Consultants" class="logo-strip-logo">
+            <img src="/public/optimized/logos/moniify-logo.png" alt="Moniify" class="logo-strip-logo logo-strip-logo-sm">
+            <img src="/public/optimized/logos/hgs-logo.png" alt="HGS Consultants" class="logo-strip-logo">
             <img src="/public/optimized/logos/transform-lab.png" alt="Transform Lab" class="logo-strip-logo">
         </div>
     </section>
@@ -64,42 +64,42 @@ require_once '../includes/navigation.php';
                     'title' => 'Building 0→1 Products (Moniify)',
                     'description' => 'Built 3 products from zero and led 20+ hybrid team in a next-gen business media startup. Each product addressed a distinct audience and market opportunity.',
                     'tags' => ['Product Strategy', 'Early-Stage'],
-                    'image' => '/public/optimized/portfolio/6631043b-6410-455a-9938-9d6e1eb8ca40.jpg',
+                    'image' => '/public/optimized/portfolio/moniify-products.jpg',
                     'link' => '/moniify'
                 ],
                 [
                     'title' => 'Custom Airtable App (Moniify)',
                     'description' => 'Designed a low-code Airtable app that automated 10K+ annual handoffs across 700+ video workflows, connecting internal teams and agencies in real time.',
                     'tags' => ['Workflow Automation', 'Internal Tools'],
-                    'image' => '/public/optimized/portfolio/622ab1d7-e27c-474d-84a6-ea33c89e469d.jpg',
+                    'image' => '/public/optimized/portfolio/airtable-app.jpg',
                     'link' => '/airtable-app'
                 ],
                 [
                     'title' => 'AI Dubbing Experiment (Google)',
                     'description' => "Led Google's early AI-dubbing experiment for developer content, testing multilingual synthetic audio using Universal Translator. AI dubbing achieved 3× higher adoption than subtitles.",
                     'tags' => ['AI Experimentation', 'Accessibility'],
-                    'image' => '/public/optimized/portfolio/cd39daee-6f59-4f2f-8cf0-57159d8faf59.jpg',
+                    'image' => '/public/optimized/portfolio/ai-dubbing.jpg',
                     'link' => '/ai-dubbing'
                 ],
                 [
                     'title' => 'Developer Audience Insights Study (Google)',
                     'description' => 'Designed and ran a 387-response user study (≈95% confidence for 210k UMV), revealing audience needs that doubled reach and boosted engagement 20%.',
                     'tags' => ['User Research', 'Data-Informed Strategy'],
-                    'image' => '/public/optimized/portfolio/22d28a67-69f2-4a30-b34e-e18acc9a5905.jpg',
+                    'image' => '/public/optimized/portfolio/developer-insights.jpg',
                     'link' => '/developer-insights'
                 ],
                 [
                     'title' => 'Cross-Platform Delivery & Discoverability (Google)',
                     'description' => "Built the delivery and discovery system for Google's Search Off the Record podcast. Discoverability experiments drove 146% and 247% increases in downloads.",
                     'tags' => ['Platform Constraints', 'Product Discoverability'],
-                    'image' => '/public/optimized/portfolio/99c400fa-3d3f-470e-80b4-f9b521d39a42.jpg',
+                    'image' => '/public/optimized/portfolio/cross-platform-delivery.jpg',
                     'link' => '/cross-platform-delivery'
                 ],
                 [
                     'title' => 'Creator Crowdfunding Product Discovery (YouTube)',
                     'description' => 'Led a hypothesis-driven discovery on creator crowdfunding, combining SQL data mining with global market research.',
                     'tags' => ['Creator Monetization', 'Product Discovery'],
-                    'image' => '/public/optimized/portfolio/052b2e21-868c-4771-9b4c-741580b7195e.jpg',
+                    'image' => '/public/optimized/portfolio/creator-crowdfunding.jpg',
                     'link' => '/creator-crowdfunding'
                 ]
             ];

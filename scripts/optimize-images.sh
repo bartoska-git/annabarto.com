@@ -20,7 +20,7 @@ echo "Optimizing images..."
 # Flatten to JPEG with background color matching the page (#EDDCCE)
 # ============================================
 echo "  Hero avatar..."
-magick "$PUBLIC_DIR/barto-1.png" \
+magick "$PUBLIC_DIR/anna-portrait.png" \
     -trim \
     +repage \
     -resize 640x \
@@ -28,7 +28,7 @@ magick "$PUBLIC_DIR/barto-1.png" \
     -alpha remove \
     -alpha off \
     -quality 90 \
-    "$OPTIMIZED_DIR/barto-1.jpg"
+    "$OPTIMIZED_DIR/anna-portrait.jpg"
 
 # ============================================
 # Logo strip images (displayed at 40px height with grayscale filter)
@@ -43,29 +43,27 @@ echo "  Logo strip images..."
 echo "  Portfolio card images..."
 mkdir -p "$OPTIMIZED_DIR/portfolio"
 
-for uuid_img in "$PUBLIC_DIR"/*-*-*-*-*.jpg; do
-    if [ -f "$uuid_img" ]; then
-        basename=$(basename "$uuid_img")
-        magick "$uuid_img" \
-            -resize 800x400^ \
-            -gravity center \
-            -extent 800x400 \
-            -quality 85 \
-            "$OPTIMIZED_DIR/portfolio/${basename}"
-    fi
+PORTFOLIO_IMAGES="moniify-products airtable-app ai-dubbing developer-insights cross-platform-delivery creator-crowdfunding"
+for name in $PORTFOLIO_IMAGES; do
+    magick "$PUBLIC_DIR/${name}.jpg" \
+        -resize 800x400^ \
+        -gravity center \
+        -extent 800x400 \
+        -quality 85 \
+        "$OPTIMIZED_DIR/portfolio/${name}.jpg"
 done
 
 # Moniify logo (smaller variant at 28px = 56px for retina)
-magick "$PUBLIC_DIR/MONIIFY_Logo-2.png" \
+magick "$PUBLIC_DIR/moniify-logo.png" \
     -resize x56 \
     -colorspace Gray \
-    "$OPTIMIZED_DIR/logos/MONIIFY_Logo-2.png"
+    "$OPTIMIZED_DIR/logos/moniify-logo.png"
 
-# Other logos
-magick "$PUBLIC_DIR/unnamed.png" \
+# HGS logo
+magick "$PUBLIC_DIR/hgs-logo.png" \
     -resize x80 \
     -colorspace Gray \
-    "$OPTIMIZED_DIR/logos/unnamed.png"
+    "$OPTIMIZED_DIR/logos/hgs-logo.png"
 
 magick "$PUBLIC_DIR/transform-lab.png" \
     -resize x80 \
