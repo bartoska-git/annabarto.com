@@ -7,7 +7,12 @@
       "Bash(git mv:*)",
       "Bash(git push)",
       "Bash(git tag:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(find:*)",
+      "Bash(sips:*)",
+      "Bash(command -v magick:*)",
+      "Bash(chmod:*)",
+      "Bash(/Users/adam/code/barto/scripts/optimize-images.sh:*)"
     ]
   }
 }
