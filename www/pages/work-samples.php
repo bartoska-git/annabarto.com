@@ -28,7 +28,7 @@ $categories = [
 
         <div class="work-samples-grid">
             <?php foreach ($categories as $category): ?>
-            <a href="/work-samples/<?php echo $category['id']; ?>" class="work-sample-card" style="background-image: url('/public/work-samples/<?php echo $category['image']; ?>')">
+            <a href="/work-samples/<?php echo $category['id']; ?>" class="work-sample-card" style="background-image: url('/public/optimized/work-samples/<?php echo $category['image']; ?>')">
                 <div class="work-sample-overlay">
                     <h3 class="work-sample-title"><?php echo htmlspecialchars($category['title']); ?></h3>
                     <?php if ($category['subtitle']): ?>
