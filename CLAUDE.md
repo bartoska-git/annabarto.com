@@ -104,17 +104,17 @@ SSH key for automated deployment: `~/.ssh/claude_annabarto`
 - ~310 words total (10% shorter than original, significantly less dense)
 
 ### Homepage Capabilities Section (pages/index.php)
-- **Skills**: 12 strategic PM skills in card layout without categories
-  - Product Strategy & Delivery, Hypothesis-Driven Discovery, 0→1 Product Building, AI Strategy, etc.
+- **Skills**: 12 strategic PM skills in card layout without categories, aligned with CV competencies
+  - Product Strategy & Execution, Hypothesis-Driven Discovery, 0→1 Product Building, AI Strategy & Prototyping, User & Market Research, Data Analysis & Basic SQL, Experimentation, Go-to-Market Strategy, Cross-Functional Leadership, Prioritization & Trade-offs, Agile (Scrum), Cross-Platform User Experience
   - Centered text with subtle gradient backgrounds
-- **Tools**: 9 categories with grouped display
-  - AI Prototyping, AI Assistants, Bug Tracking & Corporate Wiki, Project Management, Data & Analytics, etc.
+- **Tools**: 9 categories with grouped display, aligned with CV tool expertise
+  - AI Prototyping (Magic Patterns, Bolt, Claude Code), AI Assistants (ChatGPT, NotebookLM, Perplexity), Workflow & Collaboration (Airtable, Miro, Asana, Monday.com, Relay.app, Notion), Bug Tracking & Documentation, Design & Digital Assets, Analytics & Performance, Content & Media Systems
   - Category headers with tool lists
 - **Data Tables**: Card-like row styling for Experience, Certifications, Education
   - Individual gradient per row with rounded corners
   - Separate rows with spacing for better visual hierarchy
-- **Experience**: Added Lafluence (2016-2017) between Google Developer Media Lab and YouTube
-- **Certifications**: Split Reforge courses, updated Franklin Covey years (2022, 2021)
+- **Experience**: Added Lafluence (2016-2017) between Google Developer Media Lab and YouTube; removed geographic details from YouTube and Google roles for cleaner presentation
+- **Certifications**: Split Reforge courses, updated Franklin Covey years (2022, 2021), added ® symbol to CSPO
 
 ### Navigation (includes/navigation.php)
 - Added About link in main navigation
@@ -122,6 +122,7 @@ SSH key for automated deployment: `~/.ssh/claude_annabarto`
 - Navigation works correctly from both homepage and About page
 - Active section indicator uses scroll position to highlight current section
 - Orange dot moves from logo to section links as user scrolls
+- About page detection: checks current path and manually sets About link as active, prevents scroll-based updates from overriding
 
 ### Hero Section (pages/index.php)
 - Changed section ID from `#about` to `#hero` to avoid conflict with About page
@@ -130,15 +131,21 @@ SSH key for automated deployment: `~/.ssh/claude_annabarto`
 - Positioned closer to intro text with `margin-top: var(--space-sm)` and `margin-bottom: var(--space-xl)`
 
 ### CSS Updates (public/styles.css)
-- **About page styles** (lines 1576-1667):
+- **About page styles**:
   - `.about-header`, `.about-title`, `.about-divider` for page header
   - Increased paragraph spacing for better readability
   - `.work-statements .statement` for bold statement blocks
-  - `.inline-link` for in-text links with hover effects
-- **Skills cards** (lines 1005-1027): Centered text, gradient backgrounds
-- **Tools cards** (lines 1055-1066): Category headers with tool lists
-- **Data tables** (lines 1114-1158): Card-like rows with individual gradients
-- **Hero about link** (lines 474-487): Terracotta color with hover effect
+  - `.inline-link` for in-text links: terracotta color, underlined, text-underline-offset: 2px
+- **Skills cards**: Centered text, gradient backgrounds
+- **Tools cards**: Category headers with tool lists
+- **Data tables**: Card-like rows with individual gradients
+- **Link accessibility improvements**: All text links consistently underlined with terracotta color for immediate visual recognition
+  - `.inline-link`: in-text links in About and Building with AI pages
+  - `.link-accent`: case study links
+  - `.hero-about-link`: "More about my journey →" link
+  - `.article-link`: "Read More →" links in Writing section
+  - `.card-link`: "Read Case Study →" links in Portfolio section
+  - All use `text-decoration: underline`, `text-decoration-color: var(--soft-terracotta)`, `text-underline-offset: 2px`
 - **Featured badge** (.featured-badge): Terracotta background for featured articles in Writing section
 
 ### Building with AI Page (pages/building-with-ai.php)
@@ -153,9 +160,10 @@ SSH key for automated deployment: `~/.ssh/claude_annabarto`
   5. Recovery, tool-switching, and site finalization
   6. Final reflection
 - **Image layouts**:
-  - Section 2: Two images side by side (300px height, cropped to landscape)
-  - Section 3: Four cartoonification attempts in single row, Artlist result below
+  - Section 2: Two wireframe images side by side with responsive CSS grid (fixed 400px height on desktop with object-fit: cover, auto height on mobile with object-fit: contain)
+  - Section 3: Four cartoonification attempts in responsive grid (4 columns on desktop, 2 columns on mobile) with object-fit: cover, Artlist result below
   - Section 4: Single Magic Patterns Inspiration mode screenshot
+  - Mobile-responsive design ensures full images display on small screens while maintaining cropped alignment on desktop
 - **Styling**:
   - Custom font size override: body text forced to 1rem with !important
   - Subheader: 1.5rem terracotta color matching section headers
@@ -204,17 +212,19 @@ SSH key for automated deployment: `~/.ssh/claude_annabarto`
    - Product Strategy & Execution (changed from "Delivery" for more senior positioning) | Hypothesis-Driven Discovery | 0→1 Product Building | AI Strategy & Prototyping | Experimentation | User & Market Research | Go-to-Market Strategy | Cross-Functional Team Leadership | Prioritization & Trade-offs (added; removed "Project & Resource Management" as too producer-like) | Agile (Scrum) | Basic SQL | Cross-Platform User Experience
 
 3. **Platform & Tool Expertise** (3-column grid, 6 categories):
-   - Row 1: AI Prototyping & Assistants (removed Relay.app to save space; kept Claude Code, ChatGPT, NotebookLM, Magic Patterns), Workflow & Collaboration (renamed from "Project Management & Collaboration"), Analytics & Performance
+   - Row 1: AI Prototyping & Assistants (Magic Patterns, Bolt, Claude Code, ChatGPT, NotebookLM), Workflow & Collaboration (Airtable, Miro, Asana, Monday.com, Relay.app), Analytics & Performance
    - Row 2: Bug Tracking & Documentation, Design & Digital Assets, Content & Media Systems
+   - Tools aligned with homepage capabilities for consistency
 
 4. **Selected Product Highlights** (5 highlights with annabarto.com links, bulleted):
    - Section renamed from "Selected Highlights" to "Selected Product Highlights" for stronger product positioning
    - Added intro line: "Representative product work spanning strategy, discovery, experimentation, and 0→1 building:" (helps frame the section)
+   - Order optimized: most recent and impactful first, chronological last (moved Creator Crowdfunding from #2 to #5 to avoid prominently featuring 2016 work)
    - Built 0→1 Product Portfolio at Moniify → `/moniify`
-   - Led Creator Crowdfunding Product Discovery at YouTube → `/creator-crowdfunding`
    - Ran AI Dubbing Experiment at Google → `/ai-dubbing`
    - Doubled Developer Audience via Research-Led Insights → `/developer-insights`
    - Improved Cross-Platform Delivery & Adoption at Google → `/cross-platform-delivery`
+   - Led Creator Crowdfunding Product Discovery at YouTube → `/creator-crowdfunding`
 
 5. **Featured Personal Project** (bulleted for consistency):
    - AI-Assisted Website Build: Built personal portfolio website using ChatGPT, Magic Patterns, and Claude Code for end-to-end prototyping and development → `/building-with-ai`
@@ -258,8 +268,11 @@ SSH key for automated deployment: `~/.ssh/claude_annabarto`
 
 **Alignment with Website:**
 - Title line matches positioning: "Tech-Led Media & Innovation"
-- All 5 highlights link to case studies on annabarto.com
-- Competencies align with homepage capabilities
-- Tools match demonstrated AI fluency
+- All 5 highlights link to case studies on annabarto.com, ordered identically to CV
+- Competencies align with homepage capabilities (Product Strategy & Execution, Hypothesis-Driven Discovery, Data Analysis & Basic SQL, Prioritization & Trade-offs, etc.)
+- Tools match homepage exactly (Workflow & Collaboration category, Relay.app included)
+- Experience table matches CV (removed geographic details from YouTube and Google roles)
+- Certifications show CSPO® with ® symbol
 - Summary echoes About page language
 - Visual brand consistency with terracotta color throughout
+- All text links underlined for accessibility and consistency
