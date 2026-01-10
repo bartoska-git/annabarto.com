@@ -86,9 +86,44 @@ Requires SSH access to annabarto.com. SSH key: `~/.ssh/claude_annabarto`
    $isCaseStudy = true;
    $backLink = '/#portfolio';
    $backText = 'Back to Portfolio';
+
+   // Optional: Set custom Open Graph tags for social sharing
+   $ogImage = '/public/images/your-preview-image.jpg';
+   $ogDescription = 'Brief description for social media previews';
+   $ogType = 'article';  // or 'website' (default)
    ```
 3. Include header, navigation, content, footer
 4. Add link from `www/pages/index.php` portfolio section
+
+## Social Media Preview (Open Graph Tags)
+
+The site supports dynamic Open Graph meta tags for customized social media previews.
+
+**System Location:** `www/includes/header.php` contains the OG tag template
+
+**Per-Page Configuration:** Set these variables at the top of any page to customize its social preview:
+
+```php
+$ogImage = '/public/images/custom-preview.jpg';          // Full URL path to preview image
+$ogDescription = 'Your custom description';              // Preview description text
+$ogTitle = 'Custom Title';                               // Optional: Override page title
+$ogType = 'article';                                     // Optional: 'article' or 'website' (default)
+```
+
+**Default Behavior:** If variables aren't set, the system falls back to:
+- **Image**: `/public/optimized/anna-portrait.jpg`
+- **Title**: Page title from `$pageTitle` or site default
+- **Description**: "Product manager specializing in strategy, discovery, experimentation, and 0→1 product building."
+- **Type**: `website`
+
+**Current OG Images:**
+- Homepage: `Hero_website_anna_barto.png`
+- Building with AI article: `hero_image_building_with_ai.jpeg`
+
+**Image Requirements:**
+- Recommended size: 1200×630px for optimal display on all platforms
+- Supported formats: JPG, PNG
+- Place in `/www/public/images/` directory
 
 ## CV Management
 
