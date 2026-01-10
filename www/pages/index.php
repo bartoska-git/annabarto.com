@@ -193,11 +193,11 @@ require_once '../includes/navigation.php';
                             'User & Market Research',
                             'Data Analysis & Basic SQL',
                             'Experimentation',
+                            'Growth Strategy',
                             'Go-to-Market Strategy',
                             'Cross-Functional Leadership',
                             'Prioritization & Trade-offs',
-                            'Agile (Scrum)',
-                            'Cross-Platform User Experience'
+                            'Agile (Scrum)'
                         ];
                         foreach ($skills as $skill): ?>
                         <div class="skill-card">
@@ -237,12 +237,12 @@ require_once '../includes/navigation.php';
                         </thead>
                         <tbody>
                             <tr><td class="year">2025-Present</td><td>Consultant, Product & Media</td><td>hgs Consultants (freelance)</td></tr>
-                            <tr><td class="year">2025</td><td>Acting Executive Producer (parental leave cover)</td><td>Google Developer Marketing (contracted via Randstad Digital Switzerland)</td></tr>
+                            <tr><td class="year">2025</td><td>Acting Executive Producer (parental leave cover)</td><td>Google Developer Product Marketing (contracted via Randstad Digital Switzerland)</td></tr>
                             <tr><td class="year">2024-2025</td><td>Product Manager</td><td>Moniify</td></tr>
-                            <tr><td class="year">2018-2024</td><td>Senior Producer, Research & Content Innovation</td><td>Google Developer Media Lab (contracted via Advanced Systems Group)</td></tr>
+                            <tr><td class="year">2018-2024</td><td>Senior Producer, Media Innovation & Research</td><td>Google Developer Media Lab (contracted via Advanced Systems Group)</td></tr>
                             <tr><td class="year">2016-2017</td><td>Founding Team (Pre-Launch)</td><td>Lafluence</td></tr>
                             <tr><td class="year">2014-2017</td><td>Strategic Partner Manager</td><td>YouTube</td></tr>
-                            <tr><td class="year">2014</td><td>Project Manager, Transmedia</td><td>TransformatLab</td></tr>
+                            <tr><td class="year">2014</td><td>Project Manager, Transmedia</td><td>Transform@lab</td></tr>
                             <tr><td class="year">2011-2014</td><td>Audience & Media Strategist, Digital Advertising</td><td>Google</td></tr>
                         </tbody>
                     </table>
