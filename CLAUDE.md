@@ -89,3 +89,39 @@ Requires SSH access to annabarto.com. SSH key: `~/.ssh/claude_annabarto`
    ```
 3. Include header, navigation, content, footer
 4. Add link from `www/pages/index.php` portfolio section
+
+## CV Management
+
+The CV is maintained in two files:
+- **Source**: `anna-barto-cv.html` - HTML file that can be printed to PDF
+- **Published**: `www/public/Anna-Barto-CV.pdf` - The PDF file linked from the website
+
+### Updating the CV
+
+1. Edit `anna-barto-cv.html` with changes
+2. Generate PDF from the HTML (print to PDF from browser)
+3. Save as `www/public/Anna-Barto-CV.pdf` (exact filename with hyphen, not space)
+4. The website links to `/public/Anna-Barto-CV.pdf` via the "Download CV" button
+
+### CV Content Guidelines
+
+**Job Titles & Organizations:**
+- Use accurate, specific titles (e.g., "Senior Producer, Media Innovation & Research" not "Research & Content Innovation")
+- Include full organization names (e.g., "Google Developer Product Marketing" not just "Google Developer Marketing")
+- Format organization names correctly (e.g., "Transform@lab" not "TransformatLab")
+
+**Skills & Competencies:**
+- CV summary emphasizes "hypothesis-driven discovery" to show process/methodology
+- Core competencies include: Product Strategy & Execution, Hypothesis-Driven Discovery, 0→1 Product Building, AI Strategy & Prototyping, Experimentation, User & Market Research, Growth Strategy, Go-to-Market Strategy, Cross-Functional Leadership, Prioritization & Trade-offs, Agile (Scrum), Basic SQL, Cross-Platform User Experience
+- Growth Strategy appears before Go-to-Market Strategy (outcome before tactic)
+- Website Skills section has 12 items (3x4 grid) - if adding a skill, replace one to maintain layout
+
+**Role Descriptions:**
+- Be specific about scope and impact (e.g., "product marketing planning for Google's developer ecosystem")
+- Focus on tangible deliverables (e.g., "product strategy, user research, and AI-assisted workflows")
+- Use "Led product initiatives including..." to show breadth while listing specific achievements
+
+**Consistency with Website:**
+- CV serves as downloadable summary that complements portfolio case studies
+- Header "Tech-Led Media & Innovation" aligns with website positioning
+- Both CV and website should reflect the same job titles and organization names in Experience sections
