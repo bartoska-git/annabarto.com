@@ -84,28 +84,6 @@ magick "$PUBLIC_DIR/transform-lab.png" \
     "$OPTIMIZED_DIR/logos/transform-lab.png"
 
 # ============================================
-# Open Graph images (1200x630 for social sharing)
-# ============================================
-echo "  Open Graph images..."
-mkdir -p "$OPTIMIZED_DIR/images"
-
-# Homepage OG image
-magick "$PUBLIC_DIR/images/Hero_website_anna_barto.png" \
-    -resize 1200x630^ \
-    -gravity center \
-    -extent 1200x630 \
-    -quality 85 \
-    "$OPTIMIZED_DIR/images/Hero_website_anna_barto.jpg"
-
-# Building with AI OG image
-magick "$PUBLIC_DIR/images/hero_image_building_with_ai.jpeg" \
-    -resize 1200x630^ \
-    -gravity center \
-    -extent 1200x630 \
-    -quality 85 \
-    "$OPTIMIZED_DIR/images/hero_image_building_with_ai.jpg"
-
-# ============================================
 # Building with AI images
 # ============================================
 echo "  Building with AI images..."
@@ -155,11 +133,38 @@ magick "$PUBLIC_DIR/images/building-with-ai/magic-patterns-inspiration.png" \
     -quality 85 \
     "$OPTIMIZED_DIR/images/building-with-ai/magic-patterns-inspiration.jpg"
 
-# Mobile view before (displayed in comparison grid, ~600px height for retina)
+# Mobile screenshots (displayed in article at ~400px width = 800px for retina)
 magick "$PUBLIC_DIR/images/building-with-ai/Mobile-view-before.png" \
-    -resize x600 \
+    -resize 800x \
     -quality 85 \
     "$OPTIMIZED_DIR/images/building-with-ai/Mobile-view-before.jpg"
+
+magick "$PUBLIC_DIR/images/building-with-ai/Mobile-view-after.JPG" \
+    -resize 800x \
+    -quality 85 \
+    "$OPTIMIZED_DIR/images/building-with-ai/Mobile-view-after.jpg"
+
+# ============================================
+# Open Graph (OG) images for social media previews
+# Standard size: 1200x630px, quality 85
+# ============================================
+echo "  OG preview images..."
+
+# Homepage hero OG image
+magick "$PUBLIC_DIR/images/Hero_website_anna_barto.png" \
+    -resize 1200x630^ \
+    -gravity center \
+    -extent 1200x630 \
+    -quality 85 \
+    "$OPTIMIZED_DIR/images/Hero_website_anna_barto.jpg"
+
+# Building with AI article hero OG image
+magick "$PUBLIC_DIR/images/hero_image_building_with_ai.jpeg" \
+    -resize 1200x630^ \
+    -gravity center \
+    -extent 1200x630 \
+    -quality 85 \
+    "$OPTIMIZED_DIR/images/hero_image_building_with_ai.jpg"
 
 # ============================================
 # Work samples (displayed ~400px wide as backgrounds = 800px for retina)
