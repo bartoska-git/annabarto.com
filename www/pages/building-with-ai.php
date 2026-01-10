@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'How I Built This Site Using AI';
 $isCaseStudy = false;
-$ogImage = '/public/images/hero_image_building_with_ai.jpeg';
+$ogImage = '/public/optimized/images/hero_image_building_with_ai.jpg';
 $ogDescription = 'What worked, what broke, and what I didn\'t expect when building this portfolio site with AI tools across the full process.';
 $ogType = 'article';
 ?>
@@ -191,7 +191,7 @@ $ogType = 'article';
                 <div class="wireframe-grid">
                     <figure>
                         <div class="img-container">
-                            <img src="/public/images/building-with-ai/Mobile-view-before.png" alt="Mobile view before fixes showing text overflow and layout issues">
+                            <img src="/public/optimized/images/building-with-ai/Mobile-view-before.jpg" alt="Mobile view before fixes showing text overflow and layout issues">
                         </div>
                         <figcaption style="padding: var(--space-md); background: var(--light-beige); font-size: 0.875rem; color: var(--olive-grey); font-style: italic; text-align: center;">
                             Before: Text overflowing containers and layout issues

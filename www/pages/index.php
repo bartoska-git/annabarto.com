@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Product Strategy & Media Innovation';
-$ogImage = '/public/images/Hero_website_anna_barto.png';
+$ogImage = '/public/optimized/images/Hero_website_anna_barto.jpg';
 $ogDescription = 'Product manager specializing in strategy, discovery, experimentation, and 0→1 product building.';
 require_once '../includes/header.php';
 require_once '../includes/navigation.php';
