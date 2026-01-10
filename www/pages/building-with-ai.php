@@ -1,6 +1,9 @@
 <?php
 $pageTitle = 'How I Built This Site Using AI';
 $isCaseStudy = false;
+$ogImage = '/public/images/hero_image_building_with_ai.jpeg';
+$ogDescription = 'What worked, what broke, and what I didn\'t expect when building this portfolio site with AI tools across the full process.';
+$ogType = 'article';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -168,8 +171,6 @@ $isCaseStudy = false;
 
                 <p>I fed it the wireframes and visual assets, then iterated extensively. The project reached around 80% complete.</p>
 
-                <p>Then <strong>on December 24th, Magic Patterns rolled out an update</strong>. Previously working prompts stopped producing usable results. I contacted support, got a rollback and extra credits, but issues persisted for days.</p>
-
                 <figure style="margin: var(--space-xl) 0; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-soft);">
                     <img src="/public/optimized/images/building-with-ai/magic-patterns-inspiration.jpg" alt="Magic Patterns Inspiration mode interface showing multiple design variations" style="width: 100%; display: block;">
                     <figcaption style="padding: var(--space-md); background: var(--light-beige); font-size: 0.875rem; color: var(--olive-grey); font-style: italic; text-align: center;">
@@ -177,25 +178,47 @@ $isCaseStudy = false;
                     </figcaption>
                 </figure>
 
-                <h2>5. Recovery, tool-switching, and site finalization</h2>
+                <p>Then <strong>on December 24th, Magic Patterns rolled out an update</strong>. Previously working prompts stopped producing usable results. I contacted support, got a rollback and extra credits, but issues persisted for days.</p>
+
+                <h2>5. Tool switching, testing, and deployment</h2>
 
                 <p>After multiple support exchanges, Magic Patterns eventually worked again. But at the time, thinking things might be broken for good, I moved the project to <strong>Claude Code</strong>, converting from React to PHP (based on advice from someone more technical).</p>
 
-                <p>I still used Magic Patterns for some design decisions, but completed implementation and final refinements in Claude.</p>
+                <p>I still used Magic Patterns for some design decisions, but completed implementation and final refinements in Claude. While testing across devices, I noticed several mobile issues that hadn't been obvious on the desktop. For instance, text overflowing containers in the Capabilities section or visual assets not rendering correctly on smaller screens.</p>
 
-                <p><strong>Key lesson:</strong> AI-powered tools, especially LLM-based ones, are probabilistic systems. Their behavior can change unexpectedly due to underlying model updates, which then require adjustments to the prompt engineering layer and tool orchestration. I've written about the distinction between probabilistic and deterministic technology in <a href="https://www.linkedin.com/pulse/looks-like-chatgpt-learned-count-itdidnt-anna-barto-eohmf/" class="inline-link" target="_blank" rel="noopener noreferrer">"It Looks Like ChatGPT Learned to Count. It Didn't."</a></p>
+                <p>Claude Code handled these fixes surprisingly well. In practice, it required little more than a screenshot and a short prompt describing the desired behavior.</p>
 
-                <p>This project made those dynamics very tangible.</p>
+                <div class="wireframe-grid">
+                    <figure>
+                        <div class="img-container">
+                            <img src="/public/images/building-with-ai/Mobile-view-before.png" alt="Mobile view before fixes showing text overflow and layout issues">
+                        </div>
+                        <figcaption style="padding: var(--space-md); background: var(--light-beige); font-size: 0.875rem; color: var(--olive-grey); font-style: italic; text-align: center;">
+                            Before: Text overflowing containers and layout issues
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <div class="img-container" style="height: 400px; overflow: hidden;">
+                            <img src="/public/images/building-with-ai/Mobile-view-after.JPG" alt="Mobile view after fixes showing corrected layout and text wrapping" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+                        </div>
+                        <figcaption style="padding: var(--space-md); background: var(--light-beige); font-size: 0.875rem; color: var(--olive-grey); font-style: italic; text-align: center;">
+                            After: Corrected text wrapping, spacing, and layout
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <p>And because Claude Code, similarly to many other AI-assisted coding tools, integrates with GitHub and hosting platforms, I could also iterate, test, and deploy directly from the same environment.</p>
 
                 <h2>6. Final reflection</h2>
 
                 <p>Building this site with AI clarified three things:</p>
 
-                <p><strong>The tools are now powerful enough to enable work that would previously have required much deeper technical expertise or a few different contributors.</strong></p>
+                <p><strong>First: The tools are now powerful enough to enable work that would previously have required much deeper technical expertise or a few different contributors.</strong> A suite of specialized AI tools, each handling different parts of the project, can get you far.</p>
 
-                <p><strong>The same power that makes these tools so useful is also a weakness: their probabilistic nature can lead to unpredictable behavior and things breaking unexpectedly.</strong></p>
+                <p><strong>Second: The same power that makes these tools so useful is also a weakness.</strong> Many AI-powered tools, especially LLM-based ones, are probabilistic systems. Their behavior can be unpredictable and can change unexpectedly due to underlying model updates, which then require adjustments to the prompt engineering layer and tool orchestration. I've written more about this distinction between probabilistic and deterministic systems in <a href="https://www.linkedin.com/pulse/looks-like-chatgpt-learned-count-itdidnt-anna-barto-eohmf/" class="inline-link" target="_blank" rel="noopener noreferrer">"It Looks Like ChatGPT Learned to Count. It Didn't."</a></p>
 
-                <p><strong>They do not remove the need for research, experimentation, judgment, or iteration.</strong></p>
+                <p><strong>Third: They do not remove the need for research, experimentation, judgment, or iteration.</strong> If you want something good and differentiated, you will spend significant time on your project regardless. Building my site with AI did not make the process short, but it made it more ambitious.</p>
 
                 <p>This site is the result of navigating all three.</p>
             </div>

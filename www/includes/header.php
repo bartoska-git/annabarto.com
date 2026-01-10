@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo isset($pageTitle) ? $pageTitle . ' | Anna Barto' : 'Anna Barto | Product Strategy & Media Innovation'; ?></title>
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="<?php echo isset($ogTitle) ? $ogTitle : (isset($pageTitle) ? $pageTitle . ' | Anna Barto' : 'Anna Barto | Product Strategy & Media Innovation'); ?>">
+    <meta property="og:description" content="<?php echo isset($ogDescription) ? $ogDescription : 'Product manager specializing in strategy, discovery, experimentation, and 0→1 product building.'; ?>">
+    <meta property="og:image" content="<?php echo isset($ogImage) ? 'https://annabarto.com' . $ogImage : 'https://annabarto.com/public/optimized/anna-portrait.jpg'; ?>">
+    <meta property="og:url" content="https://annabarto.com<?php echo $_SERVER['REQUEST_URI']; ?>">
+    <meta property="og:type" content="<?php echo isset($ogType) ? $ogType : 'website'; ?>">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo isset($ogTitle) ? $ogTitle : (isset($pageTitle) ? $pageTitle . ' | Anna Barto' : 'Anna Barto | Product Strategy & Media Innovation'); ?>">
+    <meta name="twitter:description" content="<?php echo isset($ogDescription) ? $ogDescription : 'Product manager specializing in strategy, discovery, experimentation, and 0→1 product building.'; ?>">
+    <meta name="twitter:image" content="<?php echo isset($ogImage) ? 'https://annabarto.com' . $ogImage : 'https://annabarto.com/public/optimized/anna-portrait.jpg'; ?>">
+
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/styles.css">
 
