@@ -118,7 +118,7 @@ $ogType = 'article';                                     // Optional: 'article' 
 
 **Current OG Images:**
 - Homepage: `Hero_website_anna_barto.png` (portrait/branding)
-- Building with AI article: `magic-patterns-inspiration.jpg` (screenshot showing AI tool in action)
+- Building with AI article: `anna-portrait.jpg` (portrait illustration - optimized for small preview visibility)
 
 **Image Requirements:**
 - Recommended size: 1200×630px for optimal display on all platforms
@@ -130,10 +130,14 @@ $ogType = 'article';                                     // Optional: 'article' 
 The OG tag system automatically uses the correct domain (staging vs production) for image URLs and canonical URLs by detecting `$_SERVER['HTTP_HOST']`. This ensures social media previews work correctly in both environments.
 
 **Best Practices:**
-- Use content-specific images that represent the article/page topic rather than generic branding
-- For articles, show screenshots, tools, or visual examples from the content
-- For homepage/profile pages, branding images work well
+- **Visibility is critical**: On platforms like LinkedIn, OG images appear very small. Simple, recognizable images (like portraits) work better than detailed screenshots
+- For personal articles/blog posts, using your portrait is appropriate and helps with recognition
+- For technical tutorials aimed at anonymity, consider simple diagrams or tool logos
 - Test OG tags on staging before deploying to production using tools like LinkedIn Post Inspector or opengraph.xyz
+- When in doubt, prioritize what's recognizable at thumbnail size over what's conceptually perfect
+
+**Lesson Learned:**
+Complex screenshots (like Magic Patterns interface) may look great at full size but become indistinguishable in small LinkedIn/Twitter previews. For personal content, portraits provide better visibility and brand recognition even when the article is technical.
 
 ## CV Management
 
