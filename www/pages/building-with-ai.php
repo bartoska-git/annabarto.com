@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'How I Built This Site Using AI';
 $isCaseStudy = false;
-$ogImage = '/public/optimized/images/building-with-ai/magic-patterns-inspiration.jpg';
+$ogImage = '/public/optimized/anna-portrait.jpg';
 $ogDescription = 'What worked, what broke, and what I didn\'t expect when building this portfolio site with AI tools across the full process.';
 $ogType = 'article';
 ?>
