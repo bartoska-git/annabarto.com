@@ -117,13 +117,23 @@ $ogType = 'article';                                     // Optional: 'article' 
 - **Type**: `website`
 
 **Current OG Images:**
-- Homepage: `Hero_website_anna_barto.png`
-- Building with AI article: `hero_image_building_with_ai.jpeg`
+- Homepage: `Hero_website_anna_barto.png` (portrait/branding)
+- Building with AI article: `magic-patterns-inspiration.jpg` (screenshot showing AI tool in action)
 
 **Image Requirements:**
 - Recommended size: 1200×630px for optimal display on all platforms
 - Supported formats: JPG, PNG
 - Place in `/www/public/images/` directory
+- Use optimized versions from `/www/public/optimized/` when available
+
+**Dynamic Base URL:**
+The OG tag system automatically uses the correct domain (staging vs production) for image URLs and canonical URLs by detecting `$_SERVER['HTTP_HOST']`. This ensures social media previews work correctly in both environments.
+
+**Best Practices:**
+- Use content-specific images that represent the article/page topic rather than generic branding
+- For articles, show screenshots, tools, or visual examples from the content
+- For homepage/profile pages, branding images work well
+- Test OG tags on staging before deploying to production using tools like LinkedIn Post Inspector or opengraph.xyz
 
 ## CV Management
 
