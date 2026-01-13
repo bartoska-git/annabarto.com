@@ -95,6 +95,10 @@ $ogType = 'article';
 
                 <p style="color: var(--deep-espresso); font-weight: 400;">I rebuilt my personal website almost entirely with the help of AI tools. I approached it as an AI tool exploration across the full build process.</p>
 
+                <div style="background: var(--light-beige); border-left: 4px solid var(--soft-terracotta); padding: var(--space-md); margin: var(--space-xl) 0; border-radius: var(--radius-sm);">
+                    <p style="margin: 0; font-size: 0.95rem; color: var(--deep-espresso);">📝 <strong>Note:</strong> An expanded version of this article was published on Medium via <a href="https://medium.com/design-bootcamp/building-a-site-with-ai-what-worked-what-broke-and-what-i-didnt-expect-374b71ac7619" class="inline-link" target="_blank" rel="noopener noreferrer">Bootcamp</a> with additional detail on the decision-making process.</p>
+                </div>
+
                 <h2>1. The part AI didn't replace: Research & taste</h2>
 
                 <p>I started with extensive research across personal websites and portfolio sites. <a href="https://www.notion.com/templates/category/personal-website" class="inline-link" target="_blank" rel="noopener noreferrer">Notion personal website templates</a> turned out to be a useful source of inspiration, particularly for individual component patterns. <a href="https://blog.copyfol.io/marketing-portfolio-examples" class="inline-link" target="_blank" rel="noopener noreferrer">Marketing portfolio examples</a> were especially helpful for stylistic direction.</p>
