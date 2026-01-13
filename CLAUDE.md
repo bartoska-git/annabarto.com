@@ -175,3 +175,25 @@ The CV is maintained in two files:
 - CV serves as downloadable summary that complements portfolio case studies
 - Header "Tech-Led Media & Innovation" aligns with website positioning
 - Both CV and website should reflect the same job titles and organization names in Experience sections
+
+## Medium Publications
+
+The "How I Built This Site Using AI" article has been published in multiple versions:
+
+**Website version** (`www/pages/building-with-ai.php`):
+- Original shorter version with core narrative
+- Focus on the story and key learnings
+- Includes link banner to Medium version
+
+**Medium version** (published in Bootcamp):
+- URL: https://medium.com/design-bootcamp/building-a-site-with-ai-what-worked-what-broke-and-what-i-didnt-expect-374b71ac7619
+- Expanded with additional detail on reasoning and decision-making process
+- Repositioned for publication audience with more methodology context
+- Title: "Building a Site with AI: What Worked, What Broke, and What I Didn't Expect"
+- Subtitle: "An end-to-end exploration of what today's AI tools can (and can't) realistically do across a full build process"
+
+**Cross-linking strategy:**
+- Website version includes banner after intro linking to Medium version
+- Banner text: "An expanded version of this article was published on Medium via Bootcamp with additional detail on the decision-making process"
+- Positioned to inform readers upfront about the more detailed version
+- Styled with light beige background and terracotta border to match site design
