@@ -158,6 +158,7 @@ The CV is maintained in two files:
 - Use accurate, specific titles (e.g., "Senior Producer, Media Innovation & Research" not "Research & Content Innovation")
 - Include full organization names (e.g., "Google Developer Product Marketing" not just "Google Developer Marketing")
 - Format organization names correctly (e.g., "Transform@lab" not "TransformatLab")
+- Use "Freelance Consultant" not just "Consultant" for hgs Consultants role (clarifies independent nature of work)
 
 **Skills & Competencies:**
 - CV summary emphasizes "hypothesis-driven discovery" to show process/methodology
