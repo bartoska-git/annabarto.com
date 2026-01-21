@@ -256,6 +256,14 @@ Maintain consistency in related case study descriptions across all pages. Curren
 - `/moniify-creators` - Moniify Creators integration
 - `/developer-insights` - Developer Audience Insights Study
 
+**Mobile Responsiveness:**
+Stats cards display in a 2×2 grid on mobile with optimized spacing:
+- Gap reduced to `var(--space-sm)` (0.5rem) on mobile
+- Stat values sized at 2rem (down from 2.5rem) for better fit
+- Card padding explicitly set to `var(--space-md)` (1rem)
+- Label font sizes reduced to 0.7rem and 0.65rem for secondary labels
+- Maintains 2-column layout rather than stacking to single column
+
 ## CV Customization
 
 **Custom CV Versions:**
