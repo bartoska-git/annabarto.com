@@ -22,9 +22,10 @@ $sections = [
 ];
 
 $relatedCaseStudies = [
+    ['title' => 'YouTube Partner Program Market Expansion', 'description' => 'GTM strategy enabling monetization for 1M+ channels across 10 markets', 'slug' => 'youtube-gtm-strategy'],
     ['title' => 'Building 0→1 Products (Moniify)', 'description' => 'Product strategy and 0→1 building at a media startup', 'slug' => 'moniify'],
     ['title' => 'Moniify Creators', 'description' => 'Integrating credible creators into editorial output', 'slug' => 'moniify-creators'],
-    ['title' => 'Developer Audience Insights Study (Google)', 'description' => 'Research-driven strategy that doubled reach', 'slug' => 'developer-insights']
+    ['title' => 'Developer Audience Insights Study (Google)', 'description' => 'User research that doubled reach and boosted engagement', 'slug' => 'developer-insights']
 ];
 ?>
 <?php require_once '../includes/navigation.php'; ?>
@@ -49,7 +50,8 @@ $relatedCaseStudies = [
             <p><span class="role-label">Role:</span> Product Research Lead (Strategic Partner Manager, CEE)</p>
             <p><span class="role-label">Focus:</span> Creator Monetization · Product Discovery · Playbooks & Tooling</p>
         </div>
-        <p class="text-lg">In 2016, I led a hypothesis-driven discovery on creator crowdfunding at YouTube, combining SQL data mining with market and qualitative research. The work revealed fast-growing but fragmented adoption across regions and funding models: creators valued crowdfunding but lacked guidance and struggled to integrate YouTube into campaigns. I built an adoption dashboard, authored internal playbooks (22 languages), and co-designed a Creator Academy course (20 languages). The findings informed YouTube's approach to localized fan funding and later features such as Channel Memberships.</p>
+        <p class="text-lg mb-lg">I led a hypothesis-driven discovery on creator crowdfunding at YouTube, combining SQL data mining with market and qualitative research. The work revealed fast-growing but fragmented adoption across regions and funding models: creators valued crowdfunding but lacked guidance and struggled to integrate YouTube into campaigns.</p>
+        <p class="text-lg">I built an adoption dashboard, authored internal playbooks (22 languages), and co-designed a Creator Academy course (20 languages). The findings informed YouTube's approach to localized fan funding and later features such as Channel Memberships.</p>
     </div>
 
     <div class="stats-grid">
