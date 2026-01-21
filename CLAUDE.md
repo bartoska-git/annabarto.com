@@ -197,3 +197,85 @@ The "How I Built This Site Using AI" article has been published in multiple vers
 - Banner text: "An expanded version of this article was published on Medium via Bootcamp with additional detail on the decision-making process"
 - Positioned to inform readers upfront about the more detailed version
 - Styled with light beige background and terracotta border to match site design
+
+## Case Study Pages
+
+**Standard Structure:**
+All case study pages follow a consistent structure defined by PHP arrays and HTML sections:
+
+```php
+$pageTitle = 'Case Study Title';
+$isCaseStudy = true;
+$backLink = '/#portfolio';
+$backText = 'Back to Portfolio';
+
+$stats = [
+    ['value' => '10', 'labelSecondary' => 'New Markets', 'label' => 'YPP Launched'],
+    // ... more stats
+];
+
+$sections = [
+    ['id' => 'overview', 'label' => 'Overview'],
+    ['id' => 'problem', 'label' => 'Problem / Opportunity'],
+    // ... more sections
+];
+
+$relatedCaseStudies = [
+    ['title' => 'Title', 'description' => 'Description', 'slug' => 'slug'],
+    // ... more related studies
+];
+```
+
+**Role Box Format:**
+```html
+<div class="role-box">
+    <p><span class="role-label">Role:</span> Descriptive Role Title (Actual Job Title)</p>
+    <p><span class="role-label">Focus:</span> Area 1 · Area 2 · Area 3</p>
+</div>
+```
+
+**Summary Paragraph Spacing:**
+When case study summaries have multiple paragraphs, use `mb-lg` class on the first paragraph to create visual spacing:
+```html
+<p class="text-lg mb-lg">First paragraph...</p>
+<p class="text-lg">Second paragraph...</p>
+```
+
+**Related Case Studies:**
+Maintain consistency in related case study descriptions across all pages. Current descriptions:
+- YouTube Partner Program Market Expansion: "GTM strategy enabling monetization for 1M+ channels across 10 markets"
+- Creator Crowdfunding Product Discovery: "Hypothesis-driven discovery combining SQL data mining with market research"
+- Building 0→1 Products (Moniify): "Product strategy and 0→1 building at a media startup"
+- Moniify Creators: "Integrating credible creators into editorial output"
+- Developer Audience Insights Study: "User research that doubled reach and boosted engagement"
+
+**Current Case Studies:**
+- `/youtube-gtm-strategy` - YouTube Partner Program Market Expansion (10 markets, 1M+ channels, GTM strategy)
+- `/creator-crowdfunding` - Creator Crowdfunding Product Discovery (hypothesis-driven, SQL data mining, playbooks)
+- `/moniify` - Building 0→1 Products at Moniify
+- `/moniify-creators` - Moniify Creators integration
+- `/developer-insights` - Developer Audience Insights Study
+
+## CV Customization
+
+**Custom CV Versions:**
+Custom CV versions are stored in `cv-versions/` directory for specific job applications:
+- `anna-barto-cv-tiktok-live.html` - Customized for TikTok LIVE Product Strategy Manager role
+- `anna-barto-cv-custom.html` - General custom version template
+
+**TikTok LIVE CV Customization:**
+For the TikTok LIVE Product Strategy Manager role (London), the following customizations were made:
+- Title line: "Product Strategist · Creator, Developer & Media Platforms · Ex-YouTube"
+- Summary emphasizes: hypothesis-driven discovery, creator monetization, data-informed GTM, growth experimentation
+- Core competencies reordered to prioritize: GTM Strategy, Creator Ecosystem & Monetization
+- Product Highlights reordered: Moniify first, YouTube GTM second, Creator Crowdfunding third
+- Moniify role includes: "Conducted user, market, and competitive research to shape product hypotheses and guide iterations"
+- Truthful representation: removed claims that couldn't be supported (e.g., "live streaming experience", "Feature GTM Strategy")
+- Space-optimized to fit within 2 pages
+
+**CV Customization Guidelines:**
+- Always prioritize truthfulness over overstating experience
+- Reorder sections to match job requirements, but don't invent experience
+- Keep chronological order in Experience section
+- Ensure CV fits within 2 pages through strategic editing
+- Reference Portfolio case studies for detailed examples ([See Selected Product Highlights])
