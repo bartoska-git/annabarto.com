@@ -173,8 +173,22 @@ The CV is maintained in two files:
 
 **Consistency with Website:**
 - CV serves as downloadable summary that complements portfolio case studies
-- Header "Tech-Led Media & Innovation" aligns with website positioning
+- Header "Tech-Led Media & Innovation · Ex-Google & YouTube" aligns with website positioning
+- Website hero states HOW you work (strategy, discovery, experimentation, 0→1); CV title states WHERE you work (tech-led media)
 - Both CV and website should reflect the same job titles and organization names in Experience sections
+
+**CV Positioning Strategy (General-Purpose Version):**
+- **Title line:** "Product Manager · Tech-Led Media & Innovation · Ex-Google & YouTube"
+  - Rationale: "Tech-Led Media & Innovation" is broad enough for media companies, platforms, and adjacent roles while showing distinctive expertise
+  - "Ex-Google & YouTube" provides strong credential signal
+  - Alternative considered: "Platform & Ecosystem Strategy" (good for platform-specific roles, but slightly narrow for general use)
+- **Target roles:** Primary = Product Management in media/content companies; Secondary = Product Operations, Platform/Ecosystem roles, Product Strategy, Product Education
+- **Ops balance:** Main CV emphasizes PM positioning with strategic operational outputs (dashboards, playbooks, courses) but avoids being too ops-heavy
+- **Key achievements included:**
+  - YouTube North Star Award (2016): Shows recognition and measurable impact (30% Revenue Per Hour increase)
+  - Creator crowdfunding: Adoption dashboard and Creator Academy course (20 languages) demonstrate operational deliverables
+  - AI dubbing experimentation: Specific and clear about the type of AI work
+  - YouTube Partner Program: Case study link added for portfolio integration
 
 ## Medium Publications
 
@@ -287,3 +301,32 @@ For the TikTok LIVE Product Strategy Manager role (London), the following custom
 - Keep chronological order in Experience section
 - Ensure CV fits within 2 pages through strategic editing
 - Reference Portfolio case studies for detailed examples ([See Selected Product Highlights])
+
+**Recent CV Updates (January 2026):**
+Strategic additions to strengthen general-purpose CV while maintaining PM focus:
+
+1. **YouTube North Star Award (2016)** - Added under Strategic Partner Manager role
+   - Text: "Received YouTube North Star Award (2016) for exceptional impact in driving adoption of mid-roll ads feature, contributing to 30% increase in Revenue Per Hour"
+   - Note: "Revenue Per Hour" capitalized (official YouTube metric name)
+   - Placement: Last bullet in YouTube role (serves as capstone achievement)
+
+2. **Creator Crowdfunding Operational Outputs** - Enhanced Selected Product Highlights
+   - Added: "Built adoption dashboard and Creator Academy course"
+   - Full text: "Mapped creator crowdfunding ecosystem combining SQL, market analysis, and qualitative insights. Built adoption dashboard and Creator Academy course; research informed YouTube's later native creator funding features"
+   - Shows operational deliverables without being too ops-focused
+
+3. **YouTube Partner Program Case Study Link** - Added portfolio integration
+   - Link: `[annabarto.com/youtube-gtm-strategy]`
+   - Placed after YPP bullet to connect CV to detailed case study
+
+4. **Minor Clarifications:**
+   - Acting Executive Producer: Added "(Parental Leave Cover)" to role title
+   - Moniify: Changed to "website feature prioritization" (vs generic "feature prioritization")
+   - Dev Media Lab: Changed to "AI dubbing experimentation" (vs generic "AI experimentation")
+   - First Google role: Removed beta tests bullet, kept only integrated marketing models
+
+**What Was NOT Added (Intentionally):**
+- Dev Media Lab best practices documentation: Too ops/enablement-focused for general PM CV
+- Moniify creator toolkit: Felt too ops-y for main version
+- Additional xfn partnership details: Already covered sufficiently
+- These can be added to custom versions for ops/enablement roles
