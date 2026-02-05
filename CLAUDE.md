@@ -143,14 +143,14 @@ Complex screenshots (like Magic Patterns interface) may look great at full size 
 
 The CV is maintained in two files:
 - **Source**: `anna-barto-cv.html` - HTML file that can be printed to PDF
-- **Published**: `www/public/Anna-Barto-CV.pdf` - The PDF file linked from the website
+- **Published**: `www/public/Anna Barto - CV.pdf` - The PDF file linked from the website
 
 ### Updating the CV
 
 1. Edit `anna-barto-cv.html` with changes
 2. Generate PDF from the HTML (print to PDF from browser)
-3. Save as `www/public/Anna-Barto-CV.pdf` (exact filename with hyphen, not space)
-4. The website links to `/public/Anna-Barto-CV.pdf` via the "Download CV" button
+3. Save as `www/public/Anna Barto - CV.pdf` (exact filename with spaces and dash)
+4. The website links to `/public/Anna Barto - CV.pdf` via the "Download CV" button
 
 ### CV Content Guidelines
 
@@ -158,7 +158,7 @@ The CV is maintained in two files:
 - Use accurate, specific titles (e.g., "Senior Producer, Media Innovation & Research" not "Research & Content Innovation")
 - Include full organization names (e.g., "Google Developer Product Marketing" not just "Google Developer Marketing")
 - Format organization names correctly (e.g., "Transform@lab" not "TransformatLab")
-- Use "Freelance Consultant" not just "Consultant" for hgs Consultants role (clarifies independent nature of work)
+- Use "Independent Consultant" not just "Consultant" for hgs Consultants role (clarifies independent nature of work; avoid "Freelance" as recruiters may view it negatively)
 
 **Skills & Competencies:**
 - CV summary emphasizes "hypothesis-driven discovery" to show process/methodology
@@ -330,3 +330,17 @@ Strategic additions to strengthen general-purpose CV while maintaining PM focus:
 - Moniify creator toolkit: Felt too ops-y for main version
 - Additional xfn partnership details: Already covered sufficiently
 - These can be added to custom versions for ops/enablement roles
+
+**CV Updates (February 2026):**
+
+1. **"Freelance" → "Independent" Terminology Change**
+   - Recruiter feedback: "Freelance" can be viewed negatively by recruiters
+   - Changed role title from "Freelance Consultant, Product & Media" to "Independent Consultant, Product & Media" across all CV versions
+   - Website Experience table: updated job title to "Independent Consultant, Product & Media" and removed "(freelance)" from organization name "hgs Consultants"
+   - "Independent" is widely understood in professional contexts and cleanly signals a non-staff engagement
+   - "External" was considered but reads awkwardly as a standalone CV title
+
+2. **CV PDF Filename Change**
+   - Old: `Anna-Barto-CV.pdf` (hyphenated)
+   - New: `Anna Barto - CV.pdf` (spaces with dash separator)
+   - Download link in `index.php` updated to match new filename

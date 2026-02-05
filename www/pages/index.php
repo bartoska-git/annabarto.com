@@ -28,7 +28,7 @@ require_once '../includes/navigation.php';
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         View Portfolio
                     </a>
-                    <a href="/public/Anna-Barto-CV.pdf" class="btn btn-primary" download>
+                    <a href="/public/Anna Barto - CV.pdf" class="btn btn-primary" download>
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                         Download CV
                     </a>
@@ -238,7 +238,7 @@ require_once '../includes/navigation.php';
                             <tr><th>Year</th><th>Job Title</th><th>Organization</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td class="year">2025-Present</td><td>Consultant, Product & Media</td><td>hgs Consultants (freelance)</td></tr>
+                            <tr><td class="year">2025-Present</td><td>Independent Consultant, Product & Media</td><td>hgs Consultants</td></tr>
                             <tr><td class="year">2025</td><td>Acting Executive Producer (parental leave cover)</td><td>Google Developer Product Marketing (contracted via Randstad Digital Switzerland)</td></tr>
                             <tr><td class="year">2024-2025</td><td>Product Manager</td><td>Moniify</td></tr>
                             <tr><td class="year">2018-2024</td><td>Senior Producer, Media Innovation & Research</td><td>Google Developer Media Lab (contracted via Advanced Systems Group)</td></tr>
