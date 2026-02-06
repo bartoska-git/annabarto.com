@@ -278,6 +278,46 @@ Stats cards display in a 2×2 grid on mobile with optimized spacing:
 - Label font sizes reduced to 0.7rem and 0.65rem for secondary labels
 - Maintains 2-column layout rather than stacking to single column
 
+## Production Portfolio (Hidden Page)
+
+A standalone production portfolio page at `/production-portfolio` — not linked from the main site navigation. Designed for sharing directly with hiring managers when applying for production/Head of Production roles (e.g., Kurzgesagt). The main website and LinkedIn remain positioned for Product Management roles.
+
+**URL:** `annabarto.com/production-portfolio`
+**Files:** `www/pages/work-samples.php` (grid page), `www/pages/work-samples-category.php` (category detail pages)
+
+**Key Design Decisions:**
+- No navigation linking back to the main PM-focused site (uses `$hideNavigation = true`)
+- Category pages have a standalone "Back to Production Portfolio" nav bar (no "Anna Barto" logo link)
+- Title: "Anna Barto · Production Portfolio"
+- Subtitle: "Selected production work from my time at Moniify, Google, and beyond."
+- Old `/work-samples/[category]` routes preserved for backward compatibility in `.htaccess`
+
+**Categories (in display order):**
+1. On Location · Branded Stories (`location-shoots`) — Pinpoint Delivery, iNaturalist, EMEA Relocation
+2. Studio Shows & Formats (`studio-shoots-sets`) — Moniify Daily, SEO Mythbusting, Search Console Training
+3. White Cyc & Green Screen (`studio-shoots-green-screen`) — How Search Works Mini-Series, AMA Series
+4. Creator Collaborations (`event-videos`) — Moniify Creators (thumbnail+link), Google I/O 2018
+5. Vodcasts & Podcasts (`podcasts`) — RicHer Vodcast (TikTok embed), Search Off the Record (Libsyn embed)
+6. Animation (`animations`) — Interactive Video Game, Google Pay API Explainer
+7. Event Formats (`event-formats`) — Red Flag/Green Flag (short), Flutter I/O Announcements
+8. Feature Documentary (`feature-documentary`) — Nejsledovanější (Following)
+9. Passion Projects (`passion-projects`) — Film Poster, Converse Shoes, Transmedia Academy
+
+**Technical Implementation:**
+- Each video entry has: `title`, `embed` (or `thumbnail`+`link` for non-embeddable content), `date`, `role`, `company` (optional, omitted for Passion Projects), `description`
+- Thumbnail+link pattern used for Instagram content (Instagram embeds don't work): shows image with play button overlay, links to Instagram
+- TikTok embeds work fine with `https://www.tiktok.com/embed/v2/[id]`
+- Libsyn embeds used for podcast episodes
+- `width`/`height` overrides supported per video (defaults: 700×394)
+- Category card images stored in `/www/public/optimized/work-samples/` with source files in `/www/public/work-samples/`
+- `background-position` override supported per category card via `'position'` field
+
+**Embed Lessons Learned:**
+- Instagram embeds (`/embed` suffix) show broken file icons — use thumbnail+link approach instead
+- Google Photos share links redirect and can't be embedded — use thumbnail approach
+- TikTok embeds work reliably
+- Libsyn player embeds work for podcasts (use small height ~90px for audio-only)
+
 ## CV Customization
 
 **Custom CV Versions:**
