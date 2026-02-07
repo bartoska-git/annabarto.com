@@ -154,7 +154,7 @@ $categories = [
         'videos' => [
             [
                 'title' => 'Moniify Creators Program',
-                'thumbnail' => '/public/optimized/work-samples/Moniify-Creators.png',
+                'thumbnail' => '/public/optimized/work-samples/Moniify-Creators.jpg',
                 'link' => 'https://www.instagram.com/moniify/reel/DC31NqxTLrK/',
                 'width' => 350,
                 'height' => 622,

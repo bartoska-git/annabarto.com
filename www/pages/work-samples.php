@@ -7,13 +7,13 @@ require_once '../includes/header.php';
 $categories = [
     ['id' => 'location-shoots', 'title' => 'On Location · Branded Stories', 'subtitle' => '', 'image' => 'location-shoots.jpg'],
     ['id' => 'studio-shoots-sets', 'title' => 'Studio Shows & Formats', 'subtitle' => '', 'image' => 'studio-shows-6.jpg'],
-    ['id' => 'studio-shoots-green-screen', 'title' => 'White Cyc & Green Screen', 'subtitle' => '', 'image' => 'white-cyc-2.png'],
+    ['id' => 'studio-shoots-green-screen', 'title' => 'White Cyc & Green Screen', 'subtitle' => '', 'image' => 'white-cyc-2.jpg'],
     ['id' => 'event-videos', 'title' => 'Creator Collaborations', 'subtitle' => '', 'image' => 'event-videos.jpg'],
-    ['id' => 'podcasts', 'title' => 'Vodcasts & Podcasts', 'subtitle' => '', 'image' => 'vodcasts2.png'],
-    ['id' => 'animations', 'title' => 'Animation', 'subtitle' => '', 'image' => 'animation4.png'],
-    ['id' => 'event-formats', 'title' => 'Event Formats', 'subtitle' => '', 'image' => 'event-3.png'],
+    ['id' => 'podcasts', 'title' => 'Vodcasts & Podcasts', 'subtitle' => '', 'image' => 'vodcasts2.jpg'],
+    ['id' => 'animations', 'title' => 'Animation', 'subtitle' => '', 'image' => 'animation4.jpg'],
+    ['id' => 'event-formats', 'title' => 'Event Formats', 'subtitle' => '', 'image' => 'event-3.jpg'],
     ['id' => 'feature-documentary', 'title' => 'Feature Documentary', 'subtitle' => '', 'image' => 'feature-documentary.jpg'],
-    ['id' => 'passion-projects', 'title' => 'Passion Projects', 'subtitle' => '', 'image' => 'passion-projects-2.png'],
+    ['id' => 'passion-projects', 'title' => 'Passion Projects', 'subtitle' => '', 'image' => 'passion-projects-2.jpg'],
 ];
 ?>
 
