@@ -190,6 +190,33 @@ The CV is maintained in two files:
   - AI dubbing experimentation: Specific and clear about the type of AI work
   - YouTube Partner Program: Case study link added for portfolio integration
 
+## Writing Section (index.php)
+
+The Writing section lives in `www/pages/index.php` as a PHP array of article cards rendered in a horizontal scroll.
+
+**Article card structure:**
+```php
+['title' => '...', 'category' => '...', 'excerpt' => '...', 'date' => 'Month D, YYYY', 'link' => '...']
+// Optional: 'featured' => true  (adds Featured badge and larger card styling)
+```
+
+**Ordering convention:**
+- Featured article ("How I Built This Site Using AI") stays first — it links to an on-site page and acts as a portfolio piece
+- New articles go second (after featured), then remaining articles in reverse chronological order
+- Featured takes priority over recency — featured stays pinned at position 1 regardless of date
+
+**Category tags in use:** `AI Tools`, `AI Architecture`, `MLOps`, `AI Strategy`, `Product Management`
+- Tags describe the lens/domain, not the article's specific topic (e.g. "AI Architecture" not "Token Economics")
+- External links (LinkedIn, Medium) open in new tab via automatic detection (`strpos($link, 'http') === 0`)
+
+**Current articles (as of Feb 2026):**
+1. How I Built This Site Using AI — `/building-with-ai` — featured
+2. 6 Levers to Bring Down the Cost of Running an AI Product — LinkedIn — Feb 23, 2026
+3. When Creative Work Is Product Work — Medium — Jan 1, 2026
+4. It Looks Like ChatGPT Learned to Count. It Didn't. — LinkedIn — Dec 18, 2025
+5. How Does a 'Normal' Company Actually Implement Generative AI? — LinkedIn — Nov 13, 2025
+6. AI Disruption Risk Framework — LinkedIn — Oct 19, 2025
+
 ## Medium Publications
 
 The "How I Built This Site Using AI" article has been published in multiple versions:
