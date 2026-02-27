@@ -214,6 +214,8 @@ $ogType = 'article';
 
                 <p>And because Claude Code, similarly to many other AI-assisted coding tools, integrates with GitHub and hosting platforms, I could also iterate, test, and deploy directly from the same environment.</p>
 
+                <p><a href="https://github.com/bartoska-git/annabarto.com" class="inline-link" target="_blank" rel="noopener noreferrer">The code for this site is on GitHub</a>, if you're curious about the setup.</p>
+
                 <h2>6. Final reflection</h2>
 
                 <p>Building this site with AI clarified three things:</p>

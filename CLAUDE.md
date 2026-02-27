@@ -225,6 +225,7 @@ The "How I Built This Site Using AI" article has been published in multiple vers
 - Original shorter version with core narrative
 - Focus on the story and key learnings
 - Includes link banner to Medium version
+- Includes link to GitHub repo (`https://github.com/bartoska-git/annabarto.com`) at end of section 5, as its own paragraph after the GitHub/deployment sentence
 
 **Medium version** (published in Bootcamp):
 - URL: https://medium.com/design-bootcamp/building-a-site-with-ai-what-worked-what-broke-and-what-i-didnt-expect-374b71ac7619
