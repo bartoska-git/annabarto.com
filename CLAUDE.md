@@ -143,14 +143,14 @@ Complex screenshots (like Magic Patterns interface) may look great at full size 
 
 The CV is maintained in two files:
 - **Source**: `anna-barto-cv.html` - HTML file that can be printed to PDF
-- **Published**: `www/public/Anna Barto - CV.pdf` - The PDF file linked from the website
+- **Published**: `www/public/Anna Barto - CV - web.pdf` - The PDF file linked from the website
 
 ### Updating the CV
 
 1. Edit `anna-barto-cv.html` with changes
 2. Generate PDF from the HTML (print to PDF from browser)
-3. Save as `www/public/Anna Barto - CV.pdf` (exact filename with spaces and dash)
-4. The website links to `/public/Anna Barto - CV.pdf` via the "Download CV" button
+3. Save as `www/public/Anna Barto - CV - web.pdf` (exact filename)
+4. The website links to `/public/Anna Barto - CV - web.pdf` via the "Download CV" button
 
 ### CV Content Guidelines
 
@@ -410,5 +410,6 @@ Strategic additions to strengthen general-purpose CV while maintaining PM focus:
 
 2. **CV PDF Filename Change**
    - Old: `Anna-Barto-CV.pdf` (hyphenated)
-   - New: `Anna Barto - CV.pdf` (spaces with dash separator)
-   - Download link in `index.php` updated to match new filename
+   - Intermediate: `Anna Barto - CV.pdf` (spaces with dash separator)
+   - Current: `Anna Barto - CV - web.pdf` (web-optimized version, March 2026)
+   - Download link in `index.php` updated to match current filename
