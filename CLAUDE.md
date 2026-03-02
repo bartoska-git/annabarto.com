@@ -209,13 +209,14 @@ The Writing section lives in `www/pages/index.php` as a PHP array of article car
 - Tags describe the lens/domain, not the article's specific topic (e.g. "AI Architecture" not "Token Economics")
 - External links (LinkedIn, Medium) open in new tab via automatic detection (`strpos($link, 'http') === 0`)
 
-**Current articles (as of Feb 2026):**
+**Current articles (as of Mar 2026):**
 1. How I Built This Site Using AI — `/building-with-ai` — featured
-2. 6 Levers to Bring Down the Cost of Running an AI Product — LinkedIn — Feb 23, 2026
-3. When Creative Work Is Product Work — Medium — Jan 1, 2026
-4. It Looks Like ChatGPT Learned to Count. It Didn't. — LinkedIn — Dec 18, 2025
-5. How Does a 'Normal' Company Actually Implement Generative AI? — LinkedIn — Nov 13, 2025
-6. AI Disruption Risk Framework — LinkedIn — Oct 19, 2025
+2. I Built an AI Onboarding Prototype. One LLM Call Wasn't Enough. — TBD (not yet published, link placeholder `#`) — March 2026
+3. 6 Levers to Bring Down the Cost of Running an AI Product — LinkedIn — Feb 23, 2026
+4. When Creative Work Is Product Work — Medium — Jan 1, 2026
+5. It Looks Like ChatGPT Learned to Count. It Didn't. — LinkedIn — Dec 18, 2025
+6. How Does a 'Normal' Company Actually Implement Generative AI? — LinkedIn — Nov 13, 2025
+7. AI Disruption Risk Framework — LinkedIn — Oct 19, 2025
 
 ## Medium Publications
 
