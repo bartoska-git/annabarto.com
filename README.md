@@ -12,13 +12,7 @@ This site was built almost entirely with AI assistance as an end-to-end experime
 
 A full writeup of what worked, what broke, and what I learned is on [Medium](https://medium.com/design-bootcamp/building-a-site-with-ai-what-worked-what-broke-and-what-i-didnt-expect-374b71ac7619) and on the [site itself](https://annabarto.com/building-with-ai).
 
----
-
-## Screenshots
-
 ![Hero](docs/screenshots/hero.png)
-![AI Builds](docs/screenshots/ai-builds.png)
-![Case study](docs/screenshots/case-study.png)
 
 ---
 
