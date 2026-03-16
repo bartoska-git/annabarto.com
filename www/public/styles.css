@@ -1749,7 +1749,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-.inline-link {
+a.inline-link {
   color: var(--soft-terracotta);
   text-decoration: underline;
   text-decoration-color: var(--soft-terracotta);
@@ -1757,7 +1757,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all var(--transition-normal);
 }
 
-.inline-link:hover {
+a.inline-link:hover {
   color: rgba(201, 134, 106, 0.8);
   text-decoration-color: rgba(201, 134, 106, 0.8);
 }
