@@ -14,6 +14,14 @@ A full writeup of what worked, what broke, and what I learned is on [Medium](htt
 
 ---
 
+## Screenshots
+
+![Hero](docs/screenshots/hero.png)
+![AI Builds](docs/screenshots/ai-builds.png)
+![Case study](docs/screenshots/case-study.png)
+
+---
+
 ## Tech stack
 
 - **PHP 8.2:** used as a templating system, no frameworks
