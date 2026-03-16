@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Product Strategy & Media Innovation';
+$pageTitle = 'Product Manager & Applied AI Builder';
 $ogImage = '/public/optimized/images/Hero_website_anna_barto.jpg';
 $ogDescription = 'Product manager specializing in strategy, discovery, experimentation, and 0→1 product building.';
 require_once '../includes/header.php';
@@ -15,20 +15,19 @@ require_once '../includes/navigation.php';
         <div class="hero-content">
             <div class="hero-inner">
                 <h1 class="hero-title">Anna Barto</h1>
-                <h2 class="hero-subtitle">Product Strategy & Media Innovation</h2>
+                <h2 class="hero-subtitle">Product Manager & Applied AI Builder</h2>
                 <p class="hero-description">
-                    I'm a product manager shaped by a nonlinear path across strategy
-                    and partnerships at Google & YouTube, creative production and
-                    content R&D at a media lab, and 0&rarr;1 product work in early-stage
-                    startups and consulting.
+                    I'm a product manager who builds with AI: RAG systems, LLM pipelines, AI-assisted development.
+                    My background spans strategy and partnerships at Google &amp; YouTube, content R&amp;D at a
+                    developer media lab, and 0&rarr;1 product work at media startups.
                 </p>
                 <a href="/about" class="hero-about-link">More about my journey &rarr;</a>
                 <div class="hero-actions">
-                    <a href="#portfolio" class="btn btn-primary">
+                    <a href="#ai-builds" class="btn btn-primary">
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        View Portfolio
+                        View My Work
                     </a>
-                    <a href="/public/Anna Barto - CV - web.pdf" class="btn btn-primary" download>
+                    <a href="/public/Anna Barto-CV .pdf" class="btn btn-primary" download>
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                         Download CV
                     </a>
@@ -53,10 +52,90 @@ require_once '../includes/navigation.php';
         </div>
     </section>
 
+    <!-- AI Builds Section -->
+    <section id="ai-builds" class="section">
+        <div class="text-center mb-2xl">
+            <h2 class="section-title mb-md">AI Builds</h2>
+            <p class="section-subtitle">Selected projects in RAG, LLM pipelines, and AI-assisted development.</p>
+        </div>
+        <div class="grid grid-3">
+            <?php
+            $aiBuilds = [
+                [
+                    'title' => 'Personal AI DJ',
+                    'description' => 'YouTube Music has no AI DJ feature, so <a href="https://personal-ai-dj.streamlit.app/" target="_blank" rel="noopener noreferrer" class="inline-link">I built one</a>. It enriches songs with mood descriptions via GPT, web search, and Last.fm, stores embeddings in Supabase, and retrieves matches from natural language queries.',
+                    'tags' => ['RAG', 'Data Enrichment'],
+                    'image' => '/public/images/ai-builds/AI_DJ.jpg',
+                    'imageUrl' => 'https://personal-ai-dj.streamlit.app/',
+                    'imageExternal' => true,
+                    'links' => [
+                        ['label' => 'GitHub', 'url' => 'https://github.com/bartoska-git/personal-ai-dj', 'external' => true],
+                        ['label' => 'Build Log', 'url' => 'https://medium.com/ai-advances/i-dont-use-spotify-so-i-built-my-own-ai-dj-8c6054ceee2d', 'external' => true],
+                    ]
+                ],
+                [
+                    'title' => 'AutoFlow',
+                    'description' => 'Automation tools have an onboarding blank canvas problem. <a href="https://autoflow-prototype.lovable.app" target="_blank" rel="noopener noreferrer" class="inline-link">AutoFlow</a> addresses it with a two-call LLM pipeline: a classifier validates input, then a generator suggests personalised workflows based on role and tasks.',
+                    'tags' => ['Two-Call LLM Pipeline', 'Prompt Design'],
+                    'image' => '/public/images/ai-builds/Autoflow.jpg',
+                    'imageUrl' => 'https://autoflow-prototype.lovable.app',
+                    'imageExternal' => true,
+                    'links' => [
+                        ['label' => 'GitHub', 'url' => 'https://github.com/bartoska-git/autoflow-prototype', 'external' => true],
+                        ['label' => 'Build Log', 'url' => 'https://medium.com/womenintechnology/i-built-an-ai-onboarding-prototype-a-single-llm-call-architecture-wasnt-enough-a0af85604195', 'external' => true],
+                    ]
+                ],
+                [
+                    'title' => 'annabarto.com',
+                    'description' => 'An experiment in using AI tools across an entire full-stack website build. Wireframe with ChatGPT, interface design in Magic Patterns, code and testing with Claude Code, deployment via GitHub Actions.',
+                    'tags' => ['AI-Assisted Dev'],
+                    'image' => '/public/images/ai-builds/annabarto.jpg',
+                    'imageUrl' => '/building-with-ai',
+                    'imageExternal' => false,
+                    'links' => [
+                        ['label' => 'GitHub', 'url' => 'https://github.com/bartoska-git/annabarto.com', 'external' => true],
+                        ['label' => 'Build Log', 'url' => 'https://medium.com/design-bootcamp/building-a-site-with-ai-what-broke-and-what-i-didnt-expect-374b71ac7619', 'external' => true],
+                    ]
+                ],
+            ];
+            foreach ($aiBuilds as $build):
+                $imageAttrs = $build['imageExternal'] ? 'target="_blank" rel="noopener noreferrer"' : '';
+            ?>
+            <article class="card">
+                <div class="card-image card-image-svg">
+                    <a href="<?php echo htmlspecialchars($build['imageUrl']); ?>" <?php echo $imageAttrs; ?>>
+                        <img src="<?php echo $build['image']; ?>" alt="<?php echo htmlspecialchars($build['title']); ?>">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><?php echo htmlspecialchars($build['title']); ?></h3>
+                    <div class="tags">
+                        <?php foreach ($build['tags'] as $tag): ?>
+                        <span class="tag tag-terracotta"><?php echo htmlspecialchars($tag); ?></span>
+                        <?php endforeach; ?>
+                    </div>
+                    <p class="card-text"><?php echo $build['description']; ?></p>
+                    <div class="ai-build-links">
+                        <?php foreach ($build['links'] as $link):
+                            $isPending = isset($link['pending']) && $link['pending'];
+                            $isExternal = isset($link['external']) && $link['external'];
+                            $attrs = $isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
+                            if ($isPending): ?>
+                        <span class="ai-build-link-pending"><?php echo htmlspecialchars($link['label']); ?> (soon)</span>
+                        <?php else: ?>
+                        <a href="<?php echo htmlspecialchars($link['url']); ?>" <?php echo $attrs; ?> class="card-link"><?php echo htmlspecialchars($link['label']); ?> →</a>
+                        <?php endif; endforeach; ?>
+                    </div>
+                </div>
+            </article>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
     <!-- Portfolio Section -->
     <section id="portfolio" class="section">
         <div class="text-center mb-2xl">
-            <h2 class="section-title mb-md">Product Portfolio</h2>
+            <h2 class="section-title mb-md">Case Studies</h2>
             <p class="section-subtitle">Selected work in strategy, discovery, experimentation, and 0&rarr;1 building.</p>
         </div>
         <div class="grid grid-3">
@@ -135,7 +214,8 @@ require_once '../includes/navigation.php';
             <?php
             $articles = [
                 ['title' => 'How I Built This Site Using AI', 'category' => 'AI Tools', 'excerpt' => 'What worked, what broke, and what I didn\'t expect. A detailed exploration of building this portfolio site using AI tools across the full process.', 'date' => 'January 8, 2026', 'link' => '/building-with-ai', 'featured' => true],
-                ['title' => 'I Built an AI Onboarding Prototype. One LLM Call Wasn\'t Enough.', 'category' => 'AI Architecture', 'excerpt' => 'A PM\'s build log for an LLM-powered onboarding prototype: why a single call wasn\'t enough, and what it took — prompt iteration, input design, and a two-call architecture — to get output worth trusting.', 'date' => 'March 2026', 'link' => '#'],
+                ['title' => 'I Built an AI Onboarding Prototype. One LLM Call Wasn\'t Enough.', 'category' => 'AI Architecture', 'excerpt' => 'A PM\'s build log for an LLM-powered onboarding prototype: why a single call wasn\'t enough, and what it took — prompt iteration, input design, and a two-call architecture — to get output worth trusting.', 'date' => 'March 15, 2026', 'link' => 'https://medium.com/womenintechnology/i-built-an-ai-onboarding-prototype-a-single-llm-call-architecture-wasnt-enough-a0af85604195'],
+                ['title' => 'I Don\'t Use Spotify. So I Built My Own AI DJ.', 'category' => 'AI Architecture', 'excerpt' => 'Spotify launched Prompted Playlists. I don\'t use Spotify. So I built one for YouTube Music instead. A build log covering missing APIs, LLMs that don\'t know obscure music, and the enrichment cost that nearly derailed the whole thing.', 'date' => 'March 10, 2026', 'link' => 'https://medium.com/ai-advances/i-dont-use-spotify-so-i-built-my-own-ai-dj-8c6054ceee2d'],
                 ['title' => '6 Levers to Bring Down the Cost of Running an AI Product', 'category' => 'AI Architecture', 'excerpt' => 'Tokens in, tokens out, you pay for both. Here are six concrete levers — from prompt caching to model routing — to cut the cost of running an LLM-powered product without sacrificing quality.', 'date' => 'February 23, 2026', 'link' => 'https://www.linkedin.com/pulse/6-levers-bring-down-cost-running-ai-product-anna-barto-wbhwe'],
                 ['title' => 'When Creative Work Is Product Work', 'category' => 'Product Management', 'excerpt' => 'A producer\'s path to product management, exploring how creative production and PM share the same core loop: understand, design, ship, learn, and iterate.', 'date' => 'January 1, 2026', 'link' => 'https://medium.com/womenintechnology/when-creative-work-is-product-work-ba59267fb1ee'],
                 ['title' => 'It Looks Like ChatGPT Learned to Count. It Didn\'t.', 'category' => 'AI Architecture', 'excerpt' => 'LLMs seem much better at counting, but the real story is the shift toward hybrid, tool-augmented AI systems that delegate computational tasks strategically.', 'date' => 'December 18, 2025', 'link' => 'https://www.linkedin.com/pulse/looks-like-chatgpt-learned-count-itdidnt-anna-barto-eohmf/'],
@@ -190,15 +270,15 @@ require_once '../includes/navigation.php';
                     <div class="skills-grid">
                         <?php
                         $skills = [
+                            'AI Strategy & Prototyping',
+                            'Applied AI Architecture',
                             'Product Strategy & Execution',
                             'Hypothesis-Driven Discovery',
                             '0→1 Product Building',
-                            'AI Strategy & Prototyping',
                             'User & Market Research',
                             'Data Analysis & Basic SQL',
                             'Experimentation',
                             'Growth Strategy',
-                            'Go-to-Market Strategy',
                             'Cross-Functional Leadership',
                             'Prioritization & Trade-offs',
                             'Agile (Scrum)'
@@ -215,15 +295,15 @@ require_once '../includes/navigation.php';
                     <div class="tools-grid">
                         <?php
                         $tools = [
-                            ['category' => 'AI Prototyping', 'tools' => 'Magic Patterns, Bolt, Claude Code'],
-                            ['category' => 'AI Assistants', 'tools' => 'ChatGPT, NotebookLM, Perplexity'],
-                            ['category' => 'Workflow & Collaboration', 'tools' => 'Airtable, Miro, Asana, Monday.com, Relay.app, Notion'],
+                            ['category' => 'AI Prototyping & Dev', 'tools' => 'Claude Code, Lovable, Magic Patterns, Streamlit'],
+                            ['category' => 'APIs & Backend', 'tools' => 'OpenAI API, Supabase (pgvector), GitHub Actions'],
+                            ['category' => 'AI Assistants', 'tools' => 'NotebookLM, Perplexity, ChatGPT'],
+                            ['category' => 'Data Analysis', 'tools' => 'SQL (PLX)'],
+                            ['category' => 'Automation & Collaboration', 'tools' => 'Relay.app, Airtable, Notion, Miro, Asana'],
                             ['category' => 'Analytics & Performance', 'tools' => 'Google Analytics, PostHog, YouTube Analytics, Optimizely'],
                             ['category' => 'Bug Tracking & Documentation', 'tools' => 'Buganizer, g3doc, Google Sites'],
                             ['category' => 'Design & Digital Assets', 'tools' => 'Adobe Suite (Basic), Canva, Artlist, Frame.io, Iconik.io'],
                             ['category' => 'Content & Media Systems', 'tools' => 'YouTube CMS, Content ID'],
-                            ['category' => 'Data Analysis', 'tools' => 'SQL (PLX)'],
-                            ['category' => 'Office Suite', 'tools' => 'Google Workspace, Microsoft 365']
                         ];
                         foreach ($tools as $tool): ?>
                         <div class="tool-card">

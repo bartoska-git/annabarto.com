@@ -211,12 +211,13 @@ The Writing section lives in `www/pages/index.php` as a PHP array of article car
 
 **Current articles (as of Mar 2026):**
 1. How I Built This Site Using AI — `/building-with-ai` — featured
-2. I Built an AI Onboarding Prototype. One LLM Call Wasn't Enough. — TBD (not yet published, link placeholder `#`) — March 2026
-3. 6 Levers to Bring Down the Cost of Running an AI Product — LinkedIn — Feb 23, 2026
-4. When Creative Work Is Product Work — Medium — Jan 1, 2026
-5. It Looks Like ChatGPT Learned to Count. It Didn't. — LinkedIn — Dec 18, 2025
-6. How Does a 'Normal' Company Actually Implement Generative AI? — LinkedIn — Nov 13, 2025
-7. AI Disruption Risk Framework — LinkedIn — Oct 19, 2025
+2. I Built an AI Onboarding Prototype. One LLM Call Wasn't Enough. — Medium (womenintechnology) — March 15, 2026 — https://medium.com/womenintechnology/i-built-an-ai-onboarding-prototype-a-single-llm-call-architecture-wasnt-enough-a0af85604195
+3. I Don't Use Spotify. So I Built My Own AI DJ. — Medium (ai-advances) — March 10, 2026
+4. 6 Levers to Bring Down the Cost of Running an AI Product — LinkedIn — Feb 23, 2026
+5. When Creative Work Is Product Work — Medium — Jan 1, 2026
+6. It Looks Like ChatGPT Learned to Count. It Didn't. — LinkedIn — Dec 18, 2025
+7. How Does a 'Normal' Company Actually Implement Generative AI? — LinkedIn — Nov 13, 2025
+8. AI Disruption Risk Framework — LinkedIn — Oct 19, 2025
 
 ## Medium Publications
 
@@ -306,6 +307,47 @@ Stats cards display in a 2×2 grid on mobile with optimized spacing:
 - Card padding explicitly set to `var(--space-md)` (1rem)
 - Label font sizes reduced to 0.7rem and 0.65rem for secondary labels
 - Maintains 2-column layout rather than stacking to single column
+
+## Portfolio & AI Builds Thumbnails
+
+### File Locations
+- **Case study thumbnails**: `www/public/optimized/portfolio/*.jpg` — use clean descriptive names
+- **AI Build thumbnails**: `www/public/images/ai-builds/` — current files: `AI_DJ.jpg`, `Autoflow.jpg`, `annabarto.jpg`
+
+### Swapping Thumbnails
+When the user uploads a new thumbnail, check `www/public/` or `www/public/optimized/portfolio/` for new files by modification time (`ls -lt`), then copy to the correct location:
+```bash
+cp /path/to/new-file.jpg www/public/optimized/portfolio/existing-name.jpg
+```
+No code changes needed as long as the destination filename stays the same.
+
+### Colour Palette (extracted from case study thumbnails)
+These are the exact hex codes used in the case study illustrations — use when prompting AI image generators for new thumbnails to ensure consistency:
+
+| Role | Hex | Description |
+|------|-----|-------------|
+| Primary orange | `#F8A860` | Main fills — warm golden amber |
+| Accent orange | `#F88860` | Darker fills — coral orange |
+| Yellow | `#FAC878` | Highlight fills — warm golden yellow |
+| Green | `#DCE6C8` | Cool contrast — very pale yellow-sage |
+
+### Artlist Prompt Guidelines
+When generating new thumbnails via Artlist, include:
+- Exact hex codes (tools ignore vague colour names like "terracotta" or "muted green")
+- `"flat matte fills — zero gradients, zero glow, zero drop shadows"`
+- `"thin black ink outlines throughout"`
+- `"New Yorker editorial illustration aesthetic"`
+- `"all elements contained within the central 70% of the image, with generous white margins on all four sides"` — critical to prevent cropping on cards
+- Avoid "keep as is BUT..." instructions — they conflict; describe from scratch instead
+
+### object-fit: cover Behaviour
+Card images use `object-fit: cover` in `.card-image img` (styles.css). This crops images to fill the card. If subjects are at the very edges of a generated image they will be cut off. Solutions in order of preference:
+1. Regenerate with generous margins baked in (best)
+2. Add white padding via Python/PIL: `Image.new('RGB', (w, new_h), (255,255,255))` and paste original centred
+3. Do NOT use `object-fit: contain` — makes images look tiny
+
+### Colour Consistency: AI Builds vs Case Studies
+The AI Build thumbnails (Artlist-generated) historically had a more muted/autumnal palette vs the case study thumbnails. The gap has been narrowed but not eliminated. Key phrase for future Artlist prompts: **"no grey undertones"** — grey mixed into greens and oranges is what makes fills look autumnal rather than spring-like.
 
 ## Production Portfolio (Hidden Page)
 
@@ -412,5 +454,6 @@ Strategic additions to strengthen general-purpose CV while maintaining PM focus:
 2. **CV PDF Filename Change**
    - Old: `Anna-Barto-CV.pdf` (hyphenated)
    - Intermediate: `Anna Barto - CV.pdf` (spaces with dash separator)
-   - Current: `Anna Barto - CV - web.pdf` (web-optimized version, March 2026)
+   - Previous: `Anna Barto - CV - web.pdf` (web-optimized version)
+   - Current: `Anna Barto-CV .pdf` (March 2026 — note: space before .pdf is intentional)
    - Download link in `index.php` updated to match current filename
