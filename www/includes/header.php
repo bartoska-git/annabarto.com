@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo isset($pageTitle) ? $pageTitle . ' | Anna Barto' : 'Anna Barto | Product Strategy & Media Innovation'; ?></title>
+    <title><?php echo isset($pageTitle) ? $pageTitle . ' | Anna Barto' : 'Anna Barto | Product Manager & Applied AI Builder'; ?></title>
+    <meta name="description" content="<?php echo isset($ogDescription) ? $ogDescription : 'Product Manager & Applied AI Builder. Ex-Google & YouTube. Building RAG systems, LLM pipelines, and AI-assisted products. Case studies from YouTube, Google, and Moniify.'; ?>"><?php // Used by Google search snippets ?>
 
     <!-- Open Graph / Social Media Meta Tags -->
     <?php
@@ -11,16 +12,16 @@
     $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
     $baseUrl = $protocol . '://' . $_SERVER['HTTP_HOST'];
     ?>
-    <meta property="og:title" content="<?php echo isset($ogTitle) ? $ogTitle : (isset($pageTitle) ? $pageTitle . ' | Anna Barto' : 'Anna Barto | Product Strategy & Media Innovation'); ?>">
-    <meta property="og:description" content="<?php echo isset($ogDescription) ? $ogDescription : 'Product manager specializing in strategy, discovery, experimentation, and 0→1 product building.'; ?>">
+    <meta property="og:title" content="<?php echo isset($ogTitle) ? $ogTitle : (isset($pageTitle) ? $pageTitle . ' | Anna Barto' : 'Anna Barto | Product Manager & Applied AI Builder'); ?>">
+    <meta property="og:description" content="<?php echo isset($ogDescription) ? $ogDescription : 'Product Manager & Applied AI Builder. Ex-Google & YouTube. Building RAG systems, LLM pipelines, and AI-assisted products. Case studies from YouTube, Google, and Moniify.'; ?>">
     <meta property="og:image" content="<?php echo isset($ogImage) ? $baseUrl . $ogImage : $baseUrl . '/public/optimized/anna-portrait.jpg'; ?>">
     <meta property="og:url" content="<?php echo $baseUrl . $_SERVER['REQUEST_URI']; ?>">
     <meta property="og:type" content="<?php echo isset($ogType) ? $ogType : 'website'; ?>">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?php echo isset($ogTitle) ? $ogTitle : (isset($pageTitle) ? $pageTitle . ' | Anna Barto' : 'Anna Barto | Product Strategy & Media Innovation'); ?>">
-    <meta name="twitter:description" content="<?php echo isset($ogDescription) ? $ogDescription : 'Product manager specializing in strategy, discovery, experimentation, and 0→1 product building.'; ?>">
+    <meta name="twitter:title" content="<?php echo isset($ogTitle) ? $ogTitle : (isset($pageTitle) ? $pageTitle . ' | Anna Barto' : 'Anna Barto | Product Manager & Applied AI Builder'); ?>">
+    <meta name="twitter:description" content="<?php echo isset($ogDescription) ? $ogDescription : 'Product Manager & Applied AI Builder. Ex-Google & YouTube. Building RAG systems, LLM pipelines, and AI-assisted products. Case studies from YouTube, Google, and Moniify.'; ?>">
     <meta name="twitter:image" content="<?php echo isset($ogImage) ? $baseUrl . $ogImage : $baseUrl . '/public/optimized/anna-portrait.jpg'; ?>">
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">

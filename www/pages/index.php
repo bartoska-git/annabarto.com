@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Product Manager & Applied AI Builder';
-$ogImage = '/public/optimized/images/Hero_website_anna_barto.jpg';
-$ogDescription = 'Product manager specializing in strategy, discovery, experimentation, and 0→1 product building.';
+$ogImage = '/public/optimized/anna-portrait.jpg';
+$ogDescription = 'Product Manager & Applied AI Builder. Ex-Google & YouTube. Building RAG systems, LLM pipelines, and AI-assisted products. Case studies from YouTube, Google, and Moniify.';
 require_once '../includes/header.php';
 require_once '../includes/navigation.php';
 ?>
