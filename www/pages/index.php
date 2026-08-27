@@ -1,7 +1,7 @@
 <?php
-$pageTitle = 'Product Manager & Applied AI Builder';
+$pageTitle = 'Product Manager · Content, Media & AI';
 $ogImage = '/public/optimized/anna-portrait.jpg';
-$ogDescription = 'Product Manager & Applied AI Builder. Ex-Google & YouTube. Building RAG systems, LLM pipelines, and AI-assisted products. Case studies from YouTube, Google, and Moniify.';
+$ogDescription = 'Product Manager — Content, Media & AI. Ex-Google & YouTube. I do my best work where there\'s no playbook: turning ambiguous opportunities into shipped products.';
 require_once '../includes/header.php';
 require_once '../includes/navigation.php';
 ?>
@@ -15,19 +15,18 @@ require_once '../includes/navigation.php';
         <div class="hero-content">
             <div class="hero-inner">
                 <h1 class="hero-title">Anna Barto</h1>
-                <h2 class="hero-subtitle">Product Manager & Applied AI Builder</h2>
+                <h2 class="hero-subtitle">Product Manager &middot; Content, Media &amp; AI</h2>
                 <p class="hero-description">
-                    I'm a product manager who builds with AI: RAG systems, LLM pipelines, AI-assisted development.
-                    My background spans strategy and partnerships at Google &amp; YouTube, content R&amp;D at a
-                    developer media lab, and 0&rarr;1 product work at media startups.
+                    Ex-Google &amp; YouTube. I do my best work where there's no playbook.
                 </p>
-                <a href="/about" class="hero-about-link">More about my journey &rarr;</a>
+                <?php
+                // New (Aug 2026) CV is staging/dev-only until the client naming is confirmed;
+                // production keeps serving the existing PDF.
+                $isProduction = in_array($_SERVER['HTTP_HOST'] ?? '', ['annabarto.com', 'www.annabarto.com']);
+                $cvFile = $isProduction ? '/public/Anna Barto-CV .pdf' : '/public/Anna Barto-CV-2026.pdf';
+                ?>
                 <div class="hero-actions">
-                    <a href="#ai-builds" class="btn btn-primary">
-                        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                        View My Work
-                    </a>
-                    <a href="/public/Anna Barto-CV .pdf" class="btn btn-primary" download>
+                    <a href="<?php echo htmlspecialchars($cvFile); ?>" class="btn btn-primary" download>
                         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                         Download CV
                     </a>
@@ -49,6 +48,78 @@ require_once '../includes/navigation.php';
             <img src="/public/optimized/logos/moniify-logo.png" alt="Moniify" class="logo-strip-logo logo-strip-logo-sm">
             <img src="/public/optimized/logos/hgs-logo.png" alt="HGS Consultants" class="logo-strip-logo">
             <img src="/public/optimized/logos/transform-lab.png" alt="Transform Lab" class="logo-strip-logo">
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <div class="text-center mb-2xl">
+            <h2 class="section-title mb-md">Case Studies</h2>
+            <p class="section-subtitle">Selected work in strategy, discovery, experimentation, and 0&rarr;1 building.</p>
+        </div>
+        <div class="grid grid-3">
+            <?php
+            $projects = [
+                [
+                    'title' => 'Building 0→1 Products (Moniify)',
+                    'description' => 'Built 3 products from zero and led 20+ hybrid team in a next-gen business media startup. Each product addressed a distinct audience and market opportunity.',
+                    'tags' => ['Product Strategy', 'Early-Stage'],
+                    'image' => '/public/optimized/portfolio/moniify-products.jpg',
+                    'link' => '/moniify'
+                ],
+                [
+                    'title' => 'Custom Airtable App (Moniify)',
+                    'description' => 'Designed a low-code Airtable app that automated 10K+ annual handoffs across 700+ video workflows, connecting internal teams and agencies in real time.',
+                    'tags' => ['Workflow Automation', 'Internal Tools'],
+                    'image' => '/public/optimized/portfolio/airtable-app.jpg',
+                    'link' => '/airtable-app'
+                ],
+                [
+                    'title' => 'AI Dubbing Experiment (Google)',
+                    'description' => "Led Google's early AI-dubbing experiment for developer content, testing multilingual synthetic audio using Universal Translator. AI dubbing achieved 3× higher adoption than subtitles.",
+                    'tags' => ['AI Experimentation', 'Accessibility'],
+                    'image' => '/public/optimized/portfolio/ai-dubbing.jpg',
+                    'link' => '/ai-dubbing'
+                ],
+                [
+                    'title' => 'Developer Audience Insights Study (Google)',
+                    'description' => 'Designed and ran a 387-response user study (≈95% confidence for 210k UMV), revealing audience needs that doubled reach and boosted engagement 20%.',
+                    'tags' => ['User Research', 'Data-Informed Strategy'],
+                    'image' => '/public/optimized/portfolio/developer-insights.jpg',
+                    'link' => '/developer-insights'
+                ],
+                [
+                    'title' => 'Cross-Platform Delivery & Discoverability (Google)',
+                    'description' => "Built the delivery and discovery system for Google's Search Off the Record podcast. Discoverability experiments drove 146% and 247% increases in downloads.",
+                    'tags' => ['Platform Constraints', 'Product Discoverability'],
+                    'image' => '/public/optimized/portfolio/cross-platform-delivery.jpg',
+                    'link' => '/cross-platform-delivery'
+                ],
+                [
+                    'title' => 'Creator Crowdfunding Product Discovery (YouTube)',
+                    'description' => 'Led a hypothesis-driven discovery on creator crowdfunding, combining SQL data mining with global market research.',
+                    'tags' => ['Creator Monetization', 'Product Discovery'],
+                    'image' => '/public/optimized/portfolio/creator-crowdfunding.jpg',
+                    'link' => '/creator-crowdfunding'
+                ]
+            ];
+            foreach ($projects as $project): ?>
+            <article class="card">
+                <div class="card-image">
+                    <img src="<?php echo $project['image']; ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><?php echo htmlspecialchars($project['title']); ?></h3>
+                    <div class="tags">
+                        <?php foreach ($project['tags'] as $tag): ?>
+                        <span class="tag tag-terracotta"><?php echo htmlspecialchars($tag); ?></span>
+                        <?php endforeach; ?>
+                    </div>
+                    <p class="card-text"><?php echo htmlspecialchars($project['description']); ?></p>
+                    <a href="<?php echo $project['link'] ?? '#'; ?>" class="card-link">Read Case Study &rarr;</a>
+                </div>
+            </article>
+            <?php endforeach; ?>
         </div>
     </section>
 
@@ -132,78 +203,6 @@ require_once '../includes/navigation.php';
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section">
-        <div class="text-center mb-2xl">
-            <h2 class="section-title mb-md">Case Studies</h2>
-            <p class="section-subtitle">Selected work in strategy, discovery, experimentation, and 0&rarr;1 building.</p>
-        </div>
-        <div class="grid grid-3">
-            <?php
-            $projects = [
-                [
-                    'title' => 'Building 0→1 Products (Moniify)',
-                    'description' => 'Built 3 products from zero and led 20+ hybrid team in a next-gen business media startup. Each product addressed a distinct audience and market opportunity.',
-                    'tags' => ['Product Strategy', 'Early-Stage'],
-                    'image' => '/public/optimized/portfolio/moniify-products.jpg',
-                    'link' => '/moniify'
-                ],
-                [
-                    'title' => 'Custom Airtable App (Moniify)',
-                    'description' => 'Designed a low-code Airtable app that automated 10K+ annual handoffs across 700+ video workflows, connecting internal teams and agencies in real time.',
-                    'tags' => ['Workflow Automation', 'Internal Tools'],
-                    'image' => '/public/optimized/portfolio/airtable-app.jpg',
-                    'link' => '/airtable-app'
-                ],
-                [
-                    'title' => 'AI Dubbing Experiment (Google)',
-                    'description' => "Led Google's early AI-dubbing experiment for developer content, testing multilingual synthetic audio using Universal Translator. AI dubbing achieved 3× higher adoption than subtitles.",
-                    'tags' => ['AI Experimentation', 'Accessibility'],
-                    'image' => '/public/optimized/portfolio/ai-dubbing.jpg',
-                    'link' => '/ai-dubbing'
-                ],
-                [
-                    'title' => 'Developer Audience Insights Study (Google)',
-                    'description' => 'Designed and ran a 387-response user study (≈95% confidence for 210k UMV), revealing audience needs that doubled reach and boosted engagement 20%.',
-                    'tags' => ['User Research', 'Data-Informed Strategy'],
-                    'image' => '/public/optimized/portfolio/developer-insights.jpg',
-                    'link' => '/developer-insights'
-                ],
-                [
-                    'title' => 'Cross-Platform Delivery & Discoverability (Google)',
-                    'description' => "Built the delivery and discovery system for Google's Search Off the Record podcast. Discoverability experiments drove 146% and 247% increases in downloads.",
-                    'tags' => ['Platform Constraints', 'Product Discoverability'],
-                    'image' => '/public/optimized/portfolio/cross-platform-delivery.jpg',
-                    'link' => '/cross-platform-delivery'
-                ],
-                [
-                    'title' => 'Creator Crowdfunding Product Discovery (YouTube)',
-                    'description' => 'Led a hypothesis-driven discovery on creator crowdfunding, combining SQL data mining with global market research.',
-                    'tags' => ['Creator Monetization', 'Product Discovery'],
-                    'image' => '/public/optimized/portfolio/creator-crowdfunding.jpg',
-                    'link' => '/creator-crowdfunding'
-                ]
-            ];
-            foreach ($projects as $project): ?>
-            <article class="card">
-                <div class="card-image">
-                    <img src="<?php echo $project['image']; ?>" alt="<?php echo htmlspecialchars($project['title']); ?>">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title"><?php echo htmlspecialchars($project['title']); ?></h3>
-                    <div class="tags">
-                        <?php foreach ($project['tags'] as $tag): ?>
-                        <span class="tag tag-terracotta"><?php echo htmlspecialchars($tag); ?></span>
-                        <?php endforeach; ?>
-                    </div>
-                    <p class="card-text"><?php echo htmlspecialchars($project['description']); ?></p>
-                    <a href="<?php echo $project['link'] ?? '#'; ?>" class="card-link">Read Case Study &rarr;</a>
-                </div>
-            </article>
-            <?php endforeach; ?>
-        </div>
-    </section>
-
     <!-- Writing Section -->
     <section id="writing" class="section">
         <div class="text-center mb-2xl">
@@ -267,25 +266,18 @@ require_once '../includes/navigation.php';
             <div class="tabs-container">
                 <!-- Skills Tab -->
                 <div id="tab-skills" class="tab-content active">
-                    <div class="skills-grid">
+                    <div class="tools-grid tools-grid-2col">
                         <?php
-                        $skills = [
-                            'AI Strategy & Prototyping',
-                            'Applied AI Architecture',
-                            'Product Strategy & Execution',
-                            'Hypothesis-Driven Discovery',
-                            '0→1 Product Building',
-                            'User & Market Research',
-                            'Data Analysis & Basic SQL',
-                            'Experimentation',
-                            'Growth Strategy',
-                            'Cross-Functional Leadership',
-                            'Prioritization & Trade-offs',
-                            'Agile (Scrum)'
+                        $skillGroups = [
+                            ['category' => 'Product Strategy & Discovery', 'skills' => 'Product Strategy & Execution, Hypothesis-Driven Discovery, User & Market Research, Experimentation'],
+                            ['category' => 'AI & 0→1 Building', 'skills' => 'AI Strategy & Prototyping, Applied AI Architecture, 0→1 Product Building, AI-Assisted Development'],
+                            ['category' => 'Media & Growth', 'skills' => 'Creator Ecosystems & Monetization, Content & Media Platforms, Growth Strategy, Go-to-Market Strategy'],
+                            ['category' => 'Leadership & Execution', 'skills' => 'Cross-Functional Leadership, Prioritization & Trade-offs, Data Analysis & Basic SQL, Agile (Scrum)'],
                         ];
-                        foreach ($skills as $skill): ?>
-                        <div class="skill-card">
-                            <span class="skill-name"><?php echo htmlspecialchars($skill); ?></span>
+                        foreach ($skillGroups as $group): ?>
+                        <div class="tool-card">
+                            <div class="tool-category"><?php echo htmlspecialchars($group['category']); ?></div>
+                            <div class="tool-list"><?php echo htmlspecialchars($group['skills']); ?></div>
                         </div>
                         <?php endforeach; ?>
                     </div>
@@ -320,9 +312,9 @@ require_once '../includes/navigation.php';
                             <tr><th>Year</th><th>Job Title</th><th>Organization</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td class="year">2025-Present</td><td>Independent Consultant, Product & Media</td><td>hgs Consultants</td></tr>
+                            <tr><td class="year">2025-Present</td><td>Independent Consultant, Product & Media</td><td>Independent · Clients incl. askshannon.ai & hgs Consultants</td></tr>
                             <tr><td class="year">2025</td><td>Acting Executive Producer (parental leave cover)</td><td>Google Developer Product Marketing (contracted via Randstad Digital Switzerland)</td></tr>
-                            <tr><td class="year">2024-2025</td><td>Product Manager</td><td>Moniify</td></tr>
+                            <tr><td class="year">2024-2025</td><td>Product Lead</td><td>Moniify</td></tr>
                             <tr><td class="year">2018-2024</td><td>Senior Producer, Media Innovation & Research</td><td>Google Developer Media Lab (contracted via Advanced Systems Group)</td></tr>
                             <tr><td class="year">2016-2017</td><td>Founding Team (Pre-Launch)</td><td>Lafluence</td></tr>
                             <tr><td class="year">2014-2017</td><td>Strategic Partner Manager</td><td>YouTube</td></tr>
@@ -338,6 +330,7 @@ require_once '../includes/navigation.php';
                             <tr><th>Year</th><th>Certification / Course</th><th>Provider</th></tr>
                         </thead>
                         <tbody>
+                            <tr><td class="year">2026</td><td>CAS in Applied Machine Learning & Information Processing (one-semester program; admitted, starts Sept 2026)</td><td>ETH Zürich</td></tr>
                             <tr><td class="year">2025</td><td>AI Strategy (4-week program)</td><td>Reforge</td></tr>
                             <tr><td class="year">2025</td><td>AI Productivity for Product Managers (4-week program)</td><td>Reforge</td></tr>
                             <tr><td class="year">2025</td><td>Mastering Product Analytics (4-week program)</td><td>Reforge</td></tr>
@@ -345,7 +338,6 @@ require_once '../includes/navigation.php';
                             <tr><td class="year">2023</td><td>Virtual Reality & Augmented Reality (2-month program)</td><td>MIT xPRO</td></tr>
                             <tr><td class="year">2022</td><td>Change: How to Turn Uncertainty into Opportunity</td><td>Franklin Covey</td></tr>
                             <tr><td class="year">2021</td><td>The 6 Critical Practices for Leading a Team</td><td>Franklin Covey</td></tr>
-                            <tr><td class="year">2015</td><td>App Making for Beginners</td><td>Ravensbourne University London</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -368,7 +360,7 @@ require_once '../includes/navigation.php';
                             ['name' => 'English', 'flag' => '🇬🇧', 'level' => 'C2', 'color' => 'tag-emerald'],
                             ['name' => 'Czech', 'flag' => '🇨🇿', 'level' => 'C2', 'color' => 'tag-emerald'],
                             ['name' => 'Spanish', 'flag' => '🇪🇸', 'level' => 'B2', 'color' => 'tag-blue'],
-                            ['name' => 'German', 'flag' => '🇩🇪', 'level' => 'B1', 'color' => 'tag-amber']
+                            ['name' => 'German', 'flag' => '🇩🇪', 'level' => 'B2', 'color' => 'tag-blue']
                         ];
                         foreach ($languages as $lang): ?>
                         <div class="language-card">

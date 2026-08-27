@@ -1077,54 +1077,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Skills Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
-}
-
-.skill-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-md);
-  background: linear-gradient(135deg, rgba(246, 241, 231, 0.6) 0%, rgba(255, 250, 240, 0.4) 100%);
-  border: 1px solid rgba(138, 143, 122, 0.1);
-  border-radius: var(--radius-md);
-}
-
-.skill-icon {
-  margin-left: 0.25rem;
-}
-
-.skill-name {
-  font-weight: 600;
-  font-size: 0.875rem;
-  text-align: center;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-@media (max-width: 1280px) {
-  .skills-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (max-width: 768px) {
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 640px) {
-  .skills-grid { grid-template-columns: 1fr; }
-}
-
-/* Tools Grid */
+/* Tools Grid (also used by the Skills tab via .tools-grid-2col) */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
+}
+
+.tools-grid-2col {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .tool-card {

@@ -4,6 +4,21 @@
 
 Anna Barto's portfolio website - a simple PHP site with clean URLs on Apache.
 
+## Homepage Restructure (August 2026, mento.co mentor feedback)
+
+The homepage was stripped down to lead with work, per mentor feedback:
+
+- **Hero**: Subtitle is "Product Manager · Content, Media & AI"; tagline is "Ex-Google & YouTube. I do my best work where there's no playbook." (Differentiator: thrives where there's no playbook, chaos → tangible. The longer "...turning ambiguous opportunities into shipped products" clause lives only in `$ogDescription`.) Hero buttons are Download CV + LinkedIn only — "View My Work" was removed (mentor questioned it; work is one scroll away and in the nav).
+- **"More about my journey" link removed** from hero.
+- **About page hidden, not deleted**: still live at `/about`, but nav links are commented out in `www/includes/navigation.php` (desktop + mobile) for easy restore.
+- **Section order**: Case Studies (`#portfolio`) now come BEFORE AI Builds (`#ai-builds`) — case studies are "real work"; nav order matches.
+- **Capabilities Skills tab**: restyled as 4 grouped category cards (2×2, reusing `.tool-card`/`.tools-grid` with the `.tools-grid-2col` modifier) so it matches the Tools tab visually and doesn't look clickable. Groups: Product Strategy & Discovery / AI & 0→1 Building / Media & Growth / Leadership & Execution. The Media & Growth group (Creator Ecosystems & Monetization, Content & Media Platforms, Growth Strategy, Go-to-Market Strategy) was added deliberately to back up the "Content, Media & AI" positioning. The old `.skill-card`/`.skills-grid` CSS was removed.
+- **Certifications**: "CAS in Applied Machine Learning & Information Processing (one-semester program; admitted, starts Sept 2026)" at ETH Zürich (with umlaut; "ETH" dropped from the course title on the site since the Provider column already says ETH Zürich — the formal name "CAS ETH AMI" can still be used on the CV) added at top (selective admission; per Anna it runs Sep 11 – ~Dec 11 2026, final exam Module 5 Reinforcement Learning on Dec 11, hence "one-semester" not "4-month"; https://mas-at.ethz.ch/cas-programs/cas1.html). "App Making for Beginners" (Ravensbourne, 2015) removed as too junior next to the rest.
+- **Pending (per Anna, Aug 2026)**: a new CV version incorporating mentor feedback is needed once the homepage look is finalized — the CV still has the old hgs org, old subtitle, old skills, no ETH CAS, German at B1.
+- **Languages**: German is B2 (blue tag) as of Aug 2026.
+- **Testimonials**: kept deliberately.
+- **Experience table**: current role reads "Independent Consultant, Product & Media" at "Independent · Clients incl. askshannon.ai & hgs Consultants". Rationale: Anna never got client work through hgs (only worked with them at their start); named clients read stronger than an umbrella brand; she's a sole trader with no registered brand entity, so "Anna Barto Consulting" was rejected. **Aug 2026 status — IMPORTANT PRODUCTION GATE**: site + CV currently NAME askshannon.ai and the Alpha 2/beta details (Anna's call, Aug 2026: staging-only for a mentor review; she asks Agnes Chong for written consent in early September when both are back from holidays). DO NOT deploy the homepage or the new CV to PRODUCTION until that consent exists, per the Cluesmith contract §5.1/§6.6 (signed 2026-08-14, in Anna's Google Drive). If consent is declined, the ready-made consent-free fallback: org "Independent · Clients incl. an early-stage AI startup & hgs Consultants", bullet "For an early-stage personal AI assistant startup: designing and running a structured user validation program ... and the success criteria for the company's next-stage decision". Add Parloa to the client list once that engagement is signed and naming is cleared the same way.
+
 ## Tech Stack
 
 - **PHP 8.2** - Used purely as a templating system (no frameworks)
@@ -142,8 +157,26 @@ Complex screenshots (like Magic Patterns interface) may look great at full size 
 ## CV Management
 
 The CV is maintained in two files:
-- **Source**: `anna-barto-cv.html` - HTML file that can be printed to PDF
-- **Published**: `www/public/Anna Barto - CV - web.pdf` - The PDF file linked from the website
+- **Source**: `/Users/bartoska/web/cv/anna-barto-cv.html` - separate git repo at `/Users/bartoska/web/cv/`, with job-specific variants under `cv-versions/` (7 positioning folders + testimonials)
+- **Published (production)**: `www/public/Anna Barto-CV .pdf` - the PDF production currently links
+- **Published (staging/dev only, Aug 2026)**: `www/public/Anna Barto-CV-2026.pdf` - the restructured CV. The Download CV button in `www/pages/index.php` is environment-aware: production hosts (annabarto.com, www.annabarto.com) get the old PDF; staging and localhost get the 2026 one. Once the new CV is approved (and AskShannon naming confirmed), overwrite the old filename with the new PDF and remove the conditional. Regenerate the PDF from the HTML master headlessly: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --print-to-pdf=... --no-pdf-header-footer file:///Users/bartoska/web/cv/anna-barto-cv.html` (always sanity-check it stays 2 pages, e.g. with pypdf).
+- **ChatGPT removed from the CV tools list** (Aug 2026, per Anna): table-stakes tool, no signal.
+
+### CV Restructure (August 2026, mento.co mentor feedback)
+
+The master CV was restructured (backup: `anna-barto-cv-backup-pre-restructure-aug2026.html` in the cv repo):
+- **Order**: Header → 2-sentence summary → Professional Experience (highlights nested under roles; the standalone "Selected Product Highlights" section was dissolved into Moniify/Media Lab/YouTube bullets) → Selected AI Builds → Early Ventures (Lafluence one-liner kept, NOT a full chronological entry) → Education (CAS ETH first, then BSc) → Professional Development → Core Competencies → Platform & Tool Expertise. Competencies/tools moved to bottom per mentor (ATS fodder, not human signal).
+- **Title line**: "Product Manager · Content, Media & AI · Ex-Google & YouTube" (matches website).
+- **Summary** (NO EM DASHES anywhere in Anna's copy, ever, per Anna): just the one line "I do my best work where there's no playbook." (Anna's call, Aug 2026: everything else is in the CV). The fuller fallback sentence if a conservative application ever needs it: "Product manager with 15 years of experience across various roles in creator platforms (YouTube), developer ecosystems (Google), media (a stealth-stage finance media startup), and now early-stage AI products (independent consulting)." Note "of experience across various roles": deliberate, avoids overstating 15 years AS a PM.
+- **Skills umbrella section** (bottom of CV, Teal-style): one "Skills" header with three comma-separated labeled lines: Core Competencies, Platform & Tool Expertise (flat list, no subcategories), Certifications (CSPO® lives here now that it left the summary). Commas, not pipes, throughout (incl. Languages).
+- **Location**: "Based in Prague | Regularly in Zürich | Open to opportunities across Europe" (moved from Zürich; +44 phone stays deliberately, it's her one constant number/WhatsApp).
+- **Dates**: MM/YYYY format ("11/2025 – Present") per tealhq recommendation.
+- **Consulting entry**: org "Independent · Clients incl. askshannon.ai & hgs Consultants"; the askshannon.ai bullet names the Alpha 2 validation program and beta go/no-go decision framework. STAGING-ONLY until written consent from Agnes Chong (COO, agnes@cluesmith.com) — the Cluesmith contract (signed 2026-08-14, in Anna's Google Drive) makes "the existence and terms of this Agreement" confidential (§5.1); §6.6 permits describing the engagement in general terms (role, duration, nature of work) but not product details/metrics without written consent. See the production gate note in the Homepage Restructure section, which also carries the consent-free fallback wording. hgs (early-stage startup advisory, named publicly for months, no such contract) stays named; one truthful bullet (product discovery framework) since no client work ever came through hgs.
+- **Titles**: Moniify is "Product Lead" (officially one of the Product Leads; contract said PM; website table aligned to Product Lead too). Media Lab simplified to "Senior Producer (Product Initiatives Owner)" — "Media Innovation & Research" dropped as redundant with the org description.
+- **Typography**: 10pt body (was 8pt) per tealhq/mentor "simpler, more readable" advice; the terracotta accent stays (matches website brand). Competencies/tools blocks set at 9pt (ATS keywords, not human signal). Still exactly 2 pages (verified via headless Chrome print).
+- **Second pass (Anna's notes, Aug 2026)**: contact header has no field labels (bare values, "(WhatsApp)" after phone) and only LinkedIn + annabarto.com (GitHub/Medium dropped; the site is the hub, GitHub links stay on AI build bullets). Summary says "15 years of experience across various roles in..." (deliberate: avoids overstating 15 years AS a PM). askshannon.ai is ONE bullet with "designing" tense (success criteria not yet defined, so never "Defined"). Section divider rules removed; terracotta only on name + section headers (role titles dark, links stay terracotta). "Oversaw senior producers" without the count (it's 2). Case-study links kept. "Video-first" kept over "content-first". Title stays "Product Lead" (not "Product Lead, Content" — no title decoration). No mention of why Moniify ended (interview answer, not CV content). Dev relations/product marketing bullet restored under Media Lab. Promotion stated in-bullet, not in title (year can be added if Anna supplies it). annabarto.com AI build cut (site is its own evidence). Reforge/CSPO certifications line dropped entirely per Anna — Education holds only CAS + BSc (CSPO® survives in the summary). Languages kept as its own section. Header order is Teal-style: name → contact → title line → summary (summary kept deliberately; it carries the no-playbook hook). Spacing: `.highlight-item` needs full margin shorthand (a p tag's default top margin caused the uneven AI Builds gap); sections separated by h2 margin 14px top.
+- **Content upgrades pulled from job-variant CVs** (Aug 2026 sweep of cv-versions/): richer Acting EP bullet (I/O Connect, oversaw senior producers, 2026 strategy planning); crowdfunding outcomes (informed YouTube's native funding features + Creator Academy course in 20 languages); podcast "zero to 1.5M+ downloads in 2.5 years"; audience study "9 new video series + LinkedIn channel launch"; Moniify products named (daily news, creators, vodcast; YouTube/TikTok/Instagram/web); YouTube day-job bullet (advised creators, media companies, music labels); "Phone & WhatsApp:" label; Languages line under Education (German B2).
+- **Cuts made for the 10pt/2-page fit**: "Design & Digital Assets" tools row (double "(Basic)" weakened it), "Experimentation" competency (covered by discovery + A/B bullets), AI build blurbs shortened, Professional Development collapsed to one line, Transform@lab to one bullet, tools grid converted to inline keyword format.
 
 ### Updating the CV
 
@@ -164,7 +197,7 @@ The CV is maintained in two files:
 - CV summary emphasizes "hypothesis-driven discovery" to show process/methodology
 - Core competencies include: Product Strategy & Execution, Hypothesis-Driven Discovery, 0→1 Product Building, AI Strategy & Prototyping, Experimentation, User & Market Research, Growth Strategy, Go-to-Market Strategy, Cross-Functional Leadership, Prioritization & Trade-offs, Agile (Scrum), Basic SQL, Cross-Platform User Experience
 - Growth Strategy appears before Go-to-Market Strategy (outcome before tactic)
-- Website Skills section has 12 items (3x4 grid) - if adding a skill, replace one to maintain layout
+- Website Skills section shows 4 grouped category cards (see Homepage Restructure section above), no longer a 12-item grid
 
 **Role Descriptions:**
 - Be specific about scope and impact (e.g., "product marketing planning for Google's developer ecosystem")
@@ -313,6 +346,9 @@ Stats cards display in a 2×2 grid on mobile with optimized spacing:
 ### File Locations
 - **Case study thumbnails**: `www/public/optimized/portfolio/*.jpg` — use clean descriptive names
 - **AI Build thumbnails**: `www/public/images/ai-builds/` — current files: `AI_DJ.jpg`, `Autoflow.jpg`, `annabarto.jpg`
+
+### Stray Image Files (Aug 2026)
+Several unreferenced images sit untracked in `www/public/` (e.g. `0_to_1.jpg`, `AI_Dub.jpg`, `keep_the_image_as_is_but_*.jpg`, `moniify_0_to_1.jpg`): leftover sources/experiments from the thumbnail-swap session. The applied thumbnails were committed separately; these can be deleted or kept as sources, but don't commit them without checking with Anna.
 
 ### Swapping Thumbnails
 When the user uploads a new thumbnail, check `www/public/` or `www/public/optimized/portfolio/` for new files by modification time (`ls -lt`), then copy to the correct location:

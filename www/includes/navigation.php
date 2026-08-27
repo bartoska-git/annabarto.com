@@ -10,9 +10,9 @@ $baseUrl = $isActualHomepage ? '' : '/';
         <a href="/" class="nav-logo">Anna Barto</a>
         <?php if ($isHomepage): ?>
         <div class="nav-links">
-            <a href="/about" class="nav-link">About</a>
-            <a href="<?php echo $baseUrl; ?>#ai-builds" class="nav-link">AI Builds</a>
+            <?php /* About page hidden from nav (still live at /about): <a href="/about" class="nav-link">About</a> */ ?>
             <a href="<?php echo $baseUrl; ?>#portfolio" class="nav-link">Case Studies</a>
+            <a href="<?php echo $baseUrl; ?>#ai-builds" class="nav-link">AI Builds</a>
             <a href="<?php echo $baseUrl; ?>#writing" class="nav-link">Writing</a>
             <a href="<?php echo $baseUrl; ?>#capabilities" class="nav-link">Capabilities</a>
             <a href="<?php echo $baseUrl; ?>#testimonials" class="nav-link">Testimonials</a>
@@ -51,9 +51,9 @@ $baseUrl = $isActualHomepage ? '' : '/';
         </button>
     </div>
     <div class="nav-mobile-body">
-        <a href="/about" class="nav-mobile-link">About</a>
-        <a href="<?php echo $baseUrl; ?>#ai-builds" class="nav-mobile-link">AI Builds</a>
+        <?php /* About page hidden from nav (still live at /about): <a href="/about" class="nav-mobile-link">About</a> */ ?>
         <a href="<?php echo $baseUrl; ?>#portfolio" class="nav-mobile-link">Case Studies</a>
+        <a href="<?php echo $baseUrl; ?>#ai-builds" class="nav-mobile-link">AI Builds</a>
         <a href="<?php echo $baseUrl; ?>#writing" class="nav-mobile-link">Writing</a>
         <a href="<?php echo $baseUrl; ?>#capabilities" class="nav-mobile-link">Capabilities</a>
         <a href="<?php echo $baseUrl; ?>#testimonials" class="nav-mobile-link">Testimonials</a>
