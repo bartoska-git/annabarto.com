@@ -528,21 +528,6 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-@media (max-width: 768px) {
-  .logo-strip-logos {
-    flex-wrap: wrap;
-    gap: var(--space-lg);
-  }
-
-  .logo-strip-logo {
-    height: 1.5rem;
-  }
-
-  .logo-strip-logo-sm {
-    height: 1.1rem;
-  }
-}
-
 /* ========================================
    Buttons
    ======================================== */
@@ -613,6 +598,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-strip-logo-svg {
   opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+  .logo-strip-logos {
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+
+  .logo-strip-logo {
+    height: 1.5rem;
+  }
+
+  .logo-strip-logo-sm {
+    height: 1.1rem;
+  }
 }
 
 /* ========================================
