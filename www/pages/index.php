@@ -331,7 +331,6 @@ require_once '../includes/navigation.php';
                             <tr><th>Year</th><th>Certification / Course</th><th>Provider</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td class="year">2026</td><td>CAS in Applied Machine Learning & Information Processing (one-semester program; in progress)</td><td>ETH Zürich</td></tr>
                             <tr><td class="year">2025</td><td>AI Strategy (4-week program)</td><td>Reforge</td></tr>
                             <tr><td class="year">2025</td><td>AI Productivity for Product Managers (4-week program)</td><td>Reforge</td></tr>
                             <tr><td class="year">2025</td><td>Mastering Product Analytics (4-week program)</td><td>Reforge</td></tr>
@@ -349,6 +348,7 @@ require_once '../includes/navigation.php';
                             <tr><th>Year</th><th>Degree</th><th>University</th></tr>
                         </thead>
                         <tbody>
+                            <tr><td class="year">2026</td><td>CAS in Applied Machine Learning & Information Processing (one-semester program; in progress)</td><td>ETH Zürich</td></tr>
                             <tr><td class="year">2008-2011</td><td>BSc: Business, Language & Culture (research-based degree taught in English & Spanish)</td><td>Copenhagen Business School (Denmark)</td></tr>
                         </tbody>
                     </table>
