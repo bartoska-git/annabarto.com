@@ -525,6 +525,26 @@ h1, h2, h3, h4, h5, h6 {
   .hero-subtitle {
     font-size: 1.25rem;
   }
+
+  .hero-actions .btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-strip-logos {
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+
+  .logo-strip-logo {
+    height: 1.5rem;
+  }
+
+  .logo-strip-logo-sm {
+    height: 1.1rem;
+  }
 }
 
 /* ========================================
@@ -578,19 +598,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-strip-logos {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: var(--space-xl) var(--space-2xl);
+  align-items: center;
+  gap: var(--space-xl) var(--space-xl);
 }
 
 .logo-strip-logo {
-  height: 2.5rem;
+  height: 2rem;
   opacity: 0.5;
   filter: grayscale(100%);
+  flex-shrink: 0;
 }
 
 .logo-strip-logo-sm {
-  height: 1.75rem;
+  height: 1.5rem;
+}
+
+.logo-strip-logo-svg {
+  opacity: 0.3;
 }
 
 /* ========================================

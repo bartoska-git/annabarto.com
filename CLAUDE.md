@@ -8,7 +8,7 @@ Anna Barto's portfolio website - a simple PHP site with clean URLs on Apache.
 
 The homepage was stripped down to lead with work, per mentor feedback:
 
-- **Hero**: Subtitle is "Product Manager · Content, Media & AI"; tagline is "Ex-Google & YouTube. I do my best work where there's no playbook." (Differentiator: thrives where there's no playbook, chaos → tangible. The longer "...turning ambiguous opportunities into shipped products" clause lives only in `$ogDescription`.) Hero buttons are Download CV + LinkedIn only — "View My Work" was removed (mentor questioned it; work is one scroll away and in the nav).
+- **Hero**: Subtitle is "Product Manager & Executive Producer · AI & Media"; tagline is "Ex-Google & YouTube. I do my best work where there's no playbook." (Differentiator: thrives where there's no playbook, chaos → tangible. The longer "...turning ambiguous opportunities into shipped products" clause lives only in `$ogDescription`.) Hero buttons are Download CV + LinkedIn only — "View My Work" was removed (mentor questioned it; work is one scroll away and in the nav).
 - **"More about my journey" link removed** from hero.
 - **About page hidden, not deleted**: still live at `/about`, but nav links are commented out in `www/includes/navigation.php` (desktop + mobile) for easy restore.
 - **Section order**: Case Studies (`#portfolio`) now come BEFORE AI Builds (`#ai-builds`) — case studies are "real work"; nav order matches.

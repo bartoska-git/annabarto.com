@@ -1,7 +1,7 @@
 <?php
-$pageTitle = 'Product Manager · Content, Media & AI';
+$pageTitle = 'Product Manager & Executive Producer · AI & Media';
 $ogImage = '/public/optimized/anna-portrait.jpg';
-$ogDescription = 'Product Manager — Content, Media & AI. Ex-Google & YouTube. I do my best work where there\'s no playbook: turning ambiguous opportunities into shipped products.';
+$ogDescription = 'Product Manager & Executive Producer — AI & Media. Ex-Google & YouTube. I do my best work where there\'s no playbook: turning ambiguous opportunities into shipped products.';
 require_once '../includes/header.php';
 require_once '../includes/navigation.php';
 ?>
@@ -15,7 +15,7 @@ require_once '../includes/navigation.php';
         <div class="hero-content">
             <div class="hero-inner">
                 <h1 class="hero-title">Anna Barto</h1>
-                <h2 class="hero-subtitle">Product Manager &middot; Content, Media &amp; AI</h2>
+                <h2 class="hero-subtitle">Product Manager &amp; Executive Producer &middot; AI &amp; Media</h2>
                 <p class="hero-description">
                     Ex-Google &amp; YouTube. I do my best work where there's no playbook.
                 </p>
@@ -46,8 +46,9 @@ require_once '../includes/navigation.php';
             <img src="/public/optimized/logos/google-logo.png" alt="Google" class="logo-strip-logo">
             <img src="/public/optimized/logos/youtube-logo.png" alt="YouTube" class="logo-strip-logo">
             <img src="/public/optimized/logos/moniify-logo.png" alt="Moniify" class="logo-strip-logo logo-strip-logo-sm">
+            <img src="/public/optimized/logos/parloa-logo.svg" alt="Parloa" class="logo-strip-logo logo-strip-logo-sm logo-strip-logo-svg">
+            <img src="/public/optimized/logos/shannon-logo.svg" alt="Shannon" class="logo-strip-logo logo-strip-logo-sm logo-strip-logo-svg">
             <img src="/public/optimized/logos/hgs-logo.png" alt="HGS Consultants" class="logo-strip-logo">
-            <img src="/public/optimized/logos/transform-lab.png" alt="Transform Lab" class="logo-strip-logo">
         </div>
     </section>
 
@@ -312,7 +313,7 @@ require_once '../includes/navigation.php';
                             <tr><th>Year</th><th>Job Title</th><th>Organization</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td class="year">2025-Present</td><td>Independent Consultant, Product & Media</td><td>Independent · Clients incl. askshannon.ai & hgs Consultants</td></tr>
+                            <tr><td class="year">2025-Present</td><td>Independent Consultant, Product & Media</td><td>Independent · Clients incl. askshannon.ai, Parloa & hgs Consultants</td></tr>
                             <tr><td class="year">2025</td><td>Acting Executive Producer (parental leave cover)</td><td>Google Developer Product Marketing (contracted via Randstad Digital Switzerland)</td></tr>
                             <tr><td class="year">2024-2025</td><td>Product Lead</td><td>Moniify</td></tr>
                             <tr><td class="year">2018-2024</td><td>Senior Producer, Media Innovation & Research</td><td>Google Developer Media Lab (contracted via Advanced Systems Group)</td></tr>
@@ -330,7 +331,7 @@ require_once '../includes/navigation.php';
                             <tr><th>Year</th><th>Certification / Course</th><th>Provider</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td class="year">2026</td><td>CAS in Applied Machine Learning & Information Processing (one-semester program; admitted, starts Sept 2026)</td><td>ETH Zürich</td></tr>
+                            <tr><td class="year">2026</td><td>CAS in Applied Machine Learning & Information Processing (one-semester program; in progress)</td><td>ETH Zürich</td></tr>
                             <tr><td class="year">2025</td><td>AI Strategy (4-week program)</td><td>Reforge</td></tr>
                             <tr><td class="year">2025</td><td>AI Productivity for Product Managers (4-week program)</td><td>Reforge</td></tr>
                             <tr><td class="year">2025</td><td>Mastering Product Analytics (4-week program)</td><td>Reforge</td></tr>
