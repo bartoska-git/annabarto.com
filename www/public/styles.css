@@ -1106,7 +1106,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--space-md);
 }
 
-.tools-grid-2col {
+.tools-grid.tools-grid-2col {
   grid-template-columns: repeat(2, 1fr);
 }
 
